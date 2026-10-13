@@ -1,6 +1,6 @@
 # Design Specification
 
-Status: draft for review. Nothing in this document is implemented yet.
+Status: draft for review. Phase 1 composition studies exist at `/lab/composition` (development only); the homepage is not implemented yet.
 
 This document defines the visual system and homepage composition for Joshua Venegas's portfolio. The design is inspired by the VALORANT client's menu screens. It is an original identity built on Joshua's name, and it uses no Riot Games artwork, logos, icons, fonts, or screenshots in the shipped interface.
 
@@ -19,9 +19,23 @@ The game-client language supports these goals. It does not replace them. Specifi
 
 ## 2. Reference analysis
 
-Joshua supplied eleven screenshots of the VALORANT client (Collection, Career, Agents, Store, Esports, Premier, Progression). They are design references only. They stay local in `references/valorant/` (gitignored) and must never be committed or shipped.
+Twelve reference screenshots of the VALORANT client are available: the Play lobby (00) plus eleven other menu screens (01 to 11). These are the only references counted here; each one was inspected directly. They are design references only. They stay local in `references/valorant/` (gitignored) and must never be committed or shipped.
 
-Note: none of the supplied screenshots shows the actual Play lobby, with its party lineup and Play button. The shared chrome visible in every screenshot (top bar, Play slab, tab geometry, social rail) and the closest lobby-like compositions (Premier hub, Agents) stand in for it. An additional screenshot of the Play lobby would sharpen the homepage composition. See "Unresolved design decisions" below.
+An earlier draft of this document said that no Play lobby screenshot had been supplied. That was wrong: the lobby image existed in the local image cache but had not been attached to the planning conversation. It is now reference 00 and the **primary reference for the homepage composition**.
+
+### 2.1 Primary reference: the Play lobby (00)
+
+| Element | Observation | Portfolio use |
+|---------|-------------|---------------|
+| Lineup | Five tall pennant-shaped slots across the center. The middle slot (the player's card) is raised, brighter, and framed; flanking slots start lower and recede in depth. Center card is about 1:2.3 including its level badge. | Three-card lineup: Recolm, Hermes (raised lead), Valorant ML. |
+| Card anatomy | Level badge centered on the top edge; full-height art; a teal "Ready" bar; name in gold; inner chevron line and gold corner accents at the pointed base. | Index badge on top edge, art area, teal rule on the lead card, title, chevron line at the base. |
+| Left column | Event title in large condensed type at top-left, then a stacked mode card and option rows. | Identity block: eyebrow, name, headline, résumé and contact actions. |
+| Right column | Stack of image-backed news tiles in decreasing height. | Panel stack: Experience, About, Contact, each with one confirmed line. |
+| Primary action | A single coral "Find Match" button centered below the lineup, framed by a thin outline. | One coral "Explore projects" action below the lineup. |
+| Atmosphere | Near-black base, gold diagonal light streaks behind the lineup, gold corner diagonals, and a faint emblem under the center card. | Dark architectural scene, one warm light behind the lead card, a subtle JV emblem behind the lineup. |
+| Chrome | Off-white "PLAY" slab (active state), icon tabs, wallet, social rail, "Party:" strip at bottom-left. | Coral brand slab, text tabs, résumé action, "Currently" status strip. |
+
+### 2.2 Supporting references
 
 | # | Screen | What to learn from it |
 |---|--------|-----------------------|
@@ -34,12 +48,12 @@ Note: none of the supplied screenshots shows the actual Play lobby, with its par
 | 7 | Store | Featured banner with a 2px teal frame, large condensed title, white filled price button, and carousel progress bars; row of four offer cards with diagonal-stripe backgrounds; category buttons beneath. |
 | 8 | Career / Map Rating | Left list of image-backed rows; quadrant stat tiles; honest empty states ("--", "still calibrating") instead of fake values. This is useful for missing content. |
 | 9 | Esports | Black and gold palette; large logotype left; schedule rows ("Next up") with dense, aligned metadata. Shows how gold can lead without becoming garish. |
-| 10 | Premier Hub | Warm gold-on-brown atmosphere; vertical schedule cards with a gold left-edge accent; giant centered title ("BIND") with a single gold call-to-action; roster panel at right. This is the closest reference for a hero with one primary action. |
+| 10 | Premier Hub | Warm gold-on-brown atmosphere; vertical schedule cards with a gold left-edge accent; giant centered title ("BIND") with a single gold call-to-action; roster panel at right. |
 | 11 | Progression | Missions panel and battle-pass panel; thin teal progress bars; white filled primary button; restrained use of a single hero object inside a framed panel. |
 
 Patterns shared across all screens:
 
-- Top bar, about 48 to 56px tall: a coral "PLAY" slab with an angled right edge at far left; icon tabs where the active tab becomes a solid off-white parallelogram with a dark icon; wallet and settings at right.
+- Top bar, about 48 to 56px tall: a "PLAY" slab with an angled right edge at far left (coral on other screens, off-white when the Play tab is active); icon tabs where the active tab becomes a solid off-white parallelogram with a dark icon; wallet and settings at right.
 - Small uppercase breadcrumb under the bar ("COLLECTION", "CAREER").
 - Persistent right social rail and a bottom-left status strip ("Party:").
 - Surfaces are translucent navy over the atmospheric background, separated by hairline borders rather than shadows. Corners are square or notched, never rounded.
@@ -50,46 +64,58 @@ Patterns shared across all screens:
 
 ### 3.1 Concept: "The Lobby"
 
-The homepage is staged like a lobby before a match:
+The homepage is staged like the Play lobby (reference 00):
 
-- The **identity block** (name, role line, primary actions) takes the role of the Play button and party status: top-left, the first thing read.
-- The **three featured projects** form the **lineup**: three tall cards standing side by side, lit by the scene, the way party members stand in the lobby.
-- The **cinematic background** provides one deliberate light source that falls on the lineup, so the eye travels from the name to the work.
+- The **identity block** (eyebrow, name, headline, résumé and contact actions) takes the place of the lobby's left column: top-left, the first thing read.
+- The **three featured projects** form the **lineup** at center: **Recolm** (left), **Project Hermes** (center, raised lead card), **Valorant ML** (right).
+- A **panel stack** at right mirrors the lobby's news tiles: Experience, About, Contact.
+- One coral **"Explore projects"** action sits centered below the lineup, where "Find Match" sits in the lobby.
+- The **cinematic background** is a dark architectural scene with one warm light source that lands behind the lead card, plus a subtle original JV emblem behind the lineup. The emblem stays subordinate: about 20% opacity, mostly hidden by the cards, with only its upper portion visible above them.
+
+Headline (approved): "I build practical software and applied machine learning systems."
 
 ### 3.2 Desktop composition (reference viewport 1440 x 900)
 
 ```
-+--------------------------------------------------------------------------------+
-| [JV  JOSHUA VENEGAS]/ HOME  PROJECTS  EXPERIENCE  ABOUT  CONTACT    [RESUME] o o |  top bar 56px
-| > HOME                                                                          |  breadcrumb 32px
-|                                                   light beam                   |
-|   UNG // COMPUTER SCIENCE + ML MINOR                 |||                        |
-|                                              +------++------++------+          |
-|   JOSHUA                                     |      ||      ||      |          |
-|   VENEGAS                                    | ART  || ART  || ART  |          |
-|                                              |      ||      ||      |          |
-|   Role line (one sentence, confirmed facts)  |      ||      ||      |          |
-|                                              |------||------||------|          |
-|   [ VIEW PROJECTS ]  [ RESUME ]              |HERMES||RECOLM||VAL ML|          |
-|                                              |role  ||role  ||role  |          |
-|   AI Lab Team Leader | Founder, JV Digital   +------++------++------+          |
-|                                                                                |
-| [ CURRENTLY: confirmed status line ]                          EXPERIENCE  v    |  status strip 48px
-+--------------------------------------------------------------------------------+
-   ghost type "VENEGAS" sits behind everything at about 6% opacity
++----------------------------------------------------------------------------------+
+| [JV JOSHUA VENEGAS]/ [HOME] PROJECTS EXPERIENCE ABOUT CONTACT          [RESUME]  |  top bar 56px
+|                                  warm key light                                  |
+|                              /\  (emblem top, faint)                             |
+|                     +-01-+ +--02--+ +-03-+                                       |
+| UNG // CS + ML MINOR |    | |      | |    |                         +----------+  |
+|                      |ART | | ART  | |ART |                         |EXPERIENCE|  |
+| JOSHUA               |    | |      | |    |                         +----------+  |
+| VENEGAS              |----| |======| |----|   (lead card: teal rule) |ABOUT     |  |
+|                      |RECOLM |HERMES| |VALORANT ML                  +----------+  |
+| I build practical    |    | |      | |    |                         |CONTACT   |  |
+| software and applied  \  /  |      |  \  /                          +----------+  |
+| ML systems.            \/    \    /    \/                                         |
+| [RESUME] [CONTACT]            \  /                                                |
+|                          [ EXPLORE PROJECTS ]                                     |
+| CURRENTLY  University of North Georgia, computer science ...                     |  status strip 40px
++----------------------------------------------------------------------------------+
 ```
 
-Grid: 12 columns, max content width 1360px, 24px gutters, 40px outer margin.
+Grid: three columns inside a 1440px max width with 40px outer padding and 24px gaps: identity `minmax(300px, 360px)`, lineup `1fr`, panel stack `minmax(176px, 200px)`.
 
-- Columns 1 to 5: identity block, vertically centered in the fold.
-- Columns 6 to 12: lineup of three tall cards. Cards are about 2:3 (roughly 240 x 480 at 1440 wide), separated by 16px gaps.
-- The background focal point (beam and brightest haze) sits behind the center card at about x = 66%, y = 30%.
-- The left 40% of the background must stay low in detail and dark in value. It is the text safe zone.
-- The bottom status strip mirrors the client's "Party:" strip. It holds one confirmed status line and a scroll cue to the next section.
+Card proportions (one rule for every desktop size):
+
+- **Every desktop card is 1:2** (width is half the height), including its pennant point.
+- The lead card height is `--card-h = clamp(360px, 100svh - 320px, 520px)`.
+- Flanking cards are 88% of the lead card's height, still 1:2, and start 6% of `--card-h` lower, so they read as set back, as in the lobby.
+- Resulting sizes: at 1440 x 900, the lead card is 260 x 520 and the flanks are 229 x 458. At 1280 x 720, the lead card is 200 x 400 and the flanks are 176 x 352.
+- Cards are separated by 12px. The art area is the top 56% of each card; the title block sits below a rule (teal on the lead card, hairline on the flanks).
+
+Light and safe zones:
+
+- The key light lands behind the lead card, at about x = 56% of the viewport (the lineup's center) and above the card tops.
+- The left 38% of the background is darkened by a fixed scrim and must stay low in detail. It is the text safe zone.
+- The panel stack sits on translucent surfaces, so moderate detail behind it is acceptable.
+- The bottom status strip mirrors the client's "Party:" strip and holds one confirmed status line.
 
 Below the fold (Milestone 1 keeps these short):
 
-1. **Experience snapshot**: rows styled after match-history rows, using only confirmed roles (AI Lab Team Leader at UNG, Founder of JV Digital, UNG CS student with ML minor). Dates are shown only when confirmed.
+1. **Experience snapshot**: rows styled after match-history rows, using only confirmed roles (AI Lab Team Leader, Founder of JV Digital, UNG computer science student with an ML minor). Dates and the AI Lab's host organization are shown only when confirmed.
 2. **About teaser**: two or three sentences and a link to About.
 3. **Contact panel**: résumé, email, GitHub, LinkedIn. Only confirmed links render.
 4. **Footer**: name, a disclaimer that the site is not affiliated with Riot Games, and source link.
@@ -98,38 +124,37 @@ Below the fold (Milestone 1 keeps these short):
 
 Height is the constraint. Applied when the viewport is at least 1024px wide and at most 800px tall:
 
-- Display name shrinks one step (see type scale); the role line stays at full size.
-- Cards shrink to a minimum of 400px tall while keeping their title area intact; artwork crops from the top.
-- Breadcrumb row merges into the top bar's lower edge (saves 32px).
-- The identity block and the full height of all three cards must be visible without scrolling at 1280 x 720.
+- The display name shrinks one step (see type scale); the headline shrinks from 20px to 18px.
+- Cards follow the `--card-h` rule above (lead 200 x 400 at 1280 x 720), keeping the 1:2 ratio.
+- Outer padding drops to 32px.
+- The identity block, all three full cards, and the "Explore projects" action must be visible without scrolling at 1280 x 720.
 
 ### 3.4 Mobile composition (390 x 844)
 
 ```
 +-------------------------------+
-| [JV]/                [=] MENU |  top bar 56px
-|                               |
-|     background focal crop     |
+| [JV JOSHUA VENEGAS]/   [MENU] |  top bar 56px
+|      warm key light + faint   |
+|      JV emblem (art band,     |
+|      about 27% of the height) |
 |   UNG // CS + ML MINOR        |
 |   JOSHUA                      |
 |   VENEGAS                     |
-|   Role line                   |
-|   [ VIEW PROJECTS ] [ RESUME ]|
+|   I build practical software  |
+|   and applied ML systems.     |
+|   [ RESUME ] [ CONTACT ]      |
 |                               |
-|   FEATURED WORK ------------- |
-|   +-------------------------+ |
-|   |  ART  (4:5)             | |
-|   |  HERMES / role / stack  | |
-|   +-------------------------+ |
-|   +-------------------------+ |  cards stack vertically;
-|   |  RECOLM                 | |  no horizontal carousel
-|   +-------------------------+ |
+|   FEATURED WORK               |
+|   +----------01-------------+ |
+|   |  ART                    | |  cards stack vertically
+|   |  RECOLM                 | |  in lineup order (4:5);
+|   +-------------------------+ |  no horizontal carousel
 +-------------------------------+
 ```
 
-- The background uses a separate portrait crop with the focal point at about x = 50%, y = 22%, behind the name.
-- Below the hero, the background fades to solid navy so card text never sits on busy art.
-- Cards stack vertically at a 4:5 ratio and use full width minus 16px margins.
+- The background uses a separate portrait crop. The key light and emblem sit in the top art band, centered at about x = 50%, y = 13%; the text starts below the band.
+- From about 24% of the viewport height, the background fades to solid navy, so text and cards never sit on the bright part of the art.
+- Cards stack vertically in lineup order (Recolm, Hermes, Valorant ML) at a 4:5 ratio, full width minus 16px margins. The source order matches the desktop left-to-right order, so keyboard order is the same on both layouts.
 - Navigation collapses into a "Menu" button that opens a full-screen dialog with large angled list items.
 - The résumé action stays visible in the hero; contact links repeat at the bottom.
 
@@ -202,12 +227,12 @@ Depth layers (back to front):
 |-------|---------|
 | L0 | Base navy gradient and vignette |
 | L1 | Key art environment (far plane, slightly soft) |
-| L2 | Volumetric light beam and haze (part of the key art, optionally enhanced with CSS gradients) |
-| L3 | Ghost typography ("VENEGAS"), `aria-hidden`, about 6% opacity |
+| L2 | Volumetric light beam and haze (part of the key art), plus fixed scrims that protect the text safe zone |
+| L3 | JV emblem (original SVG, `aria-hidden`, about 20% opacity) behind the lineup, lit by a gold-to-transparent gradient |
 | L4 | Translucent panels and project cards |
 | L5 | Chrome: top bar, status strip, focus rings, menus |
 
-A 3 to 4% film-grain overlay sits above L2 to unify art and UI.
+A 7% film-grain overlay (overlay blend) sits above L2 to unify art and UI. The emblem replaces the ghost typography proposed in the first draft; ghost type may still be used on inner page headers.
 
 ## 7. Components
 
@@ -225,8 +250,10 @@ A 3 to 4% film-grain overlay sits above L2 to unify art and UI.
 - `outline`: 1px off-white border, transparent fill (like "View Mastery"); fill lightens on hover.
 - `gold-outline`: 1px gold border, used for the résumé action.
 
-**ProjectCard (tall).** Portrait card for the lineup.
-- Structure: art (top about 62%), diagonal accent bar (gold hairline at a 14-degree cut), title in `h3`, one-line summary, role tag, up to three stack tags, and a "Case study" affordance.
+**ProjectCard (tall).** Pennant-shaped card for the lineup (reference 00).
+- Proportions: 1:2 on desktop (see Section 3.2), 4:5 on mobile. The base comes to a point 28px deep, with an inner chevron line (gold on the lead card, hairline on the flanks).
+- Structure: index badge centered on the top edge, art (top 56%), a rule (teal on the lead card), context label in gold when confirmed (for example "JV Digital"), title in `h3`, one-line summary, and later a "Case study" affordance.
+- Missing art uses a clearly labelled composition placeholder (hatched area, "Composition placeholder", and what is needed). Placeholders never imitate a product interface, and the research chart placeholder shows empty axes with "No data shown".
 - Rest state: 1px line border, surface fill, art slightly desaturated (90%).
 - Hover and focus: border becomes 2px teal, a teal-soft gradient rises from the bottom (Collection's selected tile), art returns to full saturation and scales to 1.03 inside its frame, and the card lifts 4px.
 - The whole card is one link, with its accessible name equal to the project title. Secondary links (repository, demo) belong on the case study page, not nested inside the card.
@@ -263,15 +290,23 @@ Planned motion:
 
 ### Reduced-motion contract
 
-Under `prefers-reduced-motion: reduce`, behavior is consistent across every component:
+Reduced motion removes **animated movement**. It does not remove design. Under `prefers-reduced-motion: reduce`, behavior is consistent across every component:
 
-- No transforms of any kind: no translate, scale, or lift. Hover and focus states use only color, border, and opacity.
-- No entrance sequence. Content renders in its final state immediately.
-- No ambient or looping animation, and no autoplaying video.
-- Remaining color and opacity transitions are at most 120ms.
-- Smooth scrolling is disabled.
+Removed:
 
-This is implemented once, globally, through motion tokens and a single media query block. Components never define their own reduced-motion exceptions.
+- Movement on interaction: no hover lift, no art zoom, no sliding menus. State changes happen in place.
+- The entrance sequence's travel. Content renders in its final position immediately.
+- Ambient and looping animation (including any beam drift), and autoplaying video.
+- Smooth scrolling.
+
+Preserved:
+
+- Static layout: the same composition, sizes, and positions as default motion, including the set-back flanking cards.
+- Angled geometry: the brand slab, parallelogram tabs, notched panels, pennant cards, and chevron lines. These are static shapes (`clip-path` and SVG), not motion, and they are never flattened.
+- Static transforms used for layout or shape (for example centering offsets or a skewed tab plate) remain; only transforms that animate are removed.
+- Hover and focus feedback through color, border, and opacity, with transitions of 120ms or less.
+
+Implementation: components animate movement only through the `--move-lift`, `--move-rise`, and `--move-zoom` tokens. A single media query in `src/app/globals.css` sets them to no movement and disables keyframe animations. Components never define their own reduced-motion exceptions.
 
 ## 9. Responsive behavior
 
@@ -295,16 +330,19 @@ Target: WCAG 2.2 AA.
 - Navigation uses real links, with `aria-current="page"` on the active tab.
 - The mobile menu is a modal dialog: it moves focus in on open, traps focus while open, closes with Escape, and returns focus to the Menu button.
 - Text over art always sits inside a scrim or the art's dark safe zone, measured to at least 4.5:1.
-- Decorative art and ghost type use `alt=""` or `aria-hidden="true"`. Project art receives meaningful alt text only when it shows real product content.
+- Decorative art and the emblem use `alt=""` or `aria-hidden="true"`. Project art receives meaningful alt text only when it shows real product content.
 - Information is never conveyed by color alone; tags and states also carry text.
 - The layout remains usable at 200% zoom and at 320px width.
 
 ## 11. Unresolved design decisions
 
-1. **Key art direction.** Choose an environment-led, emblem-led, or portrait-led scene (see `docs/assets.md`, A1). Recommendation: emblem-led.
-2. **Play lobby reference.** Optionally supply a screenshot of the actual Play lobby to refine the hero composition.
-3. **Card order.** Which project leads the lineup (left or center)?
-4. **Project card art approach.** Real product captures, abstract emblems, or a mix (see `docs/assets.md`, A2).
-5. **Ambient motion.** Whether the beam drift ships at all; decide after the key art is evaluated in the browser.
-6. **Personal VALORANT context.** Whether the Valorant ML case study should mention Joshua's own competitive play, such as rank or Premier participation. Nothing about it appears on the site unless Joshua opts in.
-7. **Role line copy.** The one-sentence hero statement needs Joshua's approval.
+Decided in Phase 1: background direction (dark architectural scene, subtle JV emblem, one warm light), card order (Recolm, Hermes, Valorant ML), headline, and the card art approach (real captures where available, original research charts for Valorant ML, labelled placeholders otherwise).
+
+Still open:
+
+1. **Composition candidate.** Approve one of the three Phase 1 studies (see `docs/verification/phase-1/README.md`). Recommendation: candidate A, Atrium.
+2. **Final key art source.** Whether the approved scene ships as AI-generated art (with its licensing caveats), is redrawn or commissioned to match, or is replaced by an improved owned render.
+3. **Emblem visibility.** The study uses about 20% opacity, mostly hidden behind the cards. Confirm that this reads as subtle rather than missing.
+4. **Panel stack content.** Whether the right column holds Experience, About, and Contact (as in the study) or something else, such as a résumé tile.
+5. **Ambient motion.** Whether the beam drift ships at all.
+6. **Personal VALORANT context.** Whether the Valorant ML case study mentions Joshua's own competitive play. Nothing about it appears unless Joshua opts in.

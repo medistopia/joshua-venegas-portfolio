@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@custom-variant short (@media (min-width: 1024px) and (max-height: 800px));
+
+@theme {
+  --color-bg: #0b1220;
+  --color-bg-deep: #070c16;
+  --color-surface: rgb(18 28 43 / 0.72);
+  --color-surface-solid: #121c2b;
+  --color-surface-raised: #1a2638;
+  --color-line: rgb(237 234 227 / 0.14);
+  --color-line-strong: rgb(237 234 227 / 0.32);
+  --color-text: #edeae3;
+  --color-text-muted: #9aa6b8;
+  --color-gold: #c9a55c;
+  --color-gold-soft: rgb(201 165 92 / 0.18);
+  --color-teal: #3dd6c4;
+  --color-teal-soft: rgb(61 214 196 / 0.14);
+  --color-coral: #f05a5e;
+  --color-coral-soft: rgb(240 90 94 / 0.16);
+  --color-guide: #ff5cf0;
+
+  --font-display: var(--font-barlow-condensed), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --text-display-xl: clamp(3.5rem, 8vw, 8rem);
+  --text-display-xl--line-height: 0.88;
+  --text-display-xl-short: clamp(3rem, 6.5vw, 6rem);
+  --text-display-xl-short--line-height: 0.88;
+  --text-display-l: clamp(2.5rem, 5vw, 4.5rem);
+  --text-display-l--line-height: 0.9;
+  --text-label: 0.75rem;
+  --text-label--line-height: 1.2;
+
+  --tracking-label: 0.12em;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 480ms;
+}
+
+:root {
+  --move-lift: -4px;
+  --move-rise: 8px;
+  --move-zoom: 1.03;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-text);
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Shared angular geometry. These are static shapes and stay under reduced motion. */
+@utility clip-pennant {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--pennant-depth, 28px)), 50% 100%, 0 calc(100% - var(--pennant-depth, 28px)));
+}
+
+@utility clip-slab {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+}
+
+@utility clip-tab {
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+
+@utility clip-notch {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+
+@utility label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--text-label--line-height);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+@utility grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/*
+  Reduced motion removes animated movement only. Static layout, angled geometry,
+  and short color or opacity changes stay. Components animate movement through
+  the --move-* tokens, so zeroing them here covers every component.
+*/
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --move-lift: 0px;
+    --move-rise: 0px;
+    --move-zoom: 1;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
