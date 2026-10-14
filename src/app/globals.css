@@ -46,7 +46,11 @@
   --move-rise: 8px;
   --move-zoom: 1.03;
 
-  --card-h: clamp(360px, calc(100svh - 320px), 520px);
+  /*
+    Lead card height on desktop. The lineup (lead 0.5, two flanks 0.44 each, two 12px gaps,
+    so 1.38 x height + 24px) must fit the lineup column, which is a size container (cqw).
+  */
+  --card-h: min(clamp(400px, calc(100svh - 320px), 520px), calc((100cqw - 24px) / 1.38));
 }
 
 html {

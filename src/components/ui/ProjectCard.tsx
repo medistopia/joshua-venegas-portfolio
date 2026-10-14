@@ -8,16 +8,18 @@ type ProjectCardProps = {
   rank: number;
   /** "lead" and "flank" are the desktop lineup sizes; every layout is 4:5 below lg. */
   layout: "lead" | "flank" | "grid";
+  /** Spans both columns of the 640 to 1023px grid at 8:5, so its row matches the 4:5 cards' height. */
+  wide?: boolean;
 };
 
 const sizes = {
-  lead: "aspect-[4/5] w-full lg:aspect-auto lg:h-(--card-h) lg:w-[calc(var(--card-h)/2)]",
+  lead: "lg:aspect-auto lg:h-(--card-h) lg:w-[calc(var(--card-h)/2)]",
   flank:
-    "aspect-[4/5] w-full lg:mt-[calc(var(--card-h)*0.06)] lg:aspect-auto lg:h-[calc(var(--card-h)*0.88)] lg:w-[calc(var(--card-h)*0.44)]",
-  grid: "aspect-[4/5] w-full",
+    "lg:mt-[calc(var(--card-h)*0.06)] lg:aspect-auto lg:h-[calc(var(--card-h)*0.88)] lg:w-[calc(var(--card-h)*0.44)]",
+  grid: "lg:aspect-[4/5]",
 } as const;
 
-export function ProjectCard({ project, rank, layout }: ProjectCardProps) {
+export function ProjectCard({ project, rank, layout, wide = false }: ProjectCardProps) {
   const lead = layout === "lead";
   const titleId = `${project.slug}-card-title`;
   const summaryId = `${project.slug}-card-summary`;
@@ -28,7 +30,9 @@ export function ProjectCard({ project, rank, layout }: ProjectCardProps) {
       prefetch
       aria-labelledby={titleId}
       aria-describedby={summaryId}
-      className={`group relative block outline-offset-4 transition-transform duration-(--dur-base) ease-(--ease-out) hover:translate-y-(--move-lift) focus-visible:translate-y-(--move-lift) ${sizes[layout]}`}
+      className={`group relative block [container-type:size] aspect-[4/5] w-full outline-offset-4 transition-transform duration-(--dur-base) ease-(--ease-out) hover:translate-y-(--move-lift) focus-visible:translate-y-(--move-lift) ${
+        wide ? "sm:aspect-[8/5]" : ""
+      } ${sizes[layout]}`}
     >
       <span
         aria-hidden="true"
@@ -62,16 +66,18 @@ export function ProjectCard({ project, rank, layout }: ProjectCardProps) {
           {project.context && <span className="label text-gold">{project.context}</span>}
           <h3
             id={titleId}
-            className="font-display text-3xl leading-none font-bold uppercase lg:text-2xl short:text-xl"
+            className="font-display text-xl leading-none font-bold uppercase @min-[210px]:text-2xl @min-[300px]:text-3xl"
           >
             {project.title}
           </h3>
-          <p id={summaryId} className="text-sm leading-snug text-text-muted short:text-xs">
+          <p id={summaryId} className="text-xs leading-snug text-text-muted @min-[210px]:text-sm">
             {project.summary}
           </p>
+          {/* Only cards with room to keep the cue clear of a three-line summary show it. */}
           <span
             aria-hidden="true"
-            className="label mt-auto mb-11 text-text-muted transition-colors duration-(--dur-fast) group-hover:text-teal group-focus-visible:text-teal short:hidden"
+            data-card-cue
+            className="label mt-auto mb-11 hidden text-text-muted transition-colors duration-(--dur-fast) group-hover:text-teal group-focus-visible:text-teal [@container(min-width:240px)_and_(min-height:440px)]:block"
           >
             View project
           </span>

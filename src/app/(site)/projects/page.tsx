@@ -17,11 +17,14 @@ export default function ProjectsPage() {
           Featured projects
         </h2>
         <ol className="grid gap-10 pt-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-          {featured.map((project, i) => (
-            <li key={project.slug}>
-              <ProjectCard project={project} rank={i + 1} layout="grid" />
-            </li>
-          ))}
+          {featured.map((project, i) => {
+            const wide = i === featured.length - 1;
+            return (
+              <li key={project.slug} className={wide ? "sm:col-span-2 lg:col-span-1" : undefined}>
+                <ProjectCard project={project} rank={i + 1} layout="grid" wide={wide} />
+              </li>
+            );
+          })}
         </ol>
       </section>
     </PageBody>
