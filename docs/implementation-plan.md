@@ -1,6 +1,6 @@
 # Implementation Plan
 
-Status: Phase 1 approved (candidate A, Atrium, with interim background art). Phase 2, Milestone 1 (the homepage), is in progress. Each phase ends with a review by Joshua before the next one begins.
+Status: Phase 1 approved (candidate A, Atrium, with interim background art). Phase 2, Milestone 1 (the homepage), is implemented and in review. Each phase ends with a review by Joshua before the next one begins.
 
 ## Recommended stack
 
@@ -66,9 +66,11 @@ Exit criteria:
 
 What the study does not include: functional links, focus states, motion, and below-the-fold sections. Those belong to Milestone 1. The study's `_components` are throwaway; Milestone 1 rebuilds them as real components.
 
-## Phase 2: Milestone 1, the homepage
+## Phase 2: Milestone 1, the homepage (in review)
 
 Goal: one polished homepage with functional navigation, featured project cards, and a mobile layout. This is the first real milestone and is intentionally small.
+
+Status: implemented and verified; results and screenshots are in `docs/verification/milestone-1/README.md`. Waiting on Joshua's review.
 
 ### Scope
 
@@ -100,9 +102,9 @@ src/
       about/page.tsx
       contact/page.tsx
   components/
-    shell/                  # SkipLink, TopBar, BrandSlab, NavTabs, MobileMenu, StatusStrip, Footer
-    home/                   # Backdrop, Hero, Lineup, ExperienceSnapshot, AboutTeaser, ContactPanel
-    ui/                     # Button, Panel, Tag, ProjectCard, SectionHeading
+    shell/                  # SkipLink, TopBar, BrandSlab, NavTabs, MobileMenu, Footer
+    home/                   # Backdrop, Hero, Lineup, PanelStack, StatusStrip, HomeSections
+    ui/                     # ButtonLink, ProjectCard, ProjectArt, SectionHeading, PageHeader, ExperienceRows, ContactActions
   content/
     schema.ts               # Zod schemas: Profile, Project, ExperienceItem
     profile.ts              # name, affiliations, links (null until confirmed)

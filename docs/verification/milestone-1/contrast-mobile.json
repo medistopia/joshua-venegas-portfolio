@@ -1,0 +1,224 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 16,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 8430
+    },
+    {
+      "text": "A Gmail-backed workspace for agents.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 17510
+    },
+    {
+      "text": "UNG // Computer Science + ML Minor",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.98,
+      "worstBackground": "#1e2028",
+      "pixels": 18784
+    },
+    {
+      "text": "Featured work",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.51,
+      "worstBackground": "#0d1323",
+      "pixels": 7168
+    },
+    {
+      "text": "Contact",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.96,
+      "worstBackground": "#0d1322",
+      "pixels": 3840
+    }
+  ],
+  "results": [
+    {
+      "text": "Joshua",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 5616
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 6528
+    },
+    {
+      "text": "Menu",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.39,
+      "worstBackground": "#060b15",
+      "pixels": 2208
+    },
+    {
+      "text": "UNG // Computer Science + ML Minor",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.98,
+      "worstBackground": "#1e2028",
+      "pixels": 18784
+    },
+    {
+      "text": "Joshua",
+      "textColor": "#edeae3",
+      "fontSize": 56,
+      "large": true,
+      "required": 3,
+      "minRatio": 15.23,
+      "worstBackground": "#0e1521",
+      "pixels": 41808
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#edeae3",
+      "fontSize": 56,
+      "large": true,
+      "required": 3,
+      "minRatio": 15.03,
+      "worstBackground": "#111623",
+      "pixels": 48508
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.33,
+      "worstBackground": "#0d1422",
+      "pixels": 26292
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
+      "pixels": 19068
+    },
+    {
+      "text": "Contact",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.96,
+      "worstBackground": "#0d1322",
+      "pixels": 3840
+    },
+    {
+      "text": "About",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
+      "pixels": 2752
+    },
+    {
+      "text": "Featured work",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.51,
+      "worstBackground": "#0d1323",
+      "pixels": 7168
+    },
+    {
+      "text": "01",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 1088
+    },
+    {
+      "text": "Placeholder",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.19,
+      "worstBackground": "#181c25",
+      "pixels": 6080
+    },
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 8430
+    },
+    {
+      "text": "Project Hermes",
+      "textColor": "#edeae3",
+      "fontSize": 30,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 26928
+    },
+    {
+      "text": "A Gmail-backed workspace for agents.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 17510
+    }
+  ]
+}

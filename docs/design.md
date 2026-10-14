@@ -155,6 +155,7 @@ Height is the constraint. Applied when the viewport is at least 1024px wide and 
 - The background uses a separate portrait crop. The key light and a small emblem sit in a short art band (about 96px) under the top bar; the Phase 1 study used about 27% of the viewport height, which delayed the name and the first card.
 - Below the band, a scrim fades the art to solid navy so text never sits on the bright part of the beam. Contrast is verified behind each line of text (Section 10).
 - Cards stack vertically in priority order: Hermes, Recolm, Valorant ML, at a 4:5 ratio, full width minus 16px margins.
+- The panel stack and status strip are desktop-only. On mobile, the same destinations follow the lineup as the Experience, About, and Contact sections, and the menu links to each page.
 
 ### 3.5 Lineup order across layouts
 
@@ -256,11 +257,11 @@ A 7% film-grain overlay (overlay blend) sits above L2 to unify art and UI. The e
 
 **ProjectCard (tall).** Pennant-shaped card for the lineup (reference 00).
 - Proportions: 1:2 on desktop (see Section 3.2), 4:5 on mobile. The base comes to a point 28px deep, with an inner chevron line (gold on the lead card, hairline on the flanks).
-- Structure: index badge centered on the top edge, art (top 56%), a rule (teal on the lead card), context label in gold when confirmed (for example "JV Digital"), title in `h3`, one-line summary, and later a "Case study" affordance.
-- Missing art uses a clearly labelled composition placeholder (hatched area, "Composition placeholder", and what is needed). Placeholders never imitate a product interface, and the research chart placeholder shows empty axes with "No data shown".
-- Rest state: 1px line border, surface fill, art slightly desaturated (90%).
-- Hover and focus: border becomes 2px teal, a teal-soft gradient rises from the bottom (Collection's selected tile), art returns to full saturation and scales to 1.03 inside its frame, and the card lifts 4px.
-- The whole card is one link, with its accessible name equal to the project title. Secondary links (repository, demo) belong on the case study page, not nested inside the card.
+- Structure: index badge centered on the top edge (the featured-order number: Hermes 01, Recolm 02, Valorant ML 03), art (top 56%), a rule (teal on the lead card), context label in gold when confirmed (for example "JV Digital"), title in `h3`, one-line summary, and a "View project" cue at the bottom (hidden on short laptops, where the flanks have no room).
+- Missing art uses a clearly labelled placeholder: the art area is lit by a warm glow from the top (echoing the key light) over a faint hatch, and holds an empty dashed capture frame with gold corner ticks, a "Placeholder" label, and what is pending ("Product capture pending", or "Research chart pending. No data shown." with empty axes). Placeholders never imitate a product interface.
+- Rest state: 1px border (light on the lead card, hairline on the flanks), solid surface fill.
+- Hover and focus: the border, rule, chevron, and cue turn teal, a teal-soft gradient rises from the bottom (Collection's selected tile), the art scales to 1.03 inside its frame, and the card lifts 4px. The focus ring is a 2px teal rectangle 4px outside the card, drawn on the link itself, so the pennant clip never cuts it.
+- The whole card is one link, with its accessible name equal to the project title and its description equal to the summary. Secondary links (repository, demo) belong on the case study page, not nested inside the card.
 - Missing data (role, stack, links) is omitted, never filled with placeholder claims.
 
 **Panel.** Translucent surface, hairline border, optional notched top-right corner, optional 2px gold top rule for leadership or prestige content.
@@ -269,7 +270,7 @@ A 7% film-grain overlay (overlay blend) sits above L2 to unify art and UI. The e
 
 **Tag.** Mono caps label in a 1px bordered box with tight padding.
 
-**StatusStrip.** Bottom bar of the hero, showing one confirmed status line and a scroll cue.
+**StatusStrip.** Bottom bar of the hero on desktop, showing one confirmed status line.
 
 **MobileMenu.** Full-screen dialog with angled list items at `display-l` size, a close button, and contact links at the bottom.
 

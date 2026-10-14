@@ -18,7 +18,7 @@ If a change conflicts with these documents, update the document in the same pull
 
 ## Current status
 
-Phase 1 is approved: candidate A (Atrium) is the visual direction, and its background is an interim asset until final-resolution art is produced. Phase 2 (Milestone 1, the homepage) is in progress. The composition study at `/lab/composition` (development only) remains for reference; its results are in `docs/verification/phase-1/README.md`. The study's `src/app/lab/composition/_components` are throwaway and must not be imported by real pages.
+Phase 1 is approved: candidate A (Atrium) is the visual direction, and its background is an interim asset until final-resolution art is produced. Phase 2 (Milestone 1, the homepage) is implemented and in review; results are in `docs/verification/milestone-1/README.md`. Do not start Phase 3 until Joshua approves the homepage. The composition study at `/lab/composition` (development only) remains for reference; its results are in `docs/verification/phase-1/README.md`. The study's `src/app/lab/composition/_components` are throwaway and must not be imported by real pages.
 
 The lineup is an ordered list in priority order (Hermes, Recolm, Valorant ML); desktop CSS places it as Recolm, Hermes, Valorant ML (`docs/design.md`, Section 3.5).
 
@@ -51,17 +51,18 @@ npm run dev                    # local development
 npm run build                  # production build
 npm run lint
 npm run typecheck              # next typegen, then tsc
+npm run test:e2e               # production build on port 3200, then the Playwright specs
 npm run capture:composition    # Phase 1 captures (dev server on port 3100)
 python scripts/art/render_backdrop.py     # regenerate candidate C art
-python scripts/art/measure_safe_zone.py   # hero contrast over the art
+python scripts/art/measure_safe_zone.py   # quick p98 screening of hero contrast (approximate)
 python scripts/art/contact_sheet.py       # comparison sheets
 ```
 
-Playwright test suites (`npx playwright test`) arrive with Milestone 1.
+The Playwright specs in `tests/e2e` write screenshots and contrast results to `docs/verification/milestone-1/`.
 
 ## Verification before requesting review
 
-For any UI change, capture screenshots at 1440 x 900, 1280 x 720, and 390 x 844, in both default and reduced motion, and run the keyboard and reduced-motion tests. Details are in `docs/implementation-plan.md`, "Verification for Milestone 1".
+For any UI change, run `npm run test:e2e`: it captures screenshots at 1440 x 900, 1280 x 720, and 390 x 844 in both default and reduced motion, and runs the keyboard, reduced-motion, and text-contrast tests. Review the screenshots before requesting review. Details are in `docs/implementation-plan.md`, "Verification for Milestone 1".
 
 ## Git
 
