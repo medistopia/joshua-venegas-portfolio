@@ -1,6 +1,6 @@
 # Asset Plan
 
-Status: Phase 1 in review. Study art exists for three background candidates; no final assets exist yet.
+Status: candidate A (Atrium) is the approved background, still interim art. The lobby art (A2-lobby) is approved to ship for now; no final assets exist yet.
 
 This document lists every asset the portfolio needs, where each one appears, its specifications, sourcing options, and licensing constraints. The cinematic background (A1) and project card art (A2) are **early visual decisions**, made in Phase 1 of `docs/implementation-plan.md` before homepage components are built.
 
@@ -73,7 +73,7 @@ Blender, purchased art, and commissions are **not** prerequisites. This is what 
 
 **Decided approach.** Real product captures where available; original research charts for Valorant ML; clearly labelled composition placeholders for anything missing. Placeholders never imitate a product interface.
 
-**Placement.** The art area of each ProjectCard (top 56% of the card), reused as case study header art.
+**Placement.** The full face of each pennant in the lobby and the Projects view, reused as the case study banner and the project list thumbnails. Until captures exist, the A2-lobby art fills these places.
 
 **Requirements.**
 
@@ -127,15 +127,15 @@ Blender, purchased art, and commissions are **not** prerequisites. This is what 
 
 ## Content needed from Joshua
 
-Nothing below will be invented. Received in October 2026 and recorded in `src/content`: expected graduation (Spring 2027), interests, the AI Lab supervisor (Prof. Mohammad Mohebi), the Foxtrot collaboration with Brandon Hall, Hermes's stack, contributions, and Phase 1 release date (October 8, 2026), Recolm's client, stack, and scope of work, the Valorant ML methods, the research with Dr. Lai Wei and Dr. Yong Wei (title only), and two experiments (Auto Research Agent, Lyn Desktop Companion).
+Nothing below will be invented. Received in October 2026 and recorded in `src/content`: expected graduation (Spring 2027), interests, the AI Lab supervisor (Prof. Mohammad Mohebi), the Foxtrot collaboration with Brandon Hall, Hermes's stack, contributions, and Phase 1 release date (October 8, 2026), Recolm's client, stack, and scope of work, the Valorant ML methods, the research with Dr. Lai Wei and Dr. Yong Wei (title only), and two experiments (Auto Research Agent, Lyn Desktop Companion). Later in October 2026: Joshua's Foxtrot title (Software Engineer, in the Special Projects Group) and the agreement of all four collaborators to be listed. Of the Foxtrot offer letter, only the title is recorded; its compensation, terms, and the systems it lists are not published.
 
 Still needed:
 
 - Approval to publish the résumé PDF.
 - Public contact method (email or form), plus GitHub and LinkedIn URLs to display.
-- The AI Lab's host organization, Joshua's role title at Foxtrot, and the dates for each role, if they should be shown.
+- The AI Lab's host organization and the dates for each role, if they should be shown.
 - Research with Dr. Lai Wei and Dr. Yong Wei: project title, Joshua's responsibilities, methods, deliverables, and current milestone.
-- Collaborators: confirmation that each person agrees to be listed, plus any portraits, biographies, and links, each with a source.
+- Collaborators: any portraits, biographies, and links, each with a source.
 - For each project: problem, team size, key implementation decisions, evidence (repository, demo, screenshots, write-up), and real outcomes.
 - Hermes: sanitized product captures (no real email content, customer information, credentials, or private operational details).
 - Recolm: written client permission to name the client (recorded in content with `nameApproved: false`, so it is not shown) and to show screenshots.
@@ -155,6 +155,6 @@ An asset ships only when its license column is filled and Joshua has approved it
 | A2-recolm | Recolm card art | Missing | Capture | TBD | Client permission pending |
 | A2-hermes | Hermes card art | Missing | Capture | Owned once captured | Sanitize data |
 | A2-valml | Valorant ML chart | Missing | Generated from real results | Owned | Data terms pending |
-| A2-study-lobby | Lobby study art: three pennants, two "Currently working on" slides, three feature tiles | Study only | Cursor image tool, styled from the approved Atrium scene | Pending decision | `public/art/study/lobby/*`. Original, with no text, logos, interfaces, charts, people, or game imagery. Illustrative only: none depicts a real product, campus, or result. |
+| A2-lobby | Lobby art: five project pennants (the three featured projects and the two experiments), two "Currently working on" slides, three feature tiles | Approved to ship for now (Joshua, October 2026); to be replaced as captures and owned art arrive | Cursor image tool, styled from the approved Atrium scene | Pending: the generating tool's terms (link and date) and Joshua's acceptance that the output may not be protected by copyright, both before deployment | `public/art/lobby/*`. Original, with no text, logos, interfaces, charts, people, or game imagery. Illustrative only: none depicts a real product, campus, or result. |
 | A3-monogram | JV monogram and emblem | Draft | Original | Owned | Needs Joshua's review |
 | A4-resume | Résumé PDF | Awaiting approval | Joshua | Owned | |

@@ -1,0 +1,295 @@
+{
+  "path": "/about",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 23,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "Education",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.57,
+      "worstBackground": "#101928",
+      "pixels": 1085
+    },
+    {
+      "text": "Interests",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.6,
+      "worstBackground": "#0b1220",
+      "pixels": 4960
+    },
+    {
+      "text": "Full biography in progress",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.6,
+      "worstBackground": "#0b1220",
+      "pixels": 14368
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.66,
+      "worstBackground": "#0d111a",
+      "pixels": 27760
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.88,
+      "worstBackground": "#080d18",
+      "pixels": 10640
+    }
+  ],
+  "results": [
+    {
+      "text": "Joshua",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 5616
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 6528
+    },
+    {
+      "text": "Menu",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.37,
+      "worstBackground": "#070b15",
+      "pixels": 2208
+    },
+    {
+      "text": "About",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.46,
+      "worstBackground": "#060b14",
+      "pixels": 2752
+    },
+    {
+      "text": "Joshua Venegas",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 8.21,
+      "worstBackground": "#4a4239",
+      "pixels": 47808
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.66,
+      "worstBackground": "#0d111a",
+      "pixels": 27760
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.88,
+      "worstBackground": "#080d18",
+      "pixels": 10640
+    },
+    {
+      "text": "I'm a computer science student at the University of North Ge",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.04,
+      "worstBackground": "#0a0e19",
+      "pixels": 26964
+    },
+    {
+      "text": "I'm a computer science student at the University of North Ge",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.06,
+      "worstBackground": "#090e19",
+      "pixels": 28728
+    },
+    {
+      "text": "I'm a computer science student at the University of North Ge",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.09,
+      "worstBackground": "#080e18",
+      "pixels": 14364
+    },
+    {
+      "text": "I'm a software engineer in Foxtrot's Special Projects Group,",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 25200
+    },
+    {
+      "text": "I'm a software engineer in Foxtrot's Special Projects Group,",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 28098
+    },
+    {
+      "text": "I'm a software engineer in Foxtrot's Special Projects Group,",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 17892
+    },
+    {
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 27300
+    },
+    {
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 25788
+    },
+    {
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 24612
+    },
+    {
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 7896
+    },
+    {
+      "text": "Interests",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.6,
+      "worstBackground": "#0b1220",
+      "pixels": 4960
+    },
+    {
+      "text": "Software engineering",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.58,
+      "worstBackground": "#0b1220",
+      "pixels": 9622
+    },
+    {
+      "text": "Applied machine learning",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.58,
+      "worstBackground": "#0b1220",
+      "pixels": 11390
+    },
+    {
+      "text": "Building useful systems",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.58,
+      "worstBackground": "#0b1220",
+      "pixels": 10642
+    },
+    {
+      "text": "Full biography in progress",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.6,
+      "worstBackground": "#0b1220",
+      "pixels": 14368
+    },
+    {
+      "text": "Education",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.57,
+      "worstBackground": "#101928",
+      "pixels": 1085
+    }
+  ]
+}

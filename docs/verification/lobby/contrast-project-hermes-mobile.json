@@ -1,0 +1,255 @@
+{
+  "path": "/projects/project-hermes",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 19,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "What I worked on",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 8832
+    },
+    {
+      "text": "Status",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3296
+    },
+    {
+      "text": "Phase 1 production release",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 14368
+    },
+    {
+      "text": "With",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 2208
+    },
+    {
+      "text": "Foxtrot",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 3840
+    }
+  ],
+  "results": [
+    {
+      "text": "Joshua",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 5616
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 6528
+    },
+    {
+      "text": "Menu",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.37,
+      "worstBackground": "#070b15",
+      "pixels": 2208
+    },
+    {
+      "text": "Foxtrot",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 3840
+    },
+    {
+      "text": "Project Hermes",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 13.66,
+      "worstBackground": "#142129",
+      "pixels": 47904
+    },
+    {
+      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents.",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.94,
+      "worstBackground": "#0f1725",
+      "pixels": 18816
+    },
+    {
+      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents.",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.94,
+      "worstBackground": "#0f1725",
+      "pixels": 22638
+    },
+    {
+      "text": "Status",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3296
+    },
+    {
+      "text": "Pilot support and follow-up work",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 14688
+    },
+    {
+      "text": "Phase 1 production release",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 14368
+    },
+    {
+      "text": "October 8, 2026",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 7344
+    },
+    {
+      "text": "With",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 2208
+    },
+    {
+      "text": "Brandon Hall",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 5746
+    },
+    {
+      "text": "What I worked on",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 8832
+    },
+    {
+      "text": "Protected sign-in and organization access",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 15504
+    },
+    {
+      "text": "Protected sign-in and organization access",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 3162
+    },
+    {
+      "text": "Reading Gmail threads and composing replies",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17306
+    },
+    {
+      "text": "Reading Gmail threads and composing replies",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 2992
+    },
+    {
+      "text": "Contacts, deals, and linking conversations to contacts",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 12376
+    }
+  ]
+}

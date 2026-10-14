@@ -1,0 +1,325 @@
+{
+  "path": "/experience",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 26,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "·",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1632
+    },
+    {
+      "text": "Special Projects Group",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 12160
+    },
+    {
+      "text": "Work includes Project Hermes, in collaboration with Brandon ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 21046
+    },
+    {
+      "text": "Work includes Project Hermes, in collaboration with Brandon ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 8160
+    },
+    {
+      "text": "Under Prof. Mohammad Mohebi.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 14586
+    }
+  ],
+  "results": [
+    {
+      "text": "Joshua",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 5616
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 6528
+    },
+    {
+      "text": "Menu",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.37,
+      "worstBackground": "#070b15",
+      "pixels": 2208
+    },
+    {
+      "text": "Experience",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.41,
+      "worstBackground": "#070c15",
+      "pixels": 5504
+    },
+    {
+      "text": "Experience",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 9.73,
+      "worstBackground": "#3f372d",
+      "pixels": 33504
+    },
+    {
+      "text": "Roles",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.88,
+      "worstBackground": "#080d18",
+      "pixels": 2752
+    },
+    {
+      "text": "Foxtrot",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3840
+    },
+    {
+      "text": "·",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1632
+    },
+    {
+      "text": "Special Projects Group",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 12160
+    },
+    {
+      "text": "Software Engineer",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 20532
+    },
+    {
+      "text": "Work includes Project Hermes, in collaboration with Brandon ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 21046
+    },
+    {
+      "text": "Work includes Project Hermes, in collaboration with Brandon ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 8160
+    },
+    {
+      "text": "AI Lab",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3296
+    },
+    {
+      "text": "Team Leader",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 13282
+    },
+    {
+      "text": "Under Prof. Mohammad Mohebi.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 14586
+    },
+    {
+      "text": "JV Digital",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 5504
+    },
+    {
+      "text": "Founder",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 8932
+    },
+    {
+      "text": "Recolm, a listing marketplace, was developed through JV Digi",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 20468
+    },
+    {
+      "text": "Recolm, a listing marketplace, was developed through JV Digi",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 8296
+    },
+    {
+      "text": "University of North Georgia",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 14912
+    },
+    {
+      "text": "Computer science student, machine learning minor",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 29058
+    },
+    {
+      "text": "Computer science student, machine learning minor",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 25462
+    },
+    {
+      "text": "Expected graduation: Spring 2027.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 15504
+    },
+    {
+      "text": "Research",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.6,
+      "worstBackground": "#0b1220",
+      "pixels": 4416
+    },
+    {
+      "text": "Research with Dr. Lai Wei and Dr. Yong Wei",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 35670
+    },
+    {
+      "text": "Research with Dr. Lai Wei and Dr. Yong Wei",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 9454
+    }
+  ]
+}

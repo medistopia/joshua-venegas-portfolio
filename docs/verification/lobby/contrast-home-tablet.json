@@ -1,0 +1,265 @@
+{
+  "path": "/",
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "deviceScaleFactor": 1
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 20,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.52,
+      "worstBackground": "#0d1322",
+      "pixels": 4131
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.52,
+      "worstBackground": "#0d1322",
+      "pixels": 2992
+    },
+    {
+      "text": "UNG // Computer Science + ML Minor",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.96,
+      "worstBackground": "#0d1322",
+      "pixels": 4688
+    },
+    {
+      "text": "01",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "02",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    }
+  ],
+  "results": [
+    {
+      "text": "Joshua",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 1392
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 1632
+    },
+    {
+      "text": "Menu",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.47,
+      "worstBackground": "#060a14",
+      "pixels": 544
+    },
+    {
+      "text": "Currently working on",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.42,
+      "worstBackground": "#060c15",
+      "pixels": 2752
+    },
+    {
+      "text": "Foxtrot",
+      "textColor": "#edeae3",
+      "fontSize": 30,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.1,
+      "worstBackground": "#080e17",
+      "pixels": 3492
+    },
+    {
+      "text": "Building and supporting Project Hermes with Foxtrot.",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 11.06,
+      "worstBackground": "#372e25",
+      "pixels": 5933
+    },
+    {
+      "text": "View Project Hermes",
+      "textColor": "#3dd6c4",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 10.75,
+      "worstBackground": "#080d17",
+      "pixels": 2624
+    },
+    {
+      "text": "UNG // Computer Science + ML Minor",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.96,
+      "worstBackground": "#0d1322",
+      "pixels": 4688
+    },
+    {
+      "text": "Joshua",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
+      "pixels": 5328
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
+      "pixels": 6192
+    },
+    {
+      "text": "Software Engineer, Foxtrot",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.41,
+      "worstBackground": "#0d1323",
+      "pixels": 3584
+    },
+    {
+      "text": "AI Lab Team Leader",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
+      "pixels": 2480
+    },
+    {
+      "text": "Founder, JV Digital",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
+      "pixels": 2624
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.52,
+      "worstBackground": "#0d1322",
+      "pixels": 4131
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.52,
+      "worstBackground": "#0d1322",
+      "pixels": 2992
+    },
+    {
+      "text": "About",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 946
+    },
+    {
+      "text": "Contact",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 1320
+    },
+    {
+      "text": "01",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "02",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "03",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    }
+  ]
+}

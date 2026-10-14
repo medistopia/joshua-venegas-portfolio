@@ -1,0 +1,345 @@
+{
+  "path": "/projects",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 28,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "Collaborators",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.95,
+      "worstBackground": "#070c15",
+      "pixels": 1792
+    },
+    {
+      "text": "Home",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 792
+    },
+    {
+      "text": "Experience",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1804
+    },
+    {
+      "text": "About",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 946
+    },
+    {
+      "text": "Contact",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1320
+    }
+  ],
+  "results": [
+    {
+      "text": "Home",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 792
+    },
+    {
+      "text": "Projects",
+      "textColor": "#070c16",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.29,
+      "worstBackground": "#edeae3",
+      "pixels": 1496
+    },
+    {
+      "text": "Experience",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1804
+    },
+    {
+      "text": "About",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 946
+    },
+    {
+      "text": "Contact",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1320
+    },
+    {
+      "text": "Projects",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.45,
+      "worstBackground": "#070b15",
+      "pixels": 1104
+    },
+    {
+      "text": "Select a project",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.3,
+      "worstBackground": "#070c15",
+      "pixels": 13008
+    },
+    {
+      "text": "01",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "Foxtrot",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 960
+    },
+    {
+      "text": "Project Hermes",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.29,
+      "worstBackground": "#070c16",
+      "pixels": 4321
+    },
+    {
+      "text": "02",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "JV Digital",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 1376
+    },
+    {
+      "text": "Recolm",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.29,
+      "worstBackground": "#070c16",
+      "pixels": 1943
+    },
+    {
+      "text": "03",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "Research",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 1104
+    },
+    {
+      "text": "Valorant ML",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.29,
+      "worstBackground": "#070c16",
+      "pixels": 3393
+    },
+    {
+      "text": "04",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "Experiment",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 1376
+    },
+    {
+      "text": "Auto Research Agent",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.29,
+      "worstBackground": "#070c16",
+      "pixels": 5800
+    },
+    {
+      "text": "05",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "Experiment",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.31,
+      "worstBackground": "#070e18",
+      "pixels": 1376
+    },
+    {
+      "text": "Lyn Desktop Companion",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.29,
+      "worstBackground": "#070c16",
+      "pixels": 3335
+    },
+    {
+      "text": "Lyn Desktop Companion",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.29,
+      "worstBackground": "#070c16",
+      "pixels": 2871
+    },
+    {
+      "text": "Collaborators",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.95,
+      "worstBackground": "#070c15",
+      "pixels": 1792
+    },
+    {
+      "text": "BH",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 304
+    },
+    {
+      "text": "LW",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 342
+    },
+    {
+      "text": "YW",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 361
+    },
+    {
+      "text": "MM",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 342
+    }
+  ]
+}

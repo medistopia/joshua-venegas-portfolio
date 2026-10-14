@@ -1,0 +1,435 @@
+{
+  "path": "/about",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 37,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "Expected graduation:",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.47,
+      "worstBackground": "#1d222b",
+      "pixels": 2448
+    },
+    {
+      "text": "About this site",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.55,
+      "worstBackground": "#1c212a",
+      "pixels": 2064
+    },
+    {
+      "text": "An original portfolio design inspired by game client menus. ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.56,
+      "worstBackground": "#1c2129",
+      "pixels": 7055
+    },
+    {
+      "text": "An original portfolio design inspired by game client menus. ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.63,
+      "worstBackground": "#1b2029",
+      "pixels": 4692
+    },
+    {
+      "text": "Source code",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.64,
+      "worstBackground": "#1a2029",
+      "pixels": 1520
+    }
+  ],
+  "results": [
+    {
+      "text": "Home",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 792
+    },
+    {
+      "text": "Projects",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1496
+    },
+    {
+      "text": "Experience",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1804
+    },
+    {
+      "text": "About",
+      "textColor": "#070c16",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.29,
+      "worstBackground": "#edeae3",
+      "pixels": 946
+    },
+    {
+      "text": "Contact",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1320
+    },
+    {
+      "text": "About",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.45,
+      "worstBackground": "#070b15",
+      "pixels": 688
+    },
+    {
+      "text": "Joshua Venegas",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.3,
+      "worstBackground": "#070c15",
+      "pixels": 11952
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.9,
+      "worstBackground": "#080d15",
+      "pixels": 9680
+    },
+    {
+      "text": "I'm a computer science student at the University of North Ge",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.09,
+      "worstBackground": "#13161b",
+      "pixels": 14028
+    },
+    {
+      "text": "I'm a computer science student at the University of North Ge",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.19,
+      "worstBackground": "#080d16",
+      "pixels": 3591
+    },
+    {
+      "text": "I'm a software engineer in Foxtrot's Special Projects Group,",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.85,
+      "worstBackground": "#0c1018",
+      "pixels": 13419
+    },
+    {
+      "text": "I'm a software engineer in Foxtrot's Special Projects Group,",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.21,
+      "worstBackground": "#070d16",
+      "pixels": 4473
+    },
+    {
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.74,
+      "worstBackground": "#0d1118",
+      "pixels": 13377
+    },
+    {
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.18,
+      "worstBackground": "#080d17",
+      "pixels": 8232
+    },
+    {
+      "text": "Interests",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 1232
+    },
+    {
+      "text": "Software engineering",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.29,
+      "worstBackground": "#070c16",
+      "pixels": 2397
+    },
+    {
+      "text": "Applied machine learning",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.18,
+      "worstBackground": "#080d17",
+      "pixels": 2839
+    },
+    {
+      "text": "Building useful systems",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.6,
+      "worstBackground": "#0e121a",
+      "pixels": 2652
+    },
+    {
+      "text": "Full biography in progress",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.89,
+      "worstBackground": "#080d16",
+      "pixels": 3584
+    },
+    {
+      "text": "Education",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.86,
+      "worstBackground": "#1d222a",
+      "pixels": 1232
+    },
+    {
+      "text": "University of North Georgia, computer science with a machine",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 13.28,
+      "worstBackground": "#1d222b",
+      "pixels": 8020
+    },
+    {
+      "text": "University of North Georgia, computer science with a machine",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 13.28,
+      "worstBackground": "#1d222b",
+      "pixels": 3540
+    },
+    {
+      "text": "Expected graduation:",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.47,
+      "worstBackground": "#1d222b",
+      "pixels": 2448
+    },
+    {
+      "text": "Spring 2027",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.24,
+      "worstBackground": "#0f1825",
+      "pixels": 1360
+    },
+    {
+      "text": "Roles",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.94,
+      "worstBackground": "#1c212a",
+      "pixels": 688
+    },
+    {
+      "text": "Software Engineer, Foxtrot",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 13.46,
+      "worstBackground": "#1c2129",
+      "pixels": 4000
+    },
+    {
+      "text": "AI Lab Team Leader",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 13.44,
+      "worstBackground": "#1c212a",
+      "pixels": 3000
+    },
+    {
+      "text": "Founder, JV Digital",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 13.44,
+      "worstBackground": "#1c212a",
+      "pixels": 2840
+    },
+    {
+      "text": "About this site",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.55,
+      "worstBackground": "#1c212a",
+      "pixels": 2064
+    },
+    {
+      "text": "An original portfolio design inspired by game client menus. ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.56,
+      "worstBackground": "#1c2129",
+      "pixels": 7055
+    },
+    {
+      "text": "An original portfolio design inspired by game client menus. ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.63,
+      "worstBackground": "#1b2029",
+      "pixels": 4692
+    },
+    {
+      "text": "Source code",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.64,
+      "worstBackground": "#1a2029",
+      "pixels": 1520
+    },
+    {
+      "text": "Collaborators",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.95,
+      "worstBackground": "#070c15",
+      "pixels": 1792
+    },
+    {
+      "text": "BH",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 304
+    },
+    {
+      "text": "LW",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 342
+    },
+    {
+      "text": "YW",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 361
+    },
+    {
+      "text": "MM",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 342
+    }
+  ]
+}

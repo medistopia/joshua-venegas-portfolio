@@ -1,0 +1,205 @@
+{
+  "path": "/contact",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 14,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "Public contact details are being finalized and will be liste",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.29,
+      "worstBackground": "#0f1725",
+      "pixels": 10320
+    },
+    {
+      "text": "Public contact details are being finalized and will be liste",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.3,
+      "worstBackground": "#0e1724",
+      "pixels": 1640
+    },
+    {
+      "text": "Collaborators",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.95,
+      "worstBackground": "#070c15",
+      "pixels": 1792
+    },
+    {
+      "text": "Home",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 792
+    },
+    {
+      "text": "Projects",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1496
+    }
+  ],
+  "results": [
+    {
+      "text": "Home",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 792
+    },
+    {
+      "text": "Projects",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1496
+    },
+    {
+      "text": "Experience",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1804
+    },
+    {
+      "text": "About",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 946
+    },
+    {
+      "text": "Contact",
+      "textColor": "#070c16",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.29,
+      "worstBackground": "#edeae3",
+      "pixels": 1320
+    },
+    {
+      "text": "Contact",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.45,
+      "worstBackground": "#070b15",
+      "pixels": 960
+    },
+    {
+      "text": "Get in touch",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.3,
+      "worstBackground": "#070c15",
+      "pixels": 9312
+    },
+    {
+      "text": "Public contact details are being finalized and will be liste",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.29,
+      "worstBackground": "#0f1725",
+      "pixels": 10320
+    },
+    {
+      "text": "Public contact details are being finalized and will be liste",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.3,
+      "worstBackground": "#0e1724",
+      "pixels": 1640
+    },
+    {
+      "text": "Collaborators",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.95,
+      "worstBackground": "#070c15",
+      "pixels": 1792
+    },
+    {
+      "text": "BH",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 304
+    },
+    {
+      "text": "LW",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 342
+    },
+    {
+      "text": "YW",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 361
+    },
+    {
+      "text": "MM",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 342
+    }
+  ]
+}

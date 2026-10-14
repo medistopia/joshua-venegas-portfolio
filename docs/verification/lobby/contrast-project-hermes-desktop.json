@@ -1,0 +1,555 @@
+{
+  "path": "/projects/project-hermes",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 49,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "Foxtrot",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.62,
+      "worstBackground": "#0f282e",
+      "pixels": 960
+    },
+    {
+      "text": "Google Workspace sign-in",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.22,
+      "worstBackground": "#101825",
+      "pixels": 2691
+    },
+    {
+      "text": "What I worked on",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.29,
+      "worstBackground": "#0f1725",
+      "pixels": 2208
+    },
+    {
+      "text": "Supabase",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.29,
+      "worstBackground": "#0f1724",
+      "pixels": 897
+    },
+    {
+      "text": "Gmail API",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.29,
+      "worstBackground": "#0f1725",
+      "pixels": 1001
+    }
+  ],
+  "results": [
+    {
+      "text": "Home",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 792
+    },
+    {
+      "text": "Projects",
+      "textColor": "#070c16",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.29,
+      "worstBackground": "#edeae3",
+      "pixels": 1496
+    },
+    {
+      "text": "Experience",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1804
+    },
+    {
+      "text": "About",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 946
+    },
+    {
+      "text": "Contact",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.97,
+      "worstBackground": "#070b16",
+      "pixels": 1320
+    },
+    {
+      "text": "Foxtrot",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.42,
+      "worstBackground": "#060c15",
+      "pixels": 960
+    },
+    {
+      "text": "Project Hermes",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.1,
+      "worstBackground": "#080e17",
+      "pixels": 11952
+    },
+    {
+      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents.",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 13.25,
+      "worstBackground": "#1e222b",
+      "pixels": 10479
+    },
+    {
+      "text": "Status",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 816
+    },
+    {
+      "text": "Pilot support and follow-up work",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 3672
+    },
+    {
+      "text": "Phase 1 production release",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3584
+    },
+    {
+      "text": "October 8, 2026",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 1836
+    },
+    {
+      "text": "With",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 544
+    },
+    {
+      "text": "Brandon Hall",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 1428
+    },
+    {
+      "text": "What I worked on",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.29,
+      "worstBackground": "#0f1725",
+      "pixels": 2208
+    },
+    {
+      "text": "Protected sign-in and organization access",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 4726
+    },
+    {
+      "text": "Reading Gmail threads and composing replies",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 5134
+    },
+    {
+      "text": "Contacts, deals, and linking conversations to contacts",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6052
+    },
+    {
+      "text": "Inbox layout, keyboard interactions, loading states, and err",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6800
+    },
+    {
+      "text": "Inbox layout, keyboard interactions, loading states, and err",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 952
+    },
+    {
+      "text": "Session isolation between environments",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 4505
+    },
+    {
+      "text": "OAuth refusal and revocation handling",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 4284
+    },
+    {
+      "text": "Logging safeguards and operational documentation",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 5797
+    },
+    {
+      "text": "Reply-recipient validation that shows the destination and re",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6358
+    },
+    {
+      "text": "Reply-recipient validation that shows the destination and re",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 4012
+    },
+    {
+      "text": "Automated testing and production release verification",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6018
+    },
+    {
+      "text": "Stack",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.3,
+      "worstBackground": "#0e1724",
+      "pixels": 688
+    },
+    {
+      "text": "Next.js",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.3,
+      "worstBackground": "#0e1724",
+      "pixels": 780
+    },
+    {
+      "text": "TypeScript",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.3,
+      "worstBackground": "#0e1724",
+      "pixels": 1118
+    },
+    {
+      "text": "Supabase",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.29,
+      "worstBackground": "#0f1724",
+      "pixels": 897
+    },
+    {
+      "text": "Google Workspace sign-in",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.22,
+      "worstBackground": "#101825",
+      "pixels": 2691
+    },
+    {
+      "text": "Gmail API",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.29,
+      "worstBackground": "#0f1725",
+      "pixels": 1001
+    },
+    {
+      "text": "Vercel",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.29,
+      "worstBackground": "#0f1725",
+      "pixels": 663
+    },
+    {
+      "text": "All projects",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.95,
+      "worstBackground": "#070c15",
+      "pixels": 1545
+    },
+    {
+      "text": "Foxtrot",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.62,
+      "worstBackground": "#0f282e",
+      "pixels": 960
+    },
+    {
+      "text": "Project Hermes",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 12.82,
+      "worstBackground": "#0f282e",
+      "pixels": 2420
+    },
+    {
+      "text": "JV Digital",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.72,
+      "worstBackground": "#0e1725",
+      "pixels": 1376
+    },
+    {
+      "text": "Recolm",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.97,
+      "worstBackground": "#0e1725",
+      "pixels": 1078
+    },
+    {
+      "text": "Research",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.71,
+      "worstBackground": "#0f1725",
+      "pixels": 1104
+    },
+    {
+      "text": "Valorant ML",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.94,
+      "worstBackground": "#0f1725",
+      "pixels": 1892
+    },
+    {
+      "text": "Experiment",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.71,
+      "worstBackground": "#0f1725",
+      "pixels": 1376
+    },
+    {
+      "text": "Auto Research Agent",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.94,
+      "worstBackground": "#0f1725",
+      "pixels": 3212
+    },
+    {
+      "text": "Experiment",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.72,
+      "worstBackground": "#0e1725",
+      "pixels": 1376
+    },
+    {
+      "text": "Lyn Desktop Companion",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.94,
+      "worstBackground": "#0f1725",
+      "pixels": 3542
+    },
+    {
+      "text": "Collaborators",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.95,
+      "worstBackground": "#070c15",
+      "pixels": 1792
+    },
+    {
+      "text": "BH",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 304
+    },
+    {
+      "text": "LW",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 342
+    },
+    {
+      "text": "YW",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 361
+    },
+    {
+      "text": "MM",
+      "textColor": "#edeae3",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 342
+    }
+  ]
+}

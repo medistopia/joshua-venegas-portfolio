@@ -1,0 +1,235 @@
+{
+  "path": "/contact",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 17,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "Public contact details are being finalized and will be liste",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.22,
+      "worstBackground": "#101826",
+      "pixels": 24400
+    },
+    {
+      "text": "Public contact details are being finalized and will be liste",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.28,
+      "worstBackground": "#0f1726",
+      "pixels": 23400
+    },
+    {
+      "text": "An original portfolio design inspired by game client menus. ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 22780
+    },
+    {
+      "text": "An original portfolio design inspired by game client menus. ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 24208
+    },
+    {
+      "text": "Home",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 2208
+    }
+  ],
+  "results": [
+    {
+      "text": "Joshua",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 5616
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 6528
+    },
+    {
+      "text": "Menu",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.37,
+      "worstBackground": "#070b15",
+      "pixels": 2208
+    },
+    {
+      "text": "Contact",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.45,
+      "worstBackground": "#070b15",
+      "pixels": 3840
+    },
+    {
+      "text": "Get in touch",
+      "textColor": "#edeae3",
+      "fontSize": 40,
+      "large": true,
+      "required": 3,
+      "minRatio": 8.21,
+      "worstBackground": "#4a4239",
+      "pixels": 37248
+    },
+    {
+      "text": "Public contact details are being finalized and will be liste",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.22,
+      "worstBackground": "#101826",
+      "pixels": 24400
+    },
+    {
+      "text": "Public contact details are being finalized and will be liste",
+      "textColor": "#9aa6b8",
+      "fontSize": 16,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.28,
+      "worstBackground": "#0f1726",
+      "pixels": 23400
+    },
+    {
+      "text": "Joshua",
+      "textColor": "#edeae3",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.29,
+      "worstBackground": "#070c16",
+      "pixels": 5616
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#edeae3",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 16.29,
+      "worstBackground": "#070c16",
+      "pixels": 6528
+    },
+    {
+      "text": "An original portfolio design inspired by game client menus. ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 22780
+    },
+    {
+      "text": "An original portfolio design inspired by game client menus. ",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 24208
+    },
+    {
+      "text": "Home",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 2208
+    },
+    {
+      "text": "Projects",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 4416
+    },
+    {
+      "text": "Experience",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 5504
+    },
+    {
+      "text": "About",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 2752
+    },
+    {
+      "text": "Contact",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 3840
+    },
+    {
+      "text": "Source code",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 6080
+    }
+  ]
+}

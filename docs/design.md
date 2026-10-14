@@ -62,6 +62,8 @@ Patterns shared across all screens:
 
 ## 3. Composition
 
+The homepage is the lobby shell in Section 3.6. Sections 3.1 to 3.4 describe Milestone 1's first homepage (a hero, lineup, and panel stack with sections below the fold) and are kept as the record of that design; where they differ from Section 3.6, Section 3.6 applies. The lineup order rules in Section 3.5 still hold.
+
 ### 3.1 Concept: "The Lobby"
 
 The homepage is staged like the Play lobby (reference 00):
@@ -166,20 +168,41 @@ The lineup is an ordered list in priority order: Hermes, Recolm, Valorant ML. Th
 - Navigation collapses into a "Menu" button that opens a full-screen dialog with large angled list items.
 - The résumé action stays visible in the hero; contact links repeat at the bottom.
 
-### 3.6 Lobby shell revision (desktop composition, in review)
+### 3.6 Lobby shell (approved, implemented)
 
-Joshua's review of Milestone 1 asked for the homepage to become a full-screen menu shell that follows the reference's panel placement and hierarchy. The desktop composition is at `/lab/lobby` (development only) and replaces Sections 3.2 and 3.3 once approved. Tab views and responsive versions wait for that approval. Results: `docs/verification/lobby/README.md`.
+Joshua's review of Milestone 1 asked for the homepage to become a full-screen menu shell that follows the reference's panel placement and hierarchy. He approved the desktop composition in October 2026; the shell, its views, and the tablet and mobile versions are built on it. Results: `docs/verification/lobby/README.md`.
+
+**The shell.** The top bar, the collaborator rail (1024px and up), and the background persist across every view (`src/app/(site)/layout.tsx`). The navigation controls the main stage: each tab is a real link to its own URL, so views are linkable and browser Back works, and the stage between the top bar and the rail is replaced. From 1024px the shell is exactly one viewport tall and `main` scrolls on its own when a view is taller; nothing hides overflow. Below 1024px the page scrolls normally and the footer follows.
 
 | Area | Treatment |
 |------|-----------|
-| Top navigation | Compact JV slab (monogram only; the name stays in the accessible name), then icon-and-label tabs: house, briefcase, badge, person, envelope. The icons are an original set (`src/components/icons/Icons.tsx`). The selected tab keeps the light angled plate. |
-| Upper-left feature | Image-led "Currently working on" carousel bleeding into the top-left corner, with its right edge cut on the diagonal and traced by gold rules. Manual arrows and diamond indicators; no auto-rotation yet. Slides: Foxtrot, and the research with Dr. Lai Wei and Dr. Yong Wei. |
-| Left utility panel | Eyebrow, name (`--text-display-m`, 40px), roles on separate lines, headline, then About and Contact rows. The résumé row appears once confirmed. |
-| Center stage | Three art-led pennants, Hermes leading. Flanks are 0.9 of the lead and tuck 16px behind it. Each card shows artwork, a short context label, and the title; summaries move to the project view. Explore projects sits beneath. |
+| Top navigation | Compact JV slab (monogram only from 1024px; the name stays in the accessible name), then icon-and-label tabs: house, briefcase, badge, person, envelope. The icons are an original set (`src/components/icons/Icons.tsx`). The selected tab keeps the light angled plate. Below 1024px: the full brand slab and the Menu dialog, whose links carry the same icons. |
+| Upper-left feature | Image-led "Currently working on" carousel bleeding into the top-left corner, with its right edge cut on the diagonal and traced by gold rules. Manual arrows and diamond indicators; there is no auto-rotation. Slides: Foxtrot, and the research with Dr. Lai Wei and Dr. Yong Wei. Inactive slides are `inert`. |
+| Left utility panel | Eyebrow, name (`--text-display-m`, 40px; the page's `h1`), roles on separate lines, headline, then About and Contact rows. The résumé row appears once confirmed. |
+| Center stage | Three art-led pennants, Hermes leading. Flanks are 0.9 of the lead and tuck 16px behind it. Each card shows artwork, a short context label, and the title; summaries live in the project view. Explore projects sits beneath. |
 | Right feature column | Three promotional tiles sized to the lead pennant (the first one taller): the Hermes Phase 1 release, the AI Lab role, and education. |
-| Far-right rail | Collaborators: Brandon Hall, Dr. Lai Wei, Dr. Yong Wei, Prof. Mohammad Mohebi. Initials stand in for portraits. Each opens a popover with the relationship and any confirmed links. There is no online status. |
+| Far-right rail | Collaborators: Brandon Hall, Dr. Lai Wei, Dr. Yong Wei, Prof. Mohammad Mohebi, each listed with their approval. Initials stand in for portraits. Each opens a popover (a labelled dialog anchored beside the rail) with the relationship and any confirmed links. There is no online status. |
 
-Rules carried over: the shell fits one viewport at 1280 x 720 and larger without hiding overflow (if content is taller, the page scrolls), small labels over artwork sit on a dark plate, and every line of text passes the strict per-line contrast check. The lead height is `--pennant-h = min(clamp(400px, 100svh - 300px, 540px), (stage width + 32px) / 1.4)`.
+**Lobby sizes.** The lead height is `--pennant-h = min(clamp(400px, 100svh - reserve, 540px), (stage width + 32px) / 1.4)`, where the row is a lead 0.5 x height wide and two flanks 0.45 x height that tuck 16px behind it. The lobby (`.lobby` in `src/app/globals.css`) is the size container, so the pennants and the tile column resolve the same value; the stage width is written in container units as the lobby's content width less the other columns and gaps.
+
+| Range | Lobby layout |
+|-------|--------------|
+| 1280px and up | Three columns: feature and identity (300px), stage, tiles (208px), with 32px gaps. Reserve 300px. At 1440 x 900 the lead is 270 x 540; at 1280 x 720, 210 x 420. |
+| 1024 to 1279px | Feature and identity (280px) beside the stage; the tiles form one row beneath both. Reserve 440px, so the tile row fits; the carousel is 208px tall here. |
+| 640 to 1023px | One column: feature, identity, the seated pennant row (Recolm, Hermes, Valorant ML), tiles in a row of three, then a collaborator section. |
+| below 640px | One column: feature, identity, pennants stacked at 4:5 in priority order (Hermes first), tiles stacked, then the collaborator section. |
+
+**Views.** Every view other than the lobby dims the background further so long text reads over a quiet hall.
+
+| View | Content |
+|------|---------|
+| Projects (`/projects`) | "Select a project": all five projects as pennants in priority order (featured work, then the two experiments), Hermes selected. |
+| Case study (`/projects/[slug]`) | From 1024px, a project list on the left and a reading panel that scrolls inside the shell, so the navigation stays visible. The panel holds the banner art, description, status, milestones, collaborators, Joshua's contributions (or, for experiments, what the experiment involves), the stack, and an in-progress note. Below 1024px the article comes first and the list follows. |
+| Experience (`/experience`) | Roles as match-history rows (organization, team when confirmed, role, detail), and a research column with the research involving Dr. Lai Wei and Dr. Yong Wei (details in progress) and a link to Valorant ML. |
+| About (`/about`) | The about paragraphs, interests, education with expected graduation, roles, and, from 1024px, the "About this site" note with the Riot Games disclaimer and source link (the footer carries it below 1024px). |
+| Contact (`/contact`) | Confirmed contact channels in a panel; with none confirmed, a status line. |
+
+Rules carried over: small labels over artwork sit on a dark plate, every line of text passes the strict per-line contrast check, and every line of text stays inside its own box (the glyph containment check that catches a heading running behind a card).
 
 Content and layout are separate: facts live in `src/content`, and `src/components/lobby/config.ts` decides what appears where, with which art and label.
 
@@ -261,11 +284,11 @@ A 7% film-grain overlay (overlay blend) sits above L2 to unify art and UI. The e
 
 ## 7. Components
 
-**TopBar.** 56px tall, solid `--color-bg-deep` at 88% opacity with blur. Contains, from left to right, the BrandSlab, NavTabs, then the right-side actions: résumé button and icon links for GitHub and LinkedIn (rendered only when their URLs are confirmed).
+**TopBar.** 56px tall, solid `--color-bg-deep` at 85% opacity with blur. Contains, from left to right, the BrandSlab, NavTabs, then the résumé button (rendered only once a résumé is confirmed). Below 1024px, the Menu button replaces the tabs.
 
 **BrandSlab.** Coral block with an angled right edge holding the original JV monogram and "JOSHUA VENEGAS" in condensed caps. It links to Home. This is the portfolio's equivalent of the PLAY slab.
 
-**NavTab.** Text labels (not icon-only, so the page reads clearly): Home, Projects, Experience, About, Contact. Inactive tabs show muted text. On hover, a skewed `--color-surface-raised` plate appears. The active tab (`aria-current="page"`) is a solid off-white parallelogram with dark text, mirroring the client's active tab. The skew is applied to a background pseudo-element so text stays upright and crisp.
+**NavTab.** An original icon beside each text label (never icon-only, so the page reads clearly): Home, Projects, Experience, About, Contact. Inactive tabs show muted text. On hover, a skewed `--color-surface-raised` plate appears. The active tab (`aria-current="page"`) is a solid off-white parallelogram with dark text, mirroring the client's active tab. The skew is applied to a background pseudo-element so text stays upright and crisp.
 
 **Breadcrumb.** Mono label with a small triangle glyph ("> HOME"), muted.
 
@@ -275,7 +298,9 @@ A 7% film-grain overlay (overlay blend) sits above L2 to unify art and UI. The e
 - `outline`: 1px off-white border, transparent fill (like "View Mastery"); fill lightens on hover.
 - `gold-outline`: 1px gold border, used for the résumé action.
 
-**ProjectCard (tall).** Pennant-shaped card for the lineup (reference 00).
+**Pennant.** The lobby shell's project card (`src/components/lobby/Pennant.tsx`): artwork across the whole card under a bottom scrim, a rule, a gold context label, and the title, ending in a chevron point. Variants: `lead` and `flank` in the lobby row (sized from `--pennant-h`, Section 3.6) and `grid` in the Projects view (4:5, and 1:2 from 1280px); the selected card has the light border, teal rule, and gold chevron. Below 640px every variant is a full-width 4:5 card. The whole card is one link named by the title and described by the label. Hover and focus turn the border, rule, and chevron teal, zoom the art inside its frame, and lift the card, all through the motion tokens.
+
+**ProjectCard (tall, Milestone 1's first homepage; replaced by Pennant).** Pennant-shaped card for the lineup (reference 00).
 - Proportions: 1:2 on desktop (see Section 3.2), 4:5 on mobile. The base comes to a point 28px deep, with an inner chevron line (gold on the lead card, hairline on the flanks).
 - Structure: index badge centered on the top edge (the featured-order number: Hermes 01, Recolm 02, Valorant ML 03), art (top 56%), a rule (teal on the lead card), context label in gold when confirmed (for example "JV Digital"), title in `h3`, one-line summary, and a "View project" cue at the bottom. The cue shows only when the card is at least 240px wide and 440px tall, so it never collides with a long summary (at 1440 x 900 that is the lead card; on mobile and tablet, every card). Title and summary step down on cards narrower than 300px and 210px.
 - Missing art uses a clearly labelled placeholder: the art area is lit by a warm glow from the top (echoing the key light) over a faint hatch, and holds an empty dashed capture frame with gold corner ticks, a "Placeholder" label, and what is pending ("Product capture pending", or "Research chart pending. No data shown." with empty axes). Placeholders never imitate a product interface.
@@ -290,7 +315,9 @@ A 7% film-grain overlay (overlay blend) sits above L2 to unify art and UI. The e
 
 **Tag.** Mono caps label in a 1px bordered box with tight padding.
 
-**StatusStrip.** Bottom bar of the hero on desktop, showing one confirmed status line.
+**CollaboratorRail and CollaboratorStrip.** The rail is a 56px column at the far right from 1024px, in every view: a vertical "Collaborators" heading and one initials button per person. Below 1024px the same people appear as a two-column strip of name-and-context buttons at the end of the lobby. Each button opens a popover (`popover="auto"`, a labelled dialog): anchored to the left of the rail with CSS anchor positioning, centered on smaller screens. It shows the context, name, relationship, any confirmed links, and a Close button; Escape and an outside click also close it.
+
+**ViewFrame.** The frame for views other than the lobby (`src/components/views/ViewFrame.tsx`): a gold kicker, the view's `h1` at `--text-display-m`, an optional intro, and translucent panels. It marks the view so the background dims.
 
 **MobileMenu.** Full-screen dialog with angled list items at `display-l` size, a close button, and contact links at the bottom.
 
@@ -337,12 +364,12 @@ Implementation: components animate movement only through the `--move-lift`, `--m
 
 | Range | Layout |
 |-------|--------|
-| below 640px | Mobile layout; menu dialog; stacked 4:5 cards |
-| 640 to 1023px | Larger mobile layout; cards in a 2-column grid (4:5) with the third spanning both columns at 8:5, so its row is the same height; menu dialog |
-| 1024 to 1279px | Compact lobby: identity and three-card lineup side by side, panel tiles in one row beneath; inline nav tabs |
-| 1280px and up | Full lobby composition: identity, lineup, and panel stack in three columns |
-| 1024px and up, height 800px or less | Short-laptop overrides (Section 3.3) |
-| 1536px and up | Content capped at 1440px; background art continues to the edges |
+| below 640px | One column; Menu dialog; pennants stacked at 4:5 in priority order; tiles stacked; collaborator strip; footer |
+| 640 to 1023px | One column with the seated pennant row and a row of three tiles; Menu dialog; collaborator strip; footer |
+| 1024 to 1279px | The one-viewport shell with tabs and the collaborator rail; the lobby's feature and identity sit beside the stage, with the tiles in one row beneath |
+| 1280px and up | The full lobby: feature and identity, stage, and tiles in three columns |
+
+Lobby sizes and the views at each range are in Section 3.6. From 1024px the shell is one viewport tall and the stage scrolls inside it when a view is taller (for example the Projects grid at 1024 x 768), so nothing is clipped.
 
 Background art is delivered with `<picture>` art direction: a landscape crop for 1024px and wider, and a portrait crop below that. Art is never stretched. Focal positions are fixed per crop.
 
@@ -370,10 +397,12 @@ Decided:
 - Mobile art band reduced to about 96px.
 - The Experience, About, and Contact tiles and the subtle JV emblem stay.
 - Headline and card art approach (real captures where available, original research charts for Valorant ML, labelled placeholders otherwise).
+- **Lobby shell** (Section 3.6), approved by Joshua in October 2026. It replaces the first homepage, including its below-the-fold sections, panel stack, and status strip.
+- The AI-generated lobby art on the pennants, carousel, and tiles ships for now and will be replaced as product captures and owned art become available (`docs/assets.md`, A2-lobby).
+- The four collaborators agreed to be listed.
 
 Still open:
 
-1. **Lobby shell revision** (Section 3.6): approve the desktop composition before tab views and responsive versions are built. This includes whether the AI-generated study art used on the pennants, carousel, and tiles may ship, or stays a stand-in until product captures and owned art exist.
-2. **Final key art source.** Whether the approved scene ships as upscaled AI-generated art (with its licensing caveats), is redrawn or commissioned to match, or is replaced by an improved owned render.
-3. **Ambient motion.** Whether the beam drift ships at all.
-4. **Personal VALORANT context.** Whether the Valorant ML case study mentions Joshua's own competitive play. Nothing about it appears unless Joshua opts in.
+1. **Final key art source.** Whether the approved scene ships as upscaled AI-generated art (with its licensing caveats), is redrawn or commissioned to match, or is replaced by an improved owned render.
+2. **Ambient motion.** Whether the beam drift ships at all, and whether the "Currently working on" carousel gains a slow rotation (paused on hover and focus, off under reduced motion). It is manual for now.
+3. **Personal VALORANT context.** Whether the Valorant ML case study mentions Joshua's own competitive play. Nothing about it appears unless Joshua opts in.

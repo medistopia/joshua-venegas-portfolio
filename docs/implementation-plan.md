@@ -70,7 +70,7 @@ What the study does not include: functional links, focus states, motion, and bel
 
 Goal: one polished homepage with functional navigation, featured project cards, and a mobile layout. This is the first real milestone and is intentionally small.
 
-Status: implemented and verified; results and screenshots are in `docs/verification/milestone-1/README.md`. Waiting on Joshua's review.
+Status: the first homepage was implemented and verified (`docs/verification/milestone-1/README.md`). Joshua's review replaced it with the lobby shell (`docs/design.md`, Section 3.6): a persistent top bar and collaborator rail, with the navigation swapping the lobby, Projects, case study, Experience, About, and Contact views. Its desktop composition is approved; the full shell is implemented and verified (`docs/verification/lobby/README.md`) and waiting on Joshua's review. The scope, structure, and verification below describe the first homepage; the specs in `tests/e2e` now cover the shell, with output in `docs/verification/lobby/`.
 
 ### Scope
 
