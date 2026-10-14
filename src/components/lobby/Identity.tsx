@@ -30,7 +30,7 @@ export function Identity() {
         <p className="max-w-[34ch] text-sm leading-snug text-text-muted">{profile.headline}</p>
       </div>
 
-      <ul className="flex flex-col gap-2">
+      <ul className="flex max-w-[300px] flex-col gap-2 lg:max-w-none">
         {actions.map(({ href, label, Icon, external }) => {
           const className =
             "group relative flex h-11 items-center justify-between px-4 font-display text-lg font-semibold tracking-wide uppercase text-text transition-colors duration-(--dur-fast) hover:text-teal";

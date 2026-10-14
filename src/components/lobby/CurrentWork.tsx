@@ -18,12 +18,13 @@ export function CurrentWork({ items }: { items: WorkloadItem[] }) {
     <section
       aria-roledescription="carousel"
       aria-labelledby="current-work-heading"
-      className="relative -mt-6 -ml-8 h-[248px] w-[calc(100%+2rem)]"
+      className="relative -mx-4 h-[248px] lg:h-[208px] xl:h-[248px] max-lg:overflow-x-clip sm:-mx-8 lg:mr-0 lg:-mt-4 xl:-mt-6"
     >
       <div aria-hidden="true" className="clip-diagonal absolute inset-0 bg-bg-deep" />
-      <h2 id="current-work-heading" className="label label-plate absolute top-5 left-[26px] z-10 text-gold">
+      {/* Not a heading: the name below is the page's h1 and comes first in the outline. */}
+      <p id="current-work-heading" className="label label-plate absolute top-5 left-[10px] z-10 text-gold sm:left-[26px]">
         Currently working on
-      </h2>
+      </p>
       <div id="current-work-slides" aria-live="polite" className="absolute inset-0">
         {items.map((item, i) => {
           const active = i === index;
@@ -47,7 +48,7 @@ export function CurrentWork({ items }: { items: WorkloadItem[] }) {
                 />
                 <div className="scrim-feature absolute inset-0" />
               </div>
-              <div className="relative flex h-full flex-col justify-end gap-1.5 pt-5 pr-20 pb-[52px] pl-8">
+              <div className="relative flex h-full flex-col justify-end gap-1.5 pt-5 pr-20 pb-[52px] pl-4 sm:pl-8">
                 <h3 className="font-display text-3xl leading-none font-bold uppercase">{item.title}</h3>
                 <p className="text-sm leading-snug text-text">{item.description}</p>
                 {item.link && (
@@ -65,7 +66,7 @@ export function CurrentWork({ items }: { items: WorkloadItem[] }) {
         })}
       </div>
 
-      <div className="absolute bottom-4 left-8 flex items-center gap-2">
+      <div className="absolute bottom-4 left-4 flex sm:left-8 items-center gap-2">
         <button
           type="button"
           aria-controls="current-work-slides"

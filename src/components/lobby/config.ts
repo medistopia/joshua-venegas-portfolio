@@ -2,20 +2,20 @@ import { currentWork } from "@/content/current-work";
 import { experience } from "@/content/experience";
 import { people } from "@/content/people";
 import { profile } from "@/content/profile";
-import { featured, findProject, type Project } from "@/content/projects";
+import { allProjects, featured, findProject, type Project } from "@/content/projects";
 
 /**
- * Layout decisions for the desktop lobby: which facts appear where, with which study art.
- * The facts themselves live in src/content. Study art is AI-generated for composition review
- * and does not ship without Joshua's decision (docs/assets.md, A2 and A6).
+ * Layout decisions for the shell: which facts appear where, with which art and label. The facts
+ * live in src/content. The art is AI-generated and approved to ship for now (docs/assets.md,
+ * A2-lobby); it is replaced as product captures and research charts arrive.
  */
 export type Art = { src: string; focus: string };
 
-const art = (file: string, focus = "50% 50%"): Art => ({ src: `/art/study/lobby/${file}`, focus });
+const art = (file: string, focus = "50% 50%"): Art => ({ src: `/art/lobby/${file}`, focus });
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-function formatDate(iso: string) {
+export function formatDate(iso: string) {
   const [year, month, day] = iso.split("-").map(Number);
   return `${months[month - 1]} ${day}, ${year}`;
 }
@@ -52,23 +52,46 @@ export const workload: WorkloadItem[] = currentWork.map((item) => {
 
 type Seat = "left" | "center" | "right";
 
-const seats: Record<string, { seat: Seat; art: Art }> = {
-  recolm: { seat: "left", art: art("recolm-pennant.jpg", "50% 42%") },
-  "project-hermes": { seat: "center", art: art("hermes-pennant.jpg", "50% 38%") },
-  "valorant-ml": { seat: "right", art: art("valorant-ml-pennant.jpg", "50% 50%") },
+const projectArt: Record<string, Art> = {
+  "project-hermes": art("hermes-pennant.jpg", "50% 38%"),
+  recolm: art("recolm-pennant.jpg", "50% 42%"),
+  "valorant-ml": art("valorant-ml-pennant.jpg", "50% 50%"),
+  "auto-research-agent": art("auto-research-agent-pennant.jpg", "50% 40%"),
+  "lyn-desktop-companion": art("lyn-pennant.jpg", "50% 40%"),
 };
 
-export type PennantItem = { project: Project; rank: number; seat: Seat; label: string | null; art: Art };
+export function artFor(slug: string): Art {
+  const found = projectArt[slug];
+  if (!found) throw new Error(`No art for ${slug}`);
+  return found;
+}
+
+/** Short card label: where the work happened, or that it is an experiment. */
+export function labelFor(project: Project): string | null {
+  return project.context ?? (project.kind === "experiment" ? "Experiment" : null);
+}
+
+const seats: Record<string, Seat> = { recolm: "left", "project-hermes": "center", "valorant-ml": "right" };
+
+export type PennantItem = { project: Project; rank: number; seat: Seat | null; label: string | null; art: Art };
 
 /** Featured order (Hermes first) is the document and keyboard order; seats place it left to right. */
 export const pennants: PennantItem[] = featured.map((project, i) => ({
   project,
   rank: i + 1,
-  seat: seats[project.slug].seat,
-  label: project.context,
-  art: seats[project.slug].art,
+  seat: seats[project.slug],
+  label: labelFor(project),
+  art: artFor(project.slug),
 }));
 
+/** The Projects view: featured work, then experiments. */
+export const projectCards: PennantItem[] = allProjects.map((project, i) => ({
+  project,
+  rank: i + 1,
+  seat: null,
+  label: labelFor(project),
+  art: artFor(project.slug),
+}));
 export type FeatureTileItem = { id: string; kicker: string; title: string; meta: string | null; href: string; art: Art };
 
 const hermes = requireProject("project-hermes");

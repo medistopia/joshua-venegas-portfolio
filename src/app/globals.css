@@ -47,18 +47,32 @@
   --move-lift: -4px;
   --move-rise: 8px;
   --move-zoom: 1.03;
+}
 
-  /*
-    Lead card height on desktop. The lineup (lead 0.5, two flanks 0.44 each, two 12px gaps,
-    so 1.38 x height + 24px) must fit the lineup column, which is a size container (cqw).
-  */
-  --card-h: min(clamp(400px, calc(100svh - 320px), 520px), calc((100cqw - 24px) / 1.38));
-
-  /*
-    Lobby lead pennant height. The row is a lead (0.5 x height wide) and two flanks (0.45 each)
-    that tuck 16px behind it, so 1.4 x height - 32px must fit the stage (a size container, cqw).
-  */
+/*
+  Lobby lead pennant height. The row is a lead (0.5 x height wide) and two flanks (0.45 each) that
+  tuck 16px behind it, so 1.4 x height - 32px must fit the stage. The lobby is the size container,
+  so the pennants and the tile column resolve the same value; the stage width is the lobby's
+  content width (100cqw) less the other columns and the gaps in src/app/(site)/page.tsx. The height
+  term reserves the top bar, padding, and primary action, and from 1024 to 1279px the tile row too.
+*/
+.lobby {
+  container-type: inline-size;
   --pennant-h: min(clamp(400px, calc(100svh - 300px), 540px), calc((100cqw + 32px) / 1.4));
+}
+
+@media (min-width: 1024px) {
+  .lobby {
+    /* 280px column and one 32px gap. */
+    --pennant-h: min(clamp(400px, calc(100svh - 440px), 540px), calc((100cqw - 280px) / 1.4));
+  }
+}
+
+@media (min-width: 1280px) {
+  .lobby {
+    /* 300px and 208px columns and two 32px gaps. */
+    --pennant-h: min(clamp(400px, calc(100svh - 300px), 540px), calc((100cqw - 540px) / 1.4));
+  }
 }
 
 html {
