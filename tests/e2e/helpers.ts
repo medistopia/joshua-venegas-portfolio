@@ -31,7 +31,7 @@ export async function openPage(
   viewport: ViewportName,
   motion: Motion,
   path = "/",
-  options: BrowserContextOptions = {},
+  { clock = false, ...options }: BrowserContextOptions & { clock?: boolean } = {},
 ) {
   const { width, height, deviceScaleFactor } = viewports[viewport];
   const context = await browser.newContext({
@@ -41,8 +41,23 @@ export async function openPage(
     ...options,
   });
   const page = await context.newPage();
+  // A fake clock keeps real time until a test pauses or advances it.
+  if (clock) await page.clock.install();
   await page.goto(path);
   return { context, page };
+}
+
+/** Stops page timers, and with them the carousel's rotation. Needs a page opened with `clock`. */
+export async function freezeTimers(page: Page) {
+  // The page clock keeps running between reading it and pausing; retry if it has passed the target.
+  for (let attempt = 1; ; attempt++) {
+    try {
+      await page.clock.pauseAt(await page.evaluate(() => Date.now() + 250));
+      return;
+    } catch (error) {
+      if (attempt === 5) throw error;
+    }
+  }
 }
 
 /** Active tab revealed, fonts loaded, images decoded, and entrance animations finished. */

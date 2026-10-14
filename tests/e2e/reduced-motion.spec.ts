@@ -10,6 +10,7 @@ const interactive = [
   "main nav[aria-label='Highlights'] a[href='/about']",
   "aside li > button[popovertarget='rail-brandon-hall']",
   "button[aria-label='Next item']",
+  "button[aria-label$='automatic rotation']",
 ];
 
 /** Rendered boxes of an element and its descendants; any lift, slide, or zoom changes them. */

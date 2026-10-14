@@ -1,5 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
-import { openPage, settle, tabTo } from "./helpers";
+import { freezeTimers, openPage, settle, tabTo } from "./helpers";
 
 type FocusInfo = {
   stop: string;
@@ -58,11 +58,12 @@ test.describe("desktop keyboard", () => {
   });
 
   test("lobby tab order follows the documented sequence with visible, unclipped rings", async ({ browser }) => {
-    const { context, page } = await openPage(browser, "desktop", "default");
+    const { context, page } = await openPage(browser, "desktop", "default", "/", { clock: true });
     await settle(page);
+    await freezeTimers(page);
 
     const stops: FocusInfo[] = [];
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 26; i++) {
       await page.keyboard.press("Tab");
       const info = await describeFocus(page);
       if (info) stops.push(info);
@@ -78,9 +79,10 @@ test.describe("desktop keyboard", () => {
       "/contact",
       "/projects/project-hermes",
       "button Previous item",
-      "button Show Foxtrot",
+      "button Show Project Hermes",
       "button Show Research",
       "button Next item",
+      "button Pause automatic rotation",
       "/about",
       "/contact",
       "/projects/project-hermes",
@@ -103,16 +105,24 @@ test.describe("desktop keyboard", () => {
   });
 
   test("carousel controls change the slide and keep inactive slides out of the tab order", async ({ browser }) => {
-    const { context, page } = await openPage(browser, "desktop", "default");
+    const { context, page } = await openPage(browser, "desktop", "default", "/", { clock: true });
     await settle(page);
+    await freezeTimers(page);
     const carousel = page.locator("[aria-roledescription='carousel']");
-    await expect(carousel.getByRole("button", { name: "Show Foxtrot" })).toHaveAttribute("aria-current", "true");
+    await expect(carousel.getByRole("button", { name: "Show Project Hermes" })).toHaveAttribute("aria-current", "true");
     await tabTo(page, "button[aria-label='Next item']");
     await page.keyboard.press("Enter");
     await expect(carousel.getByRole("button", { name: "Show Research" })).toHaveAttribute("aria-current", "true");
     await expect(carousel.getByText("Research with Dr. Lai Wei and Dr. Yong Wei.")).toBeVisible();
-    // The Foxtrot slide's link is inert while hidden.
+    await expect(carousel.getByRole("button", { name: "Play automatic rotation" })).toBeVisible();
+    // The Project Hermes slide's link is inert while hidden.
     await expect(carousel.locator("[inert] a[href='/projects/project-hermes']")).toHaveCount(1);
+    await page.keyboard.press("Shift+Tab");
+    await page.keyboard.press("Shift+Tab");
+    await expect(carousel.getByRole("button", { name: "Show Project Hermes" })).toBeFocused();
+    await page.keyboard.press("Enter");
+    await expect(carousel.getByText("Developing a Gmail-backed inbox")).toBeVisible();
+    await expect(carousel.locator("[inert] a[href='/projects/project-hermes']")).toHaveCount(0);
     await context.close();
   });
 

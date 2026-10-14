@@ -1,6 +1,7 @@
 import { mkdirSync } from "node:fs";
 import { test } from "@playwright/test";
 import {
+  freezeTimers,
   openPage,
   settle,
   tabTo,
@@ -18,11 +19,23 @@ const shot = (name: string) => ({ path: `${verificationDir}/${name}.jpg`, type: 
 for (const viewport of Object.keys(viewports) as ViewportName[]) {
   for (const motion of ["default", "reduced"] as Motion[]) {
     test(`home ${viewport} ${motion}`, async ({ browser }) => {
-      const { context, page } = await openPage(browser, viewport, motion);
+      const { context, page } = await openPage(browser, viewport, motion, "/", { clock: true });
       await settle(page);
+      await freezeTimers(page);
       await page.screenshot(shot(`home-${viewport}-${motion}`));
       if (viewports[viewport].width < 1024) {
         await page.screenshot({ ...shot(`home-${viewport}-${motion}-full`), fullPage: true });
+      }
+
+      // Each slide close up with its controls: rotating (Pause shown) or paused (Play shown).
+      if (viewport === "desktop" || viewport === "mobile") {
+        const carousel = page.locator("[aria-roledescription='carousel']");
+        await carousel.screenshot(shot(`carousel-${viewport}-${motion}-project-hermes`));
+        await carousel.locator("button[aria-label='Show Research']").dispatchEvent("click");
+        await page.waitForTimeout(400);
+        await carousel.screenshot(shot(`carousel-${viewport}-${motion}-wei-research`));
+        await carousel.locator("button[aria-label='Show Project Hermes']").dispatchEvent("click");
+        await page.waitForTimeout(400);
       }
 
       if (viewport === "desktop") {
