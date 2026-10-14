@@ -20,6 +20,10 @@ If a change conflicts with these documents, update the document in the same pull
 
 Phase 1 is approved: candidate A (Atrium) is the visual direction, and its background is an interim asset until final-resolution art is produced. Phase 2 (Milestone 1, the homepage) is implemented and in review; results are in `docs/verification/milestone-1/README.md`. Do not start Phase 3 until Joshua approves the homepage. The composition study at `/lab/composition` (development only) remains for reference; its results are in `docs/verification/phase-1/README.md`. The study's `src/app/lab/composition/_components` are throwaway and must not be imported by real pages.
 
+Joshua's review asked for the homepage to become a full-screen lobby shell. The revised desktop composition is at `/lab/lobby` (development only; `docs/design.md`, Section 3.6; results in `docs/verification/lobby/README.md`). Do not build the tab views or responsive versions until Joshua approves it. Its components in `src/components/lobby` are intended for the real shell.
+
+Facts live in `src/content` and carry no layout fields. `src/components/lobby/config.ts` decides what appears where. A project's stack is never a list of accomplishments: only `contributions` describe Joshua's own work.
+
 The lineup is an ordered list in priority order (Hermes, Recolm, Valorant ML); desktop CSS places it as Recolm, Hermes, Valorant ML (`docs/design.md`, Section 3.5).
 
 The primary composition reference is the Play lobby (`references/valorant/00-play-lobby.jpg`, local only).

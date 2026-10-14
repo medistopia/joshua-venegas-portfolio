@@ -166,6 +166,23 @@ The lineup is an ordered list in priority order: Hermes, Recolm, Valorant ML. Th
 - Navigation collapses into a "Menu" button that opens a full-screen dialog with large angled list items.
 - The résumé action stays visible in the hero; contact links repeat at the bottom.
 
+### 3.6 Lobby shell revision (desktop composition, in review)
+
+Joshua's review of Milestone 1 asked for the homepage to become a full-screen menu shell that follows the reference's panel placement and hierarchy. The desktop composition is at `/lab/lobby` (development only) and replaces Sections 3.2 and 3.3 once approved. Tab views and responsive versions wait for that approval. Results: `docs/verification/lobby/README.md`.
+
+| Area | Treatment |
+|------|-----------|
+| Top navigation | Compact JV slab (monogram only; the name stays in the accessible name), then icon-and-label tabs: house, briefcase, badge, person, envelope. The icons are an original set (`src/components/icons/Icons.tsx`). The selected tab keeps the light angled plate. |
+| Upper-left feature | Image-led "Currently working on" carousel bleeding into the top-left corner, with its right edge cut on the diagonal and traced by gold rules. Manual arrows and diamond indicators; no auto-rotation yet. Slides: Foxtrot, and the research with Dr. Lai Wei and Dr. Yong Wei. |
+| Left utility panel | Eyebrow, name (`--text-display-m`, 40px), roles on separate lines, headline, then About and Contact rows. The résumé row appears once confirmed. |
+| Center stage | Three art-led pennants, Hermes leading. Flanks are 0.9 of the lead and tuck 16px behind it. Each card shows artwork, a short context label, and the title; summaries move to the project view. Explore projects sits beneath. |
+| Right feature column | Three promotional tiles sized to the lead pennant (the first one taller): the Hermes Phase 1 release, the AI Lab role, and education. |
+| Far-right rail | Collaborators: Brandon Hall, Dr. Lai Wei, Dr. Yong Wei, Prof. Mohammad Mohebi. Initials stand in for portraits. Each opens a popover with the relationship and any confirmed links. There is no online status. |
+
+Rules carried over: the shell fits one viewport at 1280 x 720 and larger without hiding overflow (if content is taller, the page scrolls), small labels over artwork sit on a dark plate, and every line of text passes the strict per-line contrast check. The lead height is `--pennant-h = min(clamp(400px, 100svh - 300px, 540px), (stage width + 32px) / 1.4)`.
+
+Content and layout are separate: facts live in `src/content`, and `src/components/lobby/config.ts` decides what appears where, with which art and label.
+
 ## 4. Color
 
 Original palette, tuned to the references but not copied from Riot's brand values.
@@ -356,6 +373,7 @@ Decided:
 
 Still open:
 
-1. **Final key art source.** Whether the approved scene ships as upscaled AI-generated art (with its licensing caveats), is redrawn or commissioned to match, or is replaced by an improved owned render.
-2. **Ambient motion.** Whether the beam drift ships at all.
-3. **Personal VALORANT context.** Whether the Valorant ML case study mentions Joshua's own competitive play. Nothing about it appears unless Joshua opts in.
+1. **Lobby shell revision** (Section 3.6): approve the desktop composition before tab views and responsive versions are built. This includes whether the AI-generated study art used on the pennants, carousel, and tiles may ship, or stays a stand-in until product captures and owned art exist.
+2. **Final key art source.** Whether the approved scene ships as upscaled AI-generated art (with its licensing caveats), is redrawn or commissioned to match, or is replaced by an improved owned render.
+3. **Ambient motion.** Whether the beam drift ships at all.
+4. **Personal VALORANT context.** Whether the Valorant ML case study mentions Joshua's own competitive play. Nothing about it appears unless Joshua opts in.
