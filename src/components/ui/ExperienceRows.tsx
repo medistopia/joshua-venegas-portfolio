@@ -11,7 +11,10 @@ export function ExperienceRows() {
         >
           <span aria-hidden="true" className="bg-gold" />
           <div className="flex flex-col gap-1 px-4 py-3">
-            <p className="label text-gold">{item.organization}</p>
+            <p className="label text-gold">
+              {item.organization}
+              {item.team && <span className="text-text-muted"> · {item.team}</span>}
+            </p>
             {item.role && <p className="font-display text-2xl leading-tight font-semibold uppercase">{item.role}</p>}
             {item.detail && <p className="text-sm text-text-muted">{item.detail}</p>}
           </div>
