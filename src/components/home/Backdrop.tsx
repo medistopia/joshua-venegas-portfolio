@@ -38,6 +38,8 @@ export function Backdrop() {
       <div className="scrim-bottom absolute inset-0 hidden lg:block" />
       <div className="scrim-mobile absolute inset-0 lg:hidden" />
       <div className="grain absolute inset-0 opacity-[0.07] mix-blend-overlay" />
+      {/* Views other than the lobby read over a dimmer hall. */}
+      <div className="absolute inset-0 bg-bg-deep/70 opacity-0 [html:has([data-view=inner])_&]:opacity-100" />
 
       <Monogram
         variant="emblem"

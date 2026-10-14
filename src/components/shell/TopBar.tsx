@@ -5,12 +5,18 @@ import { BrandSlab } from "./BrandSlab";
 import { MobileMenu, MobileMenuView } from "./MobileMenu";
 import { NavTabList, NavTabs } from "./NavTabs";
 
+/** Compact JV slab on desktop (the name stays in its accessible name); the full name below 1024px. */
 export function TopBar() {
   const { resume } = profile.links;
 
   return (
-    <header className="relative z-30 flex h-14 items-stretch border-b border-line bg-bg-deep/85 backdrop-blur-md">
-      <BrandSlab />
+    <header className="relative z-30 flex h-14 shrink-0 items-stretch border-b border-line bg-bg-deep/85 backdrop-blur-md">
+      <div className="hidden lg:flex">
+        <BrandSlab compact />
+      </div>
+      <div className="flex lg:hidden">
+        <BrandSlab />
+      </div>
 
       <nav aria-label="Primary" className="ml-3 hidden items-center lg:flex">
         <Suspense fallback={<NavTabList pathname={null} />}>
