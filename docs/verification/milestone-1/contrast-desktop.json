@@ -5,7 +5,7 @@
     "deviceScaleFactor": 1
   },
   "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
-  "lines": 51,
+  "lines": 49,
   "failures": 0,
   "lowest": [
     {
@@ -351,16 +351,6 @@
       "pixels": 765
     },
     {
-      "text": "View project",
-      "textColor": "#9aa6b8",
-      "fontSize": 12,
-      "large": false,
-      "required": 4.5,
-      "minRatio": 6.95,
-      "worstBackground": "#121c2b",
-      "pixels": 1648
-    },
-    {
       "text": "03",
       "textColor": "#c9a55c",
       "fontSize": 12,
@@ -449,16 +439,6 @@
       "minRatio": 6.95,
       "worstBackground": "#121c2b",
       "pixels": 2771
-    },
-    {
-      "text": "View project",
-      "textColor": "#9aa6b8",
-      "fontSize": 12,
-      "large": false,
-      "required": 4.5,
-      "minRatio": 6.95,
-      "worstBackground": "#121c2b",
-      "pixels": 1648
     },
     {
       "text": "Explore projects",

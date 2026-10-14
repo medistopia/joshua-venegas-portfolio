@@ -149,9 +149,11 @@ Content rule: fields that Joshua has not confirmed are `null`, and components om
 
 ## Verification for Milestone 1
 
-Initial verification is intentionally focused on four areas. Broader coverage comes after the visual direction is approved (Phase 5).
+Initial verification is intentionally focused: screenshots, keyboard, reduced motion, contrast, and responsive layout. Broader coverage comes after the visual direction is approved (Phase 5).
 
-### 1. Rendered screenshots (three viewports)
+`npm run test:e2e` always builds and starts its own production server on port 3200 (`reuseExistingServer: false`). If something already answers on that port, the run fails instead of testing a stale server.
+
+### 1. Rendered screenshots
 
 Playwright on Chromium, run against a production build (`npm run build && npm run start`), with fonts loaded and images decoded before capture.
 
@@ -159,6 +161,8 @@ Playwright on Chromium, run against a production build (`npm run build && npm ru
 |------|----------|----------|
 | Desktop | 1440 x 900 | Fold, full page, card hover, card focus |
 | Short laptop | 1280 x 720 | Fold, full page |
+| Compact desktop | 1024 x 768 | Fold, full page |
+| Tablet | 768 x 1024 | Fold, full page |
 | Mobile | 390 x 844 | Fold, full page, menu open |
 
 Each capture is taken twice: default motion (after the entrance completes) and `reducedMotion: 'reduce'`. Approved screenshots are saved to `docs/verification/milestone-1/` and linked in the pull request.
@@ -194,7 +198,7 @@ Automated in `tests/e2e/keyboard.spec.ts` and confirmed manually once:
 
 Automated in `tests/e2e/reduced-motion.spec.ts` with a Playwright context using `reducedMotion: 'reduce'`:
 
-- After load, `document.getAnimations()` returns no running animations.
+- After load, nothing that moves is running: no keyframe animations, no transitions of position or size properties (transform, translate, scale, rotate, insets, margins, width, height), and no transition longer than 120ms. Short visual transitions (color, opacity, filter) of 120ms or less are permitted, including the brand slab's brightness change when the pointer starts over it, which has its own regression test.
 - For the nav tab, button, card, and menu, hovering and focusing leave the computed `transform` unchanged from the rest state (no lift, zoom, or slide), and every transition duration is 120ms or less.
 - Angled geometry is preserved: the computed `clip-path` of the brand slab, tabs, panels, and cards is identical with and without reduced motion.
 - The reduced-motion fold screenshot matches the final state of the default-motion screenshot (content, position, layout, and shapes are identical; only movement differs).
@@ -202,7 +206,7 @@ Automated in `tests/e2e/reduced-motion.spec.ts` with a Playwright context using 
 
 ### 5. Text contrast at actual positions
 
-Automated in `tests/e2e/contrast.spec.ts` at all three viewports (reduced motion, so the page is in its final state):
+Automated in `tests/e2e/contrast.spec.ts` at all five screenshot viewports (reduced motion, so the page is in its final state):
 
 - Collect the box of every rendered line of text in the first viewport (one box per line, from the text node's client rects), with its computed text color and size.
 - Capture the same viewport with all text made transparent, so the pixels inside each box are exactly the background behind that line (art, scrims, grain, and surfaces).
@@ -211,11 +215,21 @@ Automated in `tests/e2e/contrast.spec.ts` at all three viewports (reduced motion
 
 This is a strict worst case per line, which replaces the Phase 1 approximation (98th-percentile luminance across the whole safe-zone box).
 
+### 6. Responsive layout
+
+Automated in `tests/e2e/layout.spec.ts` at 17 viewports from 320 x 640 to 1920 x 1080, including each breakpoint edge (639, 640, 1023, 1024, 1279, 1280) and the widths where review found clipping (1100 x 900, 1024 x 768):
+
+- No horizontal scrolling. Every card, panel tile, the name, and the primary action lie inside the viewport horizontally and are not clipped by an overflow ancestor.
+- Card text ends at least 28px above the card's bottom edge and stays within its sides.
+- Desktop (1024px and up): Recolm, Hermes, Valorant ML from left to right; cards are 1:2, flanks are 0.88 of the lead, and the lead is at least 400px tall; identity, lineup, and tiles do not overlap. From 1280px, everything fits between the top bar and the status strip and the tiles sit right of the lineup; from 1024 to 1279px, the tiles share one row below the lineup.
+- Tablet (640 to 1023px): Hermes and Recolm side by side, Valorant ML spanning both columns below at about the same height; no panel tiles.
+- Mobile (below 640px): cards stacked in featured order, Hermes first.
+
 ### Deferred to Phase 5 (after visual approval)
 
 - Automated accessibility scans (axe) and a contrast audit of states (hover, focus) and inner pages.
 - Lighthouse performance budgets (LCP, CLS) and image weight checks.
-- Firefox and WebKit, tablet (768 x 1024), 320px width, 200% zoom, and ultrawide (2560 x 1080).
+- Firefox and WebKit, 200% zoom, and ultrawide (2560 x 1080). (Tablet and 320px layout are covered by the layout spec above.)
 - Screen reader passes (NVDA and VoiceOver).
 - Pixel-diff visual regression baselines.
 
