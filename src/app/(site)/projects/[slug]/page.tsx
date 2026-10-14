@@ -45,7 +45,7 @@ async function ProjectDetail({ params }: { params: PageProps<"/projects/[slug]">
         <div className="flex flex-col gap-4">
           {project.context && <p className="label text-gold">{project.context}</p>}
           <h1 className="font-display text-display-l font-bold uppercase">{project.title}</h1>
-          <p className="max-w-[48ch] text-lg leading-relaxed text-text-muted">{project.summary}</p>
+          <p className="max-w-[48ch] text-lg leading-relaxed text-text-muted">{project.description ?? project.summary}</p>
         </div>
         <div className="relative aspect-video border border-line-strong">
           <ProjectArt project={project} className="h-full" sizes="(min-width: 1024px) 50vw, 100vw" />

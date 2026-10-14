@@ -2,12 +2,13 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { Monogram } from "@/components/brand/Monogram";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import { featured, type Project } from "@/content/projects";
+import { featured } from "@/content/projects";
 
-const desktopOrder: Record<Project["lineupPosition"], string> = {
-  left: "lg:order-1",
-  center: "lg:order-2",
-  right: "lg:order-3",
+/** Desktop seats: Recolm left, Hermes center (lead), Valorant ML right (docs/design.md, Section 3.5). */
+const seats: Record<string, { order: string; lead: boolean }> = {
+  recolm: { order: "lg:order-1", lead: false },
+  "project-hermes": { order: "lg:order-2", lead: true },
+  "valorant-ml": { order: "lg:order-3", lead: false },
 };
 
 /**
@@ -34,16 +35,17 @@ export function Lineup() {
         <ol className="relative flex flex-col gap-8 sm:grid sm:grid-cols-2 sm:gap-6 lg:flex lg:flex-row lg:items-start lg:gap-3">
           {featured.map((project, i) => {
             const wide = i === featured.length - 1;
+            const seat = seats[project.slug];
             return (
               <li
                 key={project.slug}
                 style={{ "--rise-delay": `${160 + i * 80}ms` } as CSSProperties}
-                className={`animate-rise ${wide ? "sm:col-span-2" : ""} ${desktopOrder[project.lineupPosition]}`}
+                className={`animate-rise ${wide ? "sm:col-span-2" : ""} ${seat.order}`}
               >
                 <ProjectCard
                   project={project}
                   rank={i + 1}
-                  layout={project.lineupPosition === "center" ? "lead" : "flank"}
+                  layout={seat.lead ? "lead" : "flank"}
                   wide={wide}
                 />
               </li>

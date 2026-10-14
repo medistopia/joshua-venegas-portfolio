@@ -127,14 +127,20 @@ Blender, purchased art, and commissions are **not** prerequisites. This is what 
 
 ## Content needed from Joshua
 
-Nothing below will be invented.
+Nothing below will be invented. Received in October 2026 and recorded in `src/content`: expected graduation (Spring 2027), interests, the AI Lab supervisor (Prof. Mohammad Mohebi), the Foxtrot collaboration with Brandon Hall, Hermes's stack, contributions, and Phase 1 release date (October 8, 2026), Recolm's client, stack, and scope of work, the Valorant ML methods, the research with Dr. Lai Wei and Dr. Yong Wei (title only), and two experiments (Auto Research Agent, Lyn Desktop Companion).
+
+Still needed:
 
 - Approval to publish the résumé PDF.
 - Public contact method (email or form), plus GitHub and LinkedIn URLs to display.
-- The AI Lab's host organization and the dates for that role and for JV Digital, if they should be shown.
-- For each project: problem, Joshua's role, team size, stack, key implementation decisions, evidence (repository, demo, screenshots, write-up), and real outcomes.
-- Recolm: written client permission to name the client and show screenshots.
-- Valorant ML: results or data for the charts, the data source and its terms, and whether the work can be shared.
+- The AI Lab's host organization, Joshua's role title at Foxtrot, and the dates for each role, if they should be shown.
+- Research with Dr. Lai Wei and Dr. Yong Wei: project title, Joshua's responsibilities, methods, deliverables, and current milestone.
+- Collaborators: confirmation that each person agrees to be listed, plus any portraits, biographies, and links, each with a source.
+- For each project: problem, team size, key implementation decisions, evidence (repository, demo, screenshots, write-up), and real outcomes.
+- Hermes: sanitized product captures (no real email content, customer information, credentials, or private operational details).
+- Recolm: written client permission to name the client (recorded in content with `nameApproved: false`, so it is not shown) and to show screenshots.
+- Valorant ML: research outputs for the charts, the data source and its terms, and whether the work can be shared.
+- Auto Research Agent and Lyn: Joshua's own contribution, and completion or release status.
 
 ## Asset inventory
 
@@ -149,5 +155,6 @@ An asset ships only when its license column is filled and Joshua has approved it
 | A2-recolm | Recolm card art | Missing | Capture | TBD | Client permission pending |
 | A2-hermes | Hermes card art | Missing | Capture | Owned once captured | Sanitize data |
 | A2-valml | Valorant ML chart | Missing | Generated from real results | Owned | Data terms pending |
+| A2-study-lobby | Lobby study art: three pennants, two "Currently working on" slides, three feature tiles | Study only | Cursor image tool, styled from the approved Atrium scene | Pending decision | `public/art/study/lobby/*`. Original, with no text, logos, interfaces, charts, people, or game imagery. Illustrative only: none depicts a real product, campus, or result. |
 | A3-monogram | JV monogram and emblem | Draft | Original | Owned | Needs Joshua's review |
 | A4-resume | Résumé PDF | Awaiting approval | Joshua | Owned | |
