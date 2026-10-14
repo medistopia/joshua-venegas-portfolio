@@ -27,7 +27,7 @@ function requireProject(slug: string): Project {
 }
 
 const workloadArt: Record<string, Art> = {
-  foxtrot: art("current-foxtrot.jpg", "72% 50%"),
+  "project-hermes": art("current-hermes.jpg", "72% 50%"),
   "wei-research": art("current-research.jpg", "78% 50%"),
 };
 

@@ -1,11 +1,15 @@
 import { currentWorkSchema } from "./schema";
 
-/** What Joshua is working on now, in his own wording. */
+/**
+ * What Joshua is working on now, in his own wording. Foxtrot OS is the broader initiative; his
+ * confirmed implementation work centers on Project Hermes, so nothing here claims the rest of it.
+ */
 export const currentWork = currentWorkSchema.array().parse([
   {
-    id: "foxtrot",
-    title: "Foxtrot",
-    description: "Building and supporting Project Hermes with Foxtrot.",
+    id: "project-hermes",
+    title: "Project Hermes",
+    description:
+      "Developing a Gmail-backed inbox and workspace for Foxtrot's agents as part of my work on the broader Foxtrot OS initiative.",
     project: "project-hermes",
     research: null,
     people: ["brandon-hall"],

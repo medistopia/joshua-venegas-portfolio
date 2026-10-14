@@ -101,6 +101,8 @@ export const experienceItemSchema = z.object({
   organization: text,
   team: confirmed(text),
   detail: confirmed(text),
+  /** Joshua's confirmed work in this role, summarized. Never inferred from a project's stack. */
+  highlights: z.array(text),
   people: z.array(text),
   dates: confirmed(text),
 });

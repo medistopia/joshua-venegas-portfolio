@@ -11,7 +11,8 @@ const hermes = projectSchema.parse({
   title: "Project Hermes",
   kind: "project",
   summary: "A Gmail-backed inbox and workspace for Foxtrot's agents.",
-  description: null,
+  description:
+    "A Gmail-backed inbox and workspace for Foxtrot's agents, developed as part of my work on Foxtrot OS, the broader platform initiative associated with Foxtrot's Special Projects Group. My confirmed implementation work so far centers on Hermes.",
   context: "Foxtrot",
   client: null,
   people: ["brandon-hall"],
