@@ -3,6 +3,8 @@ import type { Browser, BrowserContextOptions, Page } from "@playwright/test";
 export const viewports = {
   desktop: { width: 1440, height: 900, deviceScaleFactor: 1 },
   laptop: { width: 1280, height: 720, deviceScaleFactor: 1 },
+  compact: { width: 1024, height: 768, deviceScaleFactor: 1 },
+  tablet: { width: 768, height: 1024, deviceScaleFactor: 1 },
   mobile: { width: 390, height: 844, deviceScaleFactor: 2 },
 } as const;
 
@@ -39,6 +41,28 @@ export async function settle(page: Page) {
     );
     await Promise.all(document.getAnimations().map((animation) => animation.finished.catch(() => null)));
   });
+}
+
+/**
+ * Effects that reduced motion forbids: keyframe or script animations, transitions of geometry
+ * (transform, position, size), and any transition longer than 120ms. Short color, opacity,
+ * and filter transitions are permitted and not reported.
+ */
+export function forbiddenMotion(page: Page) {
+  return page.evaluate(() =>
+    document.getAnimations().flatMap((animation) => {
+      if (!(animation instanceof CSSTransition)) {
+        const name = animation instanceof CSSAnimation ? animation.animationName : "script";
+        return [`animation ${name}`];
+      }
+      const property = animation.transitionProperty;
+      const duration = Number(animation.effect?.getComputedTiming().duration ?? 0);
+      if (/^(transform|translate|scale|rotate|top|left|right|bottom|inset.*|margin.*|(min-|max-)?(width|height))$/.test(property)) {
+        return [`movement transition ${property}`];
+      }
+      return duration > 120 ? [`${duration}ms transition ${property}`] : [];
+    }),
+  );
 }
 
 /** Presses Tab until the focused element matches, or fails after a bound. */

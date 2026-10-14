@@ -1,5 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
-import { openPage, settle, tabTo } from "./helpers";
+import { forbiddenMotion, openPage, settle, tabTo } from "./helpers";
 
 const interactive = [
   "header nav a[href='/projects']",
@@ -57,10 +57,17 @@ function layout(page: Page) {
 }
 
 test.describe("reduced motion", () => {
-  test("no animations run after load", async ({ browser }) => {
+  test("no animations or movement run after load", async ({ browser }) => {
     const { context, page } = await openPage(browser, "desktop", "reduced");
-    const running = await page.evaluate(() => document.getAnimations().length);
-    expect(running).toBe(0);
+    expect(await forbiddenMotion(page)).toEqual([]);
+    await context.close();
+  });
+
+  test("a pointer resting on the brand slab only triggers its short brightness transition", async ({ browser }) => {
+    const { context, page } = await openPage(browser, "desktop", "reduced");
+    await page.mouse.move(20, 20);
+    await page.mouse.move(24, 24);
+    expect(await forbiddenMotion(page)).toEqual([]);
     await context.close();
   });
 
@@ -90,13 +97,7 @@ test.describe("reduced motion", () => {
     const { context, page } = await openPage(browser, "mobile", "reduced");
     await settle(page);
     await page.getByRole("button", { name: "Menu" }).click();
-    // Short color transitions are allowed; keyframe animations and transform transitions are not.
-    const effects = await page.evaluate(() =>
-      document
-        .getAnimations()
-        .map((a) => (a instanceof CSSTransition ? a.transitionProperty : `animation ${(a as CSSAnimation).animationName}`)),
-    );
-    expect(effects.filter((e) => /^animation|transform|translate|scale|rotate/.test(e))).toEqual([]);
+    expect(await forbiddenMotion(page)).toEqual([]);
     expect(await maxTransitionMs(page, "dialog")).toBeLessThanOrEqual(120);
     await context.close();
   });

@@ -12,10 +12,11 @@ export default defineConfig({
     baseURL: `http://localhost:${port}`,
     browserName: "chromium",
   },
+  // Always a fresh build on a server this run owns; if the port is taken, the run fails instead of reusing it.
   webServer: {
     command: `npm run build && npm run start -- --port ${port}`,
     url: `http://localhost:${port}`,
     timeout: 300_000,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
   },
 });
