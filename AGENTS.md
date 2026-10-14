@@ -18,7 +18,9 @@ If a change conflicts with these documents, update the document in the same pull
 
 ## Current status
 
-Phase 1 (visual direction decision) is in review. The composition study lives at `/lab/composition` (development only) and its results are in `docs/verification/phase-1/README.md`. Do not build homepage components until Joshua approves a candidate. The study's `src/app/lab/composition/_components` are throwaway and must not be imported by real pages.
+Phase 1 is approved: candidate A (Atrium) is the visual direction, and its background is an interim asset until final-resolution art is produced. Phase 2 (Milestone 1, the homepage) is in progress. The composition study at `/lab/composition` (development only) remains for reference; its results are in `docs/verification/phase-1/README.md`. The study's `src/app/lab/composition/_components` are throwaway and must not be imported by real pages.
+
+The lineup is an ordered list in priority order (Hermes, Recolm, Valorant ML); desktop CSS places it as Recolm, Hermes, Valorant ML (`docs/design.md`, Section 3.5).
 
 The primary composition reference is the Play lobby (`references/valorant/00-play-lobby.jpg`, local only).
 

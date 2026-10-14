@@ -43,13 +43,15 @@ Blender, purchased art, and commissions are **not** prerequisites. This is what 
 | Requirement | Desktop crop (landscape) | Mobile crop (portrait) |
 |-------------|--------------------------|------------------------|
 | Final master size | At least 2880 x 1620 | At least 1290 x 2796 |
-| Focal point | x about 56% (lineup center), above the card tops | x about 50%, y about 13% (top art band) |
-| Text safe zone | Left 38%: dark and low in detail; a fixed scrim adds protection | Below about 24% of the height: fades to solid `#0B1220` |
+| Focal point | x about 56% (lineup center), above the card tops | x about 50%, in the top 150px (a short art band under the top bar) |
+| Text safe zone | Left 38%: dark and low in detail; a fixed scrim adds protection | Below about 150px: fades to solid `#0B1220` |
 | Light source | One warm beam from above; gold core with a cool haze falloff | Same beam, cropped into the top band |
 | Value structure | About 80% of the frame in dark values; the brightest values only near the focal point | Same |
 | Palette | Navy and blue-black base, warm gold light, small teal rim lights; no coral | Same |
 | Depth | At least three planes: floor, mid-ground light and architecture, far haze | Same |
-| Contrast | Hero text at least 4.5:1 against the 98th-percentile background luminance in the safe zone (measured by `scripts/art/measure_safe_zone.py`) | Same |
+| Contrast | Every line of text at least 4.5:1 (3:1 for large text) against every background pixel behind it, checked by `tests/e2e/contrast.spec.ts`. `scripts/art/measure_safe_zone.py` remains a quick screening tool: it uses the 98th-percentile luminance of the whole safe-zone box, which is an approximation. | Same |
+
+**Status.** Candidate A, Atrium, is approved. Milestone 1 ships it as an **interim** asset at the Phase 1 study resolution (1280 x 720 desktop, 720 x 1280 mobile). Final resolution is handled during refinement.
 
 **Phase 1 candidates.** Previews and measurements are in `docs/verification/phase-1/README.md`.
 
@@ -59,7 +61,7 @@ Blender, purchased art, and commissions are **not** prerequisites. This is what 
 | B. Gallery | AI-generated (Cursor image tool) | Diagonal beam echoes the lobby's gold streaks; dramatic reflective floor | Light source sits at the upper right over the Valorant ML card and panel stack, not behind the lead card; mobile eyebrow contrast is marginal |
 | C. Procedural hall | `scripts/art/render_backdrop.py` | Fully owned, any resolution, exact control of the focal point | Graphic rather than cinematic; the beam is mostly hidden behind the lead card; the mobile eyebrow fails contrast (3.4:1) as rendered |
 
-**Paths to a final A1 asset** (decision required):
+**Paths to a final A1 asset** (decision required during refinement):
 
 1. Ship the approved AI-generated scene after upscaling, with its terms recorded. Fastest, but softest and least certain on licensing.
 2. Use the approved candidate as a brief for an artist or a photographer, or for a later Blender render, if Joshua chooses to invest in one. Highest quality; optional.

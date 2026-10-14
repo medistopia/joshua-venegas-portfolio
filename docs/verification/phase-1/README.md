@@ -20,7 +20,9 @@ Individual captures: `candidate-{a,b,c}-{desktop,laptop,mobile}-guides.jpg` and 
 
 ## Hero text contrast
 
-Measured against the art behind the text safe zone with the text hidden, at the 98th-percentile background luminance. WCAG AA needs 4.5:1 for this text.
+How these numbers were measured: the whole safe-zone box (the area that holds the eyebrow, name, headline, and actions) was captured with the text made transparent. The script took the 98th-percentile relative luminance of all pixels in that box and computed the WCAG contrast ratio of each text color against it. This is an approximation, not a worst case: it ignores the brightest 2% of pixels, and it covers the whole box rather than the positions where the glyphs actually sit (much of the box is empty space between and beside the lines). WCAG AA needs 4.5:1 for this text.
+
+Milestone 1 replaces this with a strict check at the actual text positions: the minimum contrast between each line's text color and every background pixel inside that line's box (`docs/implementation-plan.md`, Verification, section 5).
 
 | Candidate | Viewport | Off-white text `#EDEAE3` | Gold eyebrow `#C9A55C` |
 |-----------|----------|--------------------------|------------------------|
@@ -54,9 +56,11 @@ Measured against the art behind the text safe zone with the text hidden, at the 
 
 Layout checks that apply to all candidates: the name, headline, actions, all three full cards, and "Explore projects" fit within 1440 x 900 and 1280 x 720 without scrolling. On mobile, the art band, identity block, and the start of the first card fit in the first screen.
 
-## Recommendation
+## Recommendation and decision
 
-**Candidate A, Atrium.** It is the only candidate that passes every check, and its light composition is the closest match to the lobby. Before it ships:
+**Candidate A, Atrium.** It is the only candidate that passes every check, and its light composition is the closest match to the lobby.
+
+**Decision:** Joshua approved candidate A as the homepage direction. Its current background is an interim asset; final resolution is handled during refinement. Before the final art ships:
 
 1. Decide on the final source (see `docs/assets.md`, A1): ship the upscaled AI image with its terms recorded, use it as a brief for an artist or owned render, or move the procedural renderer toward it.
 2. Produce the final art at 2880 x 1620 and 1290 x 2796.

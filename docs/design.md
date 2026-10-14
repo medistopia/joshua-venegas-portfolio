@@ -1,6 +1,6 @@
 # Design Specification
 
-Status: draft for review. Phase 1 composition studies exist at `/lab/composition` (development only); the homepage is not implemented yet.
+Status: Phase 1 approved. Candidate A (Atrium) is the visual direction, and its current background is an interim asset until final-resolution art is produced. Milestone 1 (homepage) builds on this document.
 
 This document defines the visual system and homepage composition for Joshua Venegas's portfolio. The design is inspired by the VALORANT client's menu screens. It is an original identity built on Joshua's name, and it uses no Riot Games artwork, logos, icons, fonts, or screenshots in the shipped interface.
 
@@ -67,7 +67,7 @@ Patterns shared across all screens:
 The homepage is staged like the Play lobby (reference 00):
 
 - The **identity block** (eyebrow, name, headline, résumé and contact actions) takes the place of the lobby's left column: top-left, the first thing read.
-- The **three featured projects** form the **lineup** at center: **Recolm** (left), **Project Hermes** (center, raised lead card), **Valorant ML** (right).
+- The **three featured projects** form the **lineup** at center: **Recolm** (left), **Project Hermes** (center, raised lead card), **Valorant ML** (right). In the document, the lineup is an ordered list by priority (Hermes, Recolm, Valorant ML); desktop CSS places Hermes in the center (see Section 3.5).
 - A **panel stack** at right mirrors the lobby's news tiles: Experience, About, Contact.
 - One coral **"Explore projects"** action sits centered below the lineup, where "Find Match" sits in the lobby.
 - The **cinematic background** is a dark architectural scene with one warm light source that lands behind the lead card, plus a subtle original JV emblem behind the lineup. The emblem stays subordinate: about 20% opacity, mostly hidden by the cards, with only its upper portion visible above them.
@@ -78,10 +78,10 @@ Headline (approved): "I build practical software and applied machine learning sy
 
 ```
 +----------------------------------------------------------------------------------+
-| [JV JOSHUA VENEGAS]/ [HOME] PROJECTS EXPERIENCE ABOUT CONTACT          [RESUME]  |  top bar 56px
+| [JV JOSHUA VENEGAS]/ [HOME] PROJECTS EXPERIENCE ABOUT CONTACT          [RESUME]* |  top bar 56px
 |                                  warm key light                                  |
 |                              /\  (emblem top, faint)                             |
-|                     +-01-+ +--02--+ +-03-+                                       |
+|                     +-02-+ +--01--+ +-03-+                                       |
 | UNG // CS + ML MINOR |    | |      | |    |                         +----------+  |
 |                      |ART | | ART  | |ART |                         |EXPERIENCE|  |
 | JOSHUA               |    | |      | |    |                         +----------+  |
@@ -90,11 +90,13 @@ Headline (approved): "I build practical software and applied machine learning sy
 | I build practical    |    | |      | |    |                         |CONTACT   |  |
 | software and applied  \  /  |      |  \  /                          +----------+  |
 | ML systems.            \/    \    /    \/                                         |
-| [RESUME] [CONTACT]            \  /                                                |
+| [RESUME]* [CONTACT] [ABOUT]   \  /                                                |
 |                          [ EXPLORE PROJECTS ]                                     |
 | CURRENTLY  University of North Georgia, computer science ...                     |  status strip 40px
 +----------------------------------------------------------------------------------+
 ```
+
+\* Résumé actions render only once Joshua approves a published résumé. Until then they are omitted, not disabled.
 
 Grid: three columns inside a 1440px max width with 40px outer padding and 24px gaps: identity `minmax(300px, 360px)`, lineup `1fr`, panel stack `minmax(176px, 200px)`.
 
@@ -134,27 +136,29 @@ Height is the constraint. Applied when the viewport is at least 1024px wide and 
 ```
 +-------------------------------+
 | [JV JOSHUA VENEGAS]/   [MENU] |  top bar 56px
-|      warm key light + faint   |
-|      JV emblem (art band,     |
-|      about 27% of the height) |
+|   key light + small emblem    |  art band, about 96px
 |   UNG // CS + ML MINOR        |
 |   JOSHUA                      |
 |   VENEGAS                     |
 |   I build practical software  |
 |   and applied ML systems.     |
-|   [ RESUME ] [ CONTACT ]      |
+|   [ CONTACT ] [ ABOUT ]       |
 |                               |
 |   FEATURED WORK               |
 |   +----------01-------------+ |
 |   |  ART                    | |  cards stack vertically
-|   |  RECOLM                 | |  in lineup order (4:5);
+|   |  PROJECT HERMES         | |  in priority order (4:5);
 |   +-------------------------+ |  no horizontal carousel
 +-------------------------------+
 ```
 
-- The background uses a separate portrait crop. The key light and emblem sit in the top art band, centered at about x = 50%, y = 13%; the text starts below the band.
-- From about 24% of the viewport height, the background fades to solid navy, so text and cards never sit on the bright part of the art.
-- Cards stack vertically in lineup order (Recolm, Hermes, Valorant ML) at a 4:5 ratio, full width minus 16px margins. The source order matches the desktop left-to-right order, so keyboard order is the same on both layouts.
+- The background uses a separate portrait crop. The key light and a small emblem sit in a short art band (about 96px) under the top bar; the Phase 1 study used about 27% of the viewport height, which delayed the name and the first card.
+- Below the band, a scrim fades the art to solid navy so text never sits on the bright part of the beam. Contrast is verified behind each line of text (Section 10).
+- Cards stack vertically in priority order: Hermes, Recolm, Valorant ML, at a 4:5 ratio, full width minus 16px margins.
+
+### 3.5 Lineup order across layouts
+
+The lineup is an ordered list in priority order: Hermes, Recolm, Valorant ML. This order drives mobile layout, keyboard order, and the screen reader reading order on every viewport. On desktop, CSS `order` places the cards Recolm, Hermes, Valorant ML from left to right, so Hermes sits in the raised center position. Keyboard focus on desktop therefore moves from the lead card to the left card and then to the right card, which matches the visual hierarchy (the raised, framed lead card reads first). Index badges show the priority numbers (Hermes 01, Recolm 02, Valorant ML 03), so the desktop row reads 02, 01, 03 and the focus sequence is visible.
 - Navigation collapses into a "Menu" button that opens a full-screen dialog with large angled list items.
 - The résumé action stays visible in the hero; contact links repeat at the bottom.
 
@@ -329,20 +333,24 @@ Target: WCAG 2.2 AA.
 - Focus indicator: 2px teal outline with a 2px offset on every interactive element. It is drawn on an unclipped wrapper so `clip-path` shapes never hide it.
 - Navigation uses real links, with `aria-current="page"` on the active tab.
 - The mobile menu is a modal dialog: it moves focus in on open, traps focus while open, closes with Escape, and returns focus to the Menu button.
-- Text over art always sits inside a scrim or the art's dark safe zone, measured to at least 4.5:1.
+- Text over art always sits inside a scrim or the art's dark safe zone. Contrast is verified at the actual text positions: for every rendered line of text in the first viewport, the test compares the text color against every background pixel inside that line's box (captured with text hidden) and requires the minimum to reach 4.5:1 (3:1 for large text). This is a strict worst case, unlike the Phase 1 safe-zone measurement, which used the 98th-percentile luminance of the whole safe-zone box.
 - Decorative art and the emblem use `alt=""` or `aria-hidden="true"`. Project art receives meaningful alt text only when it shows real product content.
 - Information is never conveyed by color alone; tags and states also carry text.
 - The layout remains usable at 200% zoom and at 320px width.
 
 ## 11. Unresolved design decisions
 
-Decided in Phase 1: background direction (dark architectural scene, subtle JV emblem, one warm light), card order (Recolm, Hermes, Valorant ML), headline, and the card art approach (real captures where available, original research charts for Valorant ML, labelled placeholders otherwise).
+Decided:
+
+- Background direction: dark architectural scene, subtle JV emblem, one warm light (Phase 1).
+- **Candidate A, Atrium**, approved as the homepage direction. Its current background is an interim asset; final resolution is handled during refinement.
+- Desktop lineup: Recolm, Hermes (lead), Valorant ML. Document and mobile order: Hermes first (Section 3.5).
+- Mobile art band reduced to about 96px.
+- The Experience, About, and Contact tiles and the subtle JV emblem stay.
+- Headline and card art approach (real captures where available, original research charts for Valorant ML, labelled placeholders otherwise).
 
 Still open:
 
-1. **Composition candidate.** Approve one of the three Phase 1 studies (see `docs/verification/phase-1/README.md`). Recommendation: candidate A, Atrium.
-2. **Final key art source.** Whether the approved scene ships as AI-generated art (with its licensing caveats), is redrawn or commissioned to match, or is replaced by an improved owned render.
-3. **Emblem visibility.** The study uses about 20% opacity, mostly hidden behind the cards. Confirm that this reads as subtle rather than missing.
-4. **Panel stack content.** Whether the right column holds Experience, About, and Contact (as in the study) or something else, such as a résumé tile.
-5. **Ambient motion.** Whether the beam drift ships at all.
-6. **Personal VALORANT context.** Whether the Valorant ML case study mentions Joshua's own competitive play. Nothing about it appears unless Joshua opts in.
+1. **Final key art source.** Whether the approved scene ships as upscaled AI-generated art (with its licensing caveats), is redrawn or commissioned to match, or is replaced by an improved owned render.
+2. **Ambient motion.** Whether the beam drift ships at all.
+3. **Personal VALORANT context.** Whether the Valorant ML case study mentions Joshua's own competitive play. Nothing about it appears unless Joshua opts in.

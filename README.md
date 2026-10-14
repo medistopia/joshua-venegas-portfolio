@@ -18,13 +18,13 @@ Project details, links, and outcomes will be added as Joshua supplies and confir
 
 ## Development status
 
-**Phase 1, visual direction.** The project is scaffolded and a development-only composition study compares three background candidates. The homepage itself is not built yet.
+**Phase 2, Milestone 1.** Candidate A (Atrium) is the approved visual direction, with an interim background. The homepage is being built.
 
 | Phase | Status |
 |-------|--------|
 | 0. Repository and planning | Complete |
-| 1. Visual direction decision (key art and project art) | In review: see [docs/verification/phase-1](docs/verification/phase-1/README.md) |
-| 2. Milestone 1: homepage with navigation, project cards, mobile layout | Not started |
+| 1. Visual direction decision (key art and project art) | Approved: candidate A, see [docs/verification/phase-1](docs/verification/phase-1/README.md) |
+| 2. Milestone 1: homepage with navigation, project cards, mobile layout | In progress |
 | 3 to 6. Case studies, inner pages, expanded verification, deployment | Not started |
 
 See [docs/implementation-plan.md](docs/implementation-plan.md) for details.
