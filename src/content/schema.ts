@@ -34,6 +34,8 @@ export const personSchema = z.object({
   context: text,
   /** Joshua's own description of the relationship, first person. */
   relationship: text,
+  /** The person has agreed to appear on the site. Only approved people render. */
+  listingApproved: z.boolean(),
   bio: confirmed(text),
   portrait: confirmed(text),
   links: z.array(z.object({ label: text, href: z.url() })),
@@ -97,6 +99,7 @@ export const experienceItemSchema = z.object({
   id: text,
   role: confirmed(text),
   organization: text,
+  team: confirmed(text),
   detail: confirmed(text),
   people: z.array(text),
   dates: confirmed(text),

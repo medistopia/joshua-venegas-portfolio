@@ -128,6 +128,8 @@ export const featured: readonly Project[] = [hermes, recolm, valorantMl];
 
 export const experiments: readonly Project[] = [autoResearchAgent, lyn];
 
+export const allProjects: readonly Project[] = [...featured, ...experiments];
+
 export function findProject(slug: string): Project | undefined {
-  return featured.find((project) => project.slug === slug);
+  return allProjects.find((project) => project.slug === slug);
 }
