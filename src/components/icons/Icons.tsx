@@ -91,6 +91,22 @@ export function ChevronIcon({ direction, className }: IconProps & { direction: "
   );
 }
 
+export function PauseIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M8 5.5v13M16 5.5v13" />
+    </Icon>
+  );
+}
+
+export function PlayIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M7.5 5v14l11-7Z" />
+    </Icon>
+  );
+}
+
 export function ArrowIcon(props: IconProps) {
   return (
     <Icon {...props}>

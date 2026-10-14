@@ -191,6 +191,29 @@ body {
     linear-gradient(0deg, color-mix(in srgb, var(--color-bg-deep) 70%, transparent) 0%, transparent 50%);
 }
 
+/*
+  A dark backing sized by the text block itself, so every line sits on it whatever the art, the
+  wrap, or the slide. It reaches 32px left (the panel's left edge from 640px; clipped below that),
+  down 52px over the controls, and fades out 28px above the title and 16px past the widest line.
+*/
+@utility scrim-text {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -28px -16px -52px -32px;
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-bg-deep) 86%, transparent) calc(100% - 16px),
+      transparent
+    );
+    mask-image: linear-gradient(180deg, transparent, #000 28px);
+  }
+}
+
 /* Pixel stops, so the dark band always covers the text block whatever the card height. */
 @utility scrim-tile {
   background: linear-gradient(

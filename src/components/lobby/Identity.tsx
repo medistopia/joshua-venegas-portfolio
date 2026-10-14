@@ -16,7 +16,7 @@ export function Identity() {
   }
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 lg:max-xl:gap-4">
       <div className="flex flex-col gap-3">
         <p className="label text-gold">{profile.eyebrow}</p>
         <h1 id="hero-name" className="font-display text-display-m font-bold uppercase">
