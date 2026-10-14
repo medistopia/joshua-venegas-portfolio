@@ -177,7 +177,7 @@ Joshua's review of Milestone 1 asked for the homepage to become a full-screen me
 | Area | Treatment |
 |------|-----------|
 | Top navigation | Compact JV slab (monogram only from 1024px; the name stays in the accessible name), then icon-and-label tabs: house, briefcase, badge, person, envelope. The icons are an original set (`src/components/icons/Icons.tsx`). The selected tab keeps the light angled plate. Below 1024px: the full brand slab and the Menu dialog, whose links carry the same icons. |
-| Upper-left feature | Image-led "Currently working on" carousel bleeding into the top-left corner, with its right edge cut on the diagonal and traced by gold rules. Manual arrows and diamond indicators; there is no auto-rotation. Slides: Foxtrot, and the research with Dr. Lai Wei and Dr. Yong Wei. Inactive slides are `inert`. |
+| Upper-left feature | Image-led "Currently working on" carousel bleeding into the top-left corner, with its right edge cut on the diagonal and traced by gold rules. Slides: Project Hermes (linking to its case study), and the research with Dr. Lai Wei and Dr. Yong Wei. Each slide's text sits on a dark backing (`scrim-text`) that covers the title, description, link, and controls and fades out before the art. Arrows, diamond indicators, and a labelled Pause/Play control. It rotates every 8 seconds (Section 8); inactive slides are `inert`. |
 | Left utility panel | Eyebrow, name (`--text-display-m`, 40px; the page's `h1`), roles on separate lines, headline, then About and Contact rows. The résumé row appears once confirmed. |
 | Center stage | Three art-led pennants, Hermes leading. Flanks are 0.9 of the lead and tuck 16px behind it. Each card shows artwork, a short context label, and the title; summaries live in the project view. Explore projects sits beneath. |
 | Right feature column | Three promotional tiles sized to the lead pennant (the first one taller): the Hermes Phase 1 release, the AI Lab role, and education. |
@@ -188,7 +188,7 @@ Joshua's review of Milestone 1 asked for the homepage to become a full-screen me
 | Range | Lobby layout |
 |-------|--------------|
 | 1280px and up | Three columns: feature and identity (300px), stage, tiles (208px), with 32px gaps. Reserve 300px. At 1440 x 900 the lead is 270 x 540; at 1280 x 720, 210 x 420. |
-| 1024 to 1279px | Feature and identity (280px) beside the stage; the tiles form one row beneath both. Reserve 440px, so the tile row fits; the carousel is 208px tall here. |
+| 1024 to 1279px | Feature and identity (280px) beside the stage; the tiles form one row beneath both. Reserve 440px, so the tile row fits. The carousel keeps its 248px height (the Project Hermes description runs to five lines in this column) with a smaller slide title, and the gap above the About and Contact rows tightens to 16px. |
 | 640 to 1023px | One column: feature, identity, the seated pennant row (Recolm, Hermes, Valorant ML), tiles in a row of three, then a collaborator section. |
 | below 640px | One column: feature, identity, pennants stacked at 4:5 in priority order (Hermes first), tiles stacked, then the collaborator section. |
 
@@ -198,7 +198,7 @@ Joshua's review of Milestone 1 asked for the homepage to become a full-screen me
 |------|---------|
 | Projects (`/projects`) | "Select a project": all five projects as pennants in priority order (featured work, then the two experiments), Hermes selected. |
 | Case study (`/projects/[slug]`) | From 1024px, a project list on the left and a reading panel that scrolls inside the shell, so the navigation stays visible. The panel holds the banner art, description, status, milestones, collaborators, Joshua's contributions (or, for experiments, what the experiment involves), the stack, and an in-progress note. Below 1024px the article comes first and the list follows. |
-| Experience (`/experience`) | Roles as match-history rows (organization, team when confirmed, role, detail), and a research column with the research involving Dr. Lai Wei and Dr. Yong Wei (details in progress) and a link to Valorant ML. |
+| Experience (`/experience`) | Roles as match-history rows (organization, team when confirmed, role, detail, and a list of Joshua's confirmed work where he has supplied one), and a research column with the research involving Dr. Lai Wei and Dr. Yong Wei (details in progress) and a link to Valorant ML. |
 | About (`/about`) | The about paragraphs, interests, education with expected graduation, roles, and, from 1024px, the "About this site" note with the Riot Games disclaimer and source link (the footer carries it below 1024px). |
 | Contact (`/contact`) | Confirmed contact channels in a panel; with none confirmed, a status line. |
 
@@ -339,6 +339,7 @@ Planned motion:
 3. **NavTab hover**: skewed plate fades in over `--dur-fast`.
 4. **Ambient light** (optional, decided after the key art is approved): a very slow (20s or longer) opacity drift on the beam layer. It does not move the layout.
 5. **Mobile menu**: fade plus 12px slide, `--dur-base`.
+6. **"Currently working on" rotation**: the carousel advances every 8 seconds with a cross-fade over `--dur-base`. It holds while the pointer is over it, while keyboard focus is inside it, and while the page is hidden. Pause stops it; choosing a slide with an arrow or indicator also stops it until the visitor presses Play. Under reduced motion it starts paused, and a slide change is the 120ms cross-fade alone. Only visitor-initiated changes are announced to screen readers ("Slide 2 of 2: Research").
 
 ### Reduced-motion contract
 
@@ -348,7 +349,7 @@ Removed:
 
 - Movement on interaction: no hover lift, no art zoom, no sliding menus. State changes happen in place.
 - The entrance sequence's travel. Content renders in its final position immediately.
-- Ambient and looping animation (including any beam drift), and autoplaying video.
+- Ambient and looping animation (including any beam drift), and autoplaying video. The carousel starts paused; the visitor can still press Play.
 - Smooth scrolling.
 
 Preserved:
@@ -400,9 +401,10 @@ Decided:
 - **Lobby shell** (Section 3.6), approved by Joshua in October 2026. It replaces the first homepage, including its below-the-fold sections, panel stack, and status strip.
 - The AI-generated lobby art on the pennants, carousel, and tiles ships for now and will be replaced as product captures and owned art become available (`docs/assets.md`, A2-lobby).
 - The four collaborators agreed to be listed.
+- **Carousel rotation**, approved by Joshua in October 2026, with the pause rules in Section 8.
 
 Still open:
 
 1. **Final key art source.** Whether the approved scene ships as upscaled AI-generated art (with its licensing caveats), is redrawn or commissioned to match, or is replaced by an improved owned render.
-2. **Ambient motion.** Whether the beam drift ships at all, and whether the "Currently working on" carousel gains a slow rotation (paused on hover and focus, off under reduced motion). It is manual for now.
+2. **Ambient motion.** Whether the beam drift ships at all.
 3. **Personal VALORANT context.** Whether the Valorant ML case study mentions Joshua's own competitive play. Nothing about it appears unless Joshua opts in.
