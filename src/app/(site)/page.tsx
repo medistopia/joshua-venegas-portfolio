@@ -1,11 +1,24 @@
-export default function Home() {
+import { Backdrop } from "@/components/home/Backdrop";
+import { Hero } from "@/components/home/Hero";
+import { HomeSections } from "@/components/home/HomeSections";
+import { Lineup } from "@/components/home/Lineup";
+import { PanelStack } from "@/components/home/PanelStack";
+import { StatusStrip } from "@/components/home/StatusStrip";
+
+export default function HomePage() {
   return (
-    <main className="flex min-h-svh flex-col items-start justify-center gap-4 px-6 sm:px-10">
-      <p className="label text-text-muted">Portfolio in progress</p>
-      <h1 className="font-display text-display-l font-bold uppercase">Joshua Venegas</h1>
-      <p className="max-w-prose text-text-muted">
-        I build practical software and applied machine learning systems.
-      </p>
-    </main>
+    <>
+      {/* The fold slides under the translucent top bar so the art runs to the top edge. */}
+      <div className="relative isolate -mt-14 overflow-x-clip pt-14 lg:h-svh lg:min-h-[640px] lg:overflow-hidden">
+        <Backdrop />
+        <div className="relative mx-auto grid max-w-[1440px] gap-12 px-4 pb-16 lg:h-[calc(100%-40px)] lg:grid-cols-[minmax(300px,360px)_1fr_minmax(176px,200px)] lg:items-center lg:gap-6 lg:px-10 lg:pb-0 short:px-8">
+          <Hero />
+          <Lineup />
+          <PanelStack />
+        </div>
+        <StatusStrip />
+      </div>
+      <HomeSections />
+    </>
   );
 }
