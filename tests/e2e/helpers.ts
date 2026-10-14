@@ -1,6 +1,7 @@
 import type { Browser, BrowserContextOptions, Page } from "@playwright/test";
 
 export const viewports = {
+  wide: { width: 1920, height: 1080, deviceScaleFactor: 1 },
   desktop: { width: 1440, height: 900, deviceScaleFactor: 1 },
   laptop: { width: 1280, height: 720, deviceScaleFactor: 1 },
   compact: { width: 1024, height: 768, deviceScaleFactor: 1 },
@@ -11,7 +12,19 @@ export const viewports = {
 export type ViewportName = keyof typeof viewports;
 export type Motion = "default" | "reduced";
 
-export const verificationDir = "docs/verification/milestone-1";
+export const verificationDir = "docs/verification/lobby";
+
+/** Every view in the shell, keyed by the name used in screenshot and report files. */
+export const views = {
+  home: "/",
+  projects: "/projects",
+  "project-hermes": "/projects/project-hermes",
+  experience: "/experience",
+  about: "/about",
+  contact: "/contact",
+} as const;
+
+export type ViewName = keyof typeof views;
 
 export async function openPage(
   browser: Browser,
@@ -32,8 +45,10 @@ export async function openPage(
   return { context, page };
 }
 
-/** Fonts loaded, images decoded, and entrance animations finished. */
+/** Active tab revealed, fonts loaded, images decoded, and entrance animations finished. */
 export async function settle(page: Page) {
+  // The tabs stream in behind a Suspense boundary (usePathname under Cache Components).
+  await page.waitForSelector("header [aria-current='page']", { state: "attached" });
   await page.evaluate(async () => {
     await document.fonts.ready;
     await Promise.all(

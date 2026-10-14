@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
-import { openPage, settle, verificationDir, viewports, type ViewportName } from "./helpers";
+import { openPage, settle, verificationDir, views, viewports, type ViewName, type ViewportName } from "./helpers";
 
 type Line = {
   text: string;
@@ -23,9 +23,16 @@ type Result = {
 
 mkdirSync(verificationDir, { recursive: true });
 
-for (const viewport of Object.keys(viewports) as ViewportName[]) {
-  test(`text contrast at actual positions, ${viewport}`, async ({ browser }) => {
-    const { context, page } = await openPage(browser, viewport, "reduced");
+const cases: [ViewName, ViewportName][] = [
+  ...(Object.keys(viewports) as ViewportName[]).map((viewport): [ViewName, ViewportName] => ["home", viewport]),
+  ...(Object.keys(views) as ViewName[])
+    .filter((view) => view !== "home")
+    .flatMap((view) => (["desktop", "mobile"] as ViewportName[]).map((viewport): [ViewName, ViewportName] => [view, viewport])),
+];
+
+for (const [view, viewport] of cases) {
+  test(`text contrast at actual positions, ${view} ${viewport}`, async ({ browser }) => {
+    const { context, page } = await openPage(browser, viewport, "reduced", views[view]);
     await settle(page);
 
     // One box per rendered line of every visible text node in the first viewport.
@@ -58,14 +65,28 @@ for (const viewport of Object.keys(viewports) as ViewportName[]) {
         }
         if (hidden || opacity === 0) continue;
 
+        // Lines scrolled out of a reading panel or the stage are not on screen.
+        let clip = { left: 0, top: 0, right: innerWidth, bottom: innerHeight };
+        for (let a = el.parentElement; a && a !== document.documentElement; a = a.parentElement) {
+          const s = getComputedStyle(a);
+          if (s.overflowX === "visible" && s.overflowY === "visible") continue;
+          const c = a.getBoundingClientRect();
+          clip = {
+            left: Math.max(clip.left, c.left),
+            top: Math.max(clip.top, c.top),
+            right: Math.min(clip.right, c.right),
+            bottom: Math.min(clip.bottom, c.bottom),
+          };
+        }
+
         const range = document.createRange();
         range.selectNodeContents(node);
         for (const r of Array.from(range.getClientRects())) {
           const box = {
-            x0: Math.max(0, r.left),
-            y0: Math.max(0, r.top),
-            x1: Math.min(innerWidth, r.right),
-            y1: Math.min(innerHeight, r.bottom),
+            x0: Math.max(clip.left, r.left),
+            y0: Math.max(clip.top, r.top),
+            x1: Math.min(clip.right, r.right),
+            y1: Math.min(clip.bottom, r.bottom),
           };
           if (box.x1 - box.x0 < 2 || box.y1 - box.y0 < 2) continue;
           out.push({
@@ -79,7 +100,7 @@ for (const viewport of Object.keys(viewports) as ViewportName[]) {
       }
       return out;
     });
-    expect(lines.length).toBeGreaterThan(10);
+    expect(lines.length).toBeGreaterThan(view === "home" ? 10 : 5);
 
     // Hide only the glyph fill so borders and backgrounds drawn with currentColor stay put.
     const hide = await page.addStyleTag({
@@ -148,9 +169,10 @@ for (const viewport of Object.keys(viewports) as ViewportName[]) {
 
     const failures = results.filter((r) => r.minRatio < r.required);
     writeFileSync(
-      `${verificationDir}/contrast-${viewport}.json`,
+      `${verificationDir}/contrast-${view}-${viewport}.json`,
       `${JSON.stringify(
         {
+          path: views[view],
           viewport: viewports[viewport],
           method:
             "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
