@@ -1,0 +1,96 @@
+{
+  "files": [
+    {
+      "source": "V1",
+      "sha256": "fda57602a60a63602e8b7dc37ab39c3ed1548189684c5a835971e8d083c05e9b",
+      "path": "outputs/final/final_run_summary.md"
+    },
+    {
+      "source": "V1",
+      "sha256": "13471fd74a76a3033d8a3ddf8f81acd3774ba124449c943edf252a9dfb7298c2",
+      "path": "outputs/final/final_model_results.csv"
+    },
+    {
+      "source": "V1",
+      "sha256": "aad2dd16c78e347f5c2a36841e8162eb3ab4b272671e31da9a5c1b839da6e698",
+      "path": "outputs/final/final_temporal_validation.csv"
+    },
+    {
+      "source": "V1",
+      "sha256": "307bcd7414cf01cde8ca679953c830fa185623036b7ab61b02c9189671d76243",
+      "path": "outputs/tables/leakage_audit.txt"
+    },
+    {
+      "source": "A1/A2",
+      "sha256": "ecd84a70ac6b78f90159452976b43e3beaa1540d82e3013b604ae0b65f413932",
+      "path": "pyproject.toml"
+    },
+    {
+      "source": "A1/A2",
+      "sha256": "2895a3226f0f4591229992838b355336e49b8612156ad8e78b8c5cf427ca92be",
+      "path": "ara/cli.py"
+    },
+    {
+      "source": "A1/A2",
+      "sha256": "45ac7a7796ca2003f7971b1c46c59cf4e638596f6a18748c2237335fab37eb5d",
+      "path": "ara/storage/models.py"
+    },
+    {
+      "source": "A1/A2",
+      "sha256": "98865149c16f7ae40ffe2d9cf4d948a6a119c005250484fb34642df1b7b53e69",
+      "path": "ara/embeddings/pipeline.py"
+    },
+    {
+      "source": "A1/A2",
+      "sha256": "678b7c21add26dfd1b195252da98066735b725edcceccafffed3057f24bc147f",
+      "path": "ara/extraction/extractor.py"
+    },
+    {
+      "source": "A1/A2",
+      "sha256": "bb65631df6a12967c564c381caa52a510a366e9debd87a65a776f3b4562434a0",
+      "path": "ara/api/main.py"
+    },
+    {
+      "source": "A1/A2",
+      "sha256": "1b7efb0e0463a1bd9a7e440bad201277b80713a33fcdf7deb3dd89d1ca439f06",
+      "path": "ara/scheduler/__init__.py"
+    },
+    {
+      "source": "A1/A2",
+      "sha256": "3ba847c29d5db644d8c95ba32090e6fb53600656a129a0af9376d0a376922a2c",
+      "path": "frontend/index.html"
+    },
+    {
+      "source": "L1",
+      "sha256": "0b99980c8b5e16f8107cc60e02e657c6e5ad04ec7a122f0e8622f777d126c7cc",
+      "path": "README.md"
+    },
+    {
+      "source": "L1",
+      "sha256": "e0e9b1e307b7e780db51aa44d506144207760e9431823866bc966e54c6a1f4e6",
+      "path": "main.js"
+    },
+    {
+      "source": "L1",
+      "sha256": "b7e80b92646d0a75b16a0001dad38ea12521887c72ecea7af1988b18eae3025b",
+      "path": "preload.js"
+    },
+    {
+      "source": "L1",
+      "sha256": "b8965ce9c4c99b9f4a802d3e1ef98ead61ef1ad47ca7acfc2021c46d1830f4db",
+      "path": "whisper_transcribe.py"
+    },
+    {
+      "source": "L1",
+      "sha256": "a12a31b6b09450c9cb2bcbfc79c0cccb66ba26d15cc971546f547d51973f3907",
+      "path": "reminder-intents.js"
+    },
+    {
+      "source": "L1",
+      "sha256": "14a21039aaafb4d6e42abcb8728deb75287ca76e678957909021e0f255df0c6d",
+      "path": "test-intents.js"
+    }
+  ],
+  "inspected": "2026-10-14",
+  "algorithm": "SHA-256"
+}

@@ -1,0 +1,327 @@
+{
+  "path": "/about",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2
+  },
+  "browser": "Chromium 156.0.8078.4",
+  "states": [
+    "page"
+  ],
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden (4.5:1, or 3:1 for large text). First viewport, reduced motion.",
+  "lines": 23,
+  "failures": 0,
+  "lowest": [
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Education",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.57,
+      "worstBackground": "#101928",
+      "pixels": 1085
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Interests",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.6,
+      "worstBackground": "#0b1220",
+      "pixels": 4960
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Full biography in progress",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.6,
+      "worstBackground": "#0b1220",
+      "pixels": 14368
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I build practical software and applied machine learning syst",
+      "color": "#9aa6b8",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 7.66,
+      "worstBackground": "#0d111a",
+      "pixels": 27760
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I build practical software and applied machine learning syst",
+      "color": "#9aa6b8",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 7.88,
+      "worstBackground": "#080d18",
+      "pixels": 10640
+    }
+  ],
+  "results": [
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Joshua",
+      "color": "#070c16",
+      "fontSize": 20,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 5616
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Venegas",
+      "color": "#070c16",
+      "fontSize": 20,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 6528
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Menu",
+      "color": "#edeae3",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 16.37,
+      "worstBackground": "#070b15",
+      "pixels": 2208
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "About",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 8.46,
+      "worstBackground": "#060b14",
+      "pixels": 2752
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Joshua Venegas",
+      "color": "#edeae3",
+      "fontSize": 40,
+      "required": 3,
+      "minRatio": 8.21,
+      "worstBackground": "#4a4239",
+      "pixels": 47808
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I build practical software and applied machine learning syst",
+      "color": "#9aa6b8",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 7.66,
+      "worstBackground": "#0d111a",
+      "pixels": 27760
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I build practical software and applied machine learning syst",
+      "color": "#9aa6b8",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 7.88,
+      "worstBackground": "#080d18",
+      "pixels": 10640
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm a computer science student at the University of North Ge",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.04,
+      "worstBackground": "#0a0e19",
+      "pixels": 26964
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm a computer science student at the University of North Ge",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.06,
+      "worstBackground": "#090e19",
+      "pixels": 28728
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm a computer science student at the University of North Ge",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.09,
+      "worstBackground": "#080e18",
+      "pixels": 14364
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm a software engineer in Foxtrot's Special Projects Group,",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 25200
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm a software engineer in Foxtrot's Special Projects Group,",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 28098
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm a software engineer in Foxtrot's Special Projects Group,",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 17892
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 27300
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 25788
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 24612
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "I'm also an AI Lab team leader and the founder of JV Digital",
+      "color": "#edeae3",
+      "fontSize": 18,
+      "required": 4.5,
+      "minRatio": 16.16,
+      "worstBackground": "#080d19",
+      "pixels": 7896
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Interests",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.6,
+      "worstBackground": "#0b1220",
+      "pixels": 4960
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Software engineering",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 15.58,
+      "worstBackground": "#0b1220",
+      "pixels": 9622
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Applied machine learning",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 15.58,
+      "worstBackground": "#0b1220",
+      "pixels": 11390
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Building useful systems",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 15.58,
+      "worstBackground": "#0b1220",
+      "pixels": 10642
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Full biography in progress",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.6,
+      "worstBackground": "#0b1220",
+      "pixels": 14368
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Education",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.57,
+      "worstBackground": "#101928",
+      "pixels": 1085
+    }
+  ]
+}

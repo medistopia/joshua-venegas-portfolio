@@ -1,0 +1,437 @@
+{
+  "path": "/experience",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2
+  },
+  "browser": "Chromium 156.0.8078.4",
+  "states": [
+    "page"
+  ],
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden (4.5:1, or 3:1 for large text). First viewport, reduced motion.",
+  "lines": 33,
+  "failures": 0,
+  "lowest": [
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "·",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1632
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Special Projects Group",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 12160
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot OS is the broader platform initiative associated wit",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 19244
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot OS is the broader platform initiative associated wit",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 19924
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot OS is the broader platform initiative associated wit",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 20672
+    }
+  ],
+  "results": [
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Joshua",
+      "color": "#070c16",
+      "fontSize": 20,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 5616
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Venegas",
+      "color": "#070c16",
+      "fontSize": 20,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 6528
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Menu",
+      "color": "#edeae3",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 16.37,
+      "worstBackground": "#070b15",
+      "pixels": 2208
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Experience",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 8.41,
+      "worstBackground": "#070c15",
+      "pixels": 5504
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Experience",
+      "color": "#edeae3",
+      "fontSize": 40,
+      "required": 3,
+      "minRatio": 9.73,
+      "worstBackground": "#3f372d",
+      "pixels": 33504
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Roles",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.88,
+      "worstBackground": "#080d18",
+      "pixels": 2752
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3840
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "·",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1632
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Special Projects Group",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 12160
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Software Engineer",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 20532
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot OS is the broader platform initiative associated wit",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 19244
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot OS is the broader platform initiative associated wit",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 19924
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot OS is the broader platform initiative associated wit",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 20672
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot OS is the broader platform initiative associated wit",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 18666
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot OS is the broader platform initiative associated wit",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 14280
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Google Workspace sign-in and organization access",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 19720
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Google Workspace sign-in and organization access",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 3162
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Gmail thread reading and reply composition",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 19618
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Contacts, deals, and conversation linking",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 18462
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Inbox layout, keyboard interactions, loading states, and err",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 19550
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Inbox layout, keyboard interactions, loading states, and err",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 11492
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Session isolation, OAuth handling, logging safeguards, and r",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 18870
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Session isolation, OAuth handling, logging safeguards, and r",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 16014
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Automated testing, release verification, and operational doc",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 19550
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Automated testing, release verification, and operational doc",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 12036
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Phase 1 production release on October 8, 2026, followed by p",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 18496
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Phase 1 production release on October 8, 2026, followed by p",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 13974
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "AI Lab",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3296
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Team Leader",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 13282
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Under Prof. Mohammad Mohebi.",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 14586
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "JV Digital",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 5504
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Founder",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 8932
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Recolm, a listing marketplace, was developed through JV Digi",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 9632
+    }
+  ]
+}

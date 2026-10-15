@@ -1,6 +1,6 @@
 # Implementation Plan
 
-Status: Phase 1 approved (candidate A, Atrium, with interim background art). Phase 2, Milestone 1 (the homepage), is in progress. Each phase ends with a review by Joshua before the next one begins.
+Status: Phase 1 approved (candidate A, Atrium, with interim background art). Phase 2, Milestone 1 (the homepage), is implemented and in review. Each phase ends with a review by Joshua before the next one begins.
 
 ## Recommended stack
 
@@ -66,9 +66,11 @@ Exit criteria:
 
 What the study does not include: functional links, focus states, motion, and below-the-fold sections. Those belong to Milestone 1. The study's `_components` are throwaway; Milestone 1 rebuilds them as real components.
 
-## Phase 2: Milestone 1, the homepage
+## Phase 2: Milestone 1, the homepage (in review)
 
 Goal: one polished homepage with functional navigation, featured project cards, and a mobile layout. This is the first real milestone and is intentionally small.
+
+Status: the first homepage was implemented and verified (`docs/verification/milestone-1/README.md`). Joshua's review replaced it with the lobby shell (`docs/design.md`, Section 3.6): a persistent top bar and collaborator rail, with the navigation swapping the lobby, Projects, case study, Experience, About, and Contact views. Its desktop composition is approved; the full shell is implemented and verified (`docs/verification/lobby/README.md`) and waiting on Joshua's review. The scope, structure, and verification below describe the first homepage; the specs in `tests/e2e` now cover the shell, with output in `docs/verification/lobby/`.
 
 ### Scope
 
@@ -100,9 +102,9 @@ src/
       about/page.tsx
       contact/page.tsx
   components/
-    shell/                  # SkipLink, TopBar, BrandSlab, NavTabs, MobileMenu, StatusStrip, Footer
-    home/                   # Backdrop, Hero, Lineup, ExperienceSnapshot, AboutTeaser, ContactPanel
-    ui/                     # Button, Panel, Tag, ProjectCard, SectionHeading
+    shell/                  # SkipLink, TopBar, BrandSlab, NavTabs, MobileMenu, Footer
+    home/                   # Backdrop, Hero, Lineup, PanelStack, StatusStrip, HomeSections
+    ui/                     # ButtonLink, ProjectCard, ProjectArt, SectionHeading, PageHeader, ExperienceRows, ContactActions
   content/
     schema.ts               # Zod schemas: Profile, Project, ExperienceItem
     profile.ts              # name, affiliations, links (null until confirmed)
@@ -117,6 +119,7 @@ tests/
     keyboard.spec.ts
     reduced-motion.spec.ts
     contrast.spec.ts
+    carousel.spec.ts        # lobby shell: "Currently working on" rotation
 playwright.config.ts
 ```
 
@@ -147,9 +150,11 @@ Content rule: fields that Joshua has not confirmed are `null`, and components om
 
 ## Verification for Milestone 1
 
-Initial verification is intentionally focused on four areas. Broader coverage comes after the visual direction is approved (Phase 5).
+Initial verification is intentionally focused: screenshots, keyboard, reduced motion, contrast, and responsive layout. Broader coverage comes after the visual direction is approved (Phase 5).
 
-### 1. Rendered screenshots (three viewports)
+`npm run test:e2e` always builds and starts its own production server on port 3200 (`reuseExistingServer: false`). If something already answers on that port, the run fails instead of testing a stale server.
+
+### 1. Rendered screenshots
 
 Playwright on Chromium, run against a production build (`npm run build && npm run start`), with fonts loaded and images decoded before capture.
 
@@ -157,6 +162,8 @@ Playwright on Chromium, run against a production build (`npm run build && npm ru
 |------|----------|----------|
 | Desktop | 1440 x 900 | Fold, full page, card hover, card focus |
 | Short laptop | 1280 x 720 | Fold, full page |
+| Compact desktop | 1024 x 768 | Fold, full page |
+| Tablet | 768 x 1024 | Fold, full page |
 | Mobile | 390 x 844 | Fold, full page, menu open |
 
 Each capture is taken twice: default motion (after the entrance completes) and `reducedMotion: 'reduce'`. Approved screenshots are saved to `docs/verification/milestone-1/` and linked in the pull request.
@@ -192,7 +199,7 @@ Automated in `tests/e2e/keyboard.spec.ts` and confirmed manually once:
 
 Automated in `tests/e2e/reduced-motion.spec.ts` with a Playwright context using `reducedMotion: 'reduce'`:
 
-- After load, `document.getAnimations()` returns no running animations.
+- After load, nothing that moves is running: no keyframe animations, no transitions of position or size properties (transform, translate, scale, rotate, insets, margins, width, height), and no transition longer than 120ms. Short visual transitions (color, opacity, filter) of 120ms or less are permitted, including the brand slab's brightness change when the pointer starts over it, which has its own regression test.
 - For the nav tab, button, card, and menu, hovering and focusing leave the computed `transform` unchanged from the rest state (no lift, zoom, or slide), and every transition duration is 120ms or less.
 - Angled geometry is preserved: the computed `clip-path` of the brand slab, tabs, panels, and cards is identical with and without reduced motion.
 - The reduced-motion fold screenshot matches the final state of the default-motion screenshot (content, position, layout, and shapes are identical; only movement differs).
@@ -200,7 +207,7 @@ Automated in `tests/e2e/reduced-motion.spec.ts` with a Playwright context using 
 
 ### 5. Text contrast at actual positions
 
-Automated in `tests/e2e/contrast.spec.ts` at all three viewports (reduced motion, so the page is in its final state):
+Automated in `tests/e2e/contrast.spec.ts` at all five screenshot viewports (reduced motion, so the page is in its final state):
 
 - Collect the box of every rendered line of text in the first viewport (one box per line, from the text node's client rects), with its computed text color and size.
 - Capture the same viewport with all text made transparent, so the pixels inside each box are exactly the background behind that line (art, scrims, grain, and surfaces).
@@ -209,17 +216,43 @@ Automated in `tests/e2e/contrast.spec.ts` at all three viewports (reduced motion
 
 This is a strict worst case per line, which replaces the Phase 1 approximation (98th-percentile luminance across the whole safe-zone box).
 
+### 6. Responsive layout
+
+Automated in `tests/e2e/layout.spec.ts` at 17 viewports from 320 x 640 to 1920 x 1080, including each breakpoint edge (639, 640, 1023, 1024, 1279, 1280) and the widths where review found clipping (1100 x 900, 1024 x 768):
+
+- No horizontal scrolling. Every card, panel tile, the name, and the primary action lie inside the viewport horizontally and are not clipped by an overflow ancestor.
+- Card text ends at least 28px above the card's bottom edge and stays within its sides.
+- Desktop (1024px and up): Recolm, Hermes, Valorant ML from left to right; cards are 1:2, flanks are 0.88 of the lead, and the lead is at least 400px tall; identity, lineup, and tiles do not overlap. From 1280px, everything fits between the top bar and the status strip and the tiles sit right of the lineup; from 1024 to 1279px, the tiles share one row below the lineup.
+- Tablet (640 to 1023px): Hermes and Recolm side by side, Valorant ML spanning both columns below at about the same height; no panel tiles.
+- Mobile (below 640px): cards stacked in featured order, Hermes first.
+
+### 7. Carousel rotation (lobby shell)
+
+Automated in `tests/e2e/carousel.spec.ts` on Playwright's fake clock, paused once the page settles, with every pending rotation timer tracked:
+
+- The carousel advances every 8 seconds and wraps; automatic changes are not announced.
+- The pointer over it, keyboard focus inside it, and a hidden page each hold rotation with no timer pending, and rotation resumes with a fresh 8-second timer when that ends.
+- Pause stops rotation until Play. Choosing a slide with an arrow or indicator stops it too, and is announced ("Slide 2 of 2: Research").
+- Under reduced motion it starts paused, and a slide change is a 120ms opacity fade with no movement.
+- On both slides, only the active slide's link is in the tab order. Leaving the lobby clears the timer.
+
+Screenshots and the keyboard tab-order test pause the same clock, so captures never change slide mid-test.
+
 ### Deferred to Phase 5 (after visual approval)
 
 - Automated accessibility scans (axe) and a contrast audit of states (hover, focus) and inner pages.
 - Lighthouse performance budgets (LCP, CLS) and image weight checks.
-- Firefox and WebKit, tablet (768 x 1024), 320px width, 200% zoom, and ultrawide (2560 x 1080).
+- Firefox and WebKit, 200% zoom, and ultrawide (2560 x 1080). (Tablet and 320px layout are covered by the layout spec above.)
 - Screen reader passes (NVDA and VoiceOver).
 - Pixel-diff visual regression baselines.
 
 ## Phase 3: Project case studies
 
-- `/projects` index in the lineup style, and `/projects/[slug]` with MDX bodies.
+October 14 pilot authorization: Joshua requested a sourced dossier for all five projects and research, a limited lobby/Projects motion pilot, and a substantial Hermes narrative. Only Hermes advances beyond the minimal case-study view in this pass. Its prose stays in Zod-validated TypeScript content rather than introducing MDX for one page. Review this pilot before extending the remaining case studies or tab motion. Evidence, unresolved facts and extension order are in `content-dossier.md`; motion in `motion-pilot.md`; verification in `verification/motion-pilot/README.md`.
+
+Integration baseline: PR #4 merged into `milestone-1/homepage` at `e4653a2`, whose tree matches reviewed `36eec11`. On inspection, `origin/main` was `75d18ba` and did not include the lobby. The pilot branch starts at `e4653a2`; its draft PR targets `main` per repository convention, so the GitHub diff also includes the previously reviewed homepage/lobby ancestry. Do not merge or deploy as part of this pilot.
+
+- `/projects` index in the lineup style; Hermes pilot uses typed narrative sections. Reconsider MDX only if the remaining case studies need richer editorial authoring.
 - Case study structure: Problem, My role, Implementation decisions, Evidence (repository, demo, screenshots, diagrams), Outcomes, Links.
 - Content-gated: a section renders only when Joshua supplies its content. Recolm waits for client permission.
 

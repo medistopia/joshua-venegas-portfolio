@@ -30,21 +30,53 @@
   --text-display-xl-short--line-height: 0.88;
   --text-display-l: clamp(2.5rem, 5vw, 4.5rem);
   --text-display-l--line-height: 0.9;
+  --text-display-m: 2.5rem;
+  --text-display-m--line-height: 0.92;
   --text-label: 0.75rem;
   --text-label--line-height: 1.2;
 
   --tracking-label: 0.12em;
+}
 
+:root {
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
   --dur-fast: 120ms;
   --dur-base: 200ms;
   --dur-slow: 480ms;
-}
+  --dur-stagger: 60ms;
+  --dur-popover: 160ms;
 
-:root {
   --move-lift: -4px;
   --move-rise: 8px;
   --move-zoom: 1.03;
+  --move-view: 4px;
+  --motion-readable-opacity: 0.92;
+}
+
+/*
+  Lobby lead pennant height. The row is a lead (0.5 x height wide) and two flanks (0.45 each) that
+  tuck 16px behind it, so 1.4 x height - 32px must fit the stage. The lobby is the size container,
+  so the pennants and the tile column resolve the same value; the stage width is the lobby's
+  content width (100cqw) less the other columns and the gaps in src/app/(site)/page.tsx. The height
+  term reserves the top bar, padding, and primary action, and from 1024 to 1279px the tile row too.
+*/
+.lobby {
+  container-type: inline-size;
+  --pennant-h: min(clamp(400px, calc(100svh - 300px), 540px), calc((100cqw + 32px) / 1.4));
+}
+
+@media (min-width: 1024px) {
+  .lobby {
+    /* 280px column and one 32px gap. */
+    --pennant-h: min(clamp(400px, calc(100svh - 440px), 540px), calc((100cqw - 280px) / 1.4));
+  }
+}
+
+@media (min-width: 1280px) {
+  .lobby {
+    /* 300px and 208px columns and two 32px gaps. */
+    --pennant-h: min(clamp(400px, calc(100svh - 300px), 540px), calc((100cqw - 540px) / 1.4));
+  }
 }
 
 html {
@@ -53,8 +85,62 @@ html {
   color-scheme: dark;
 }
 
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
 body {
   font-family: var(--font-sans);
+}
+
+/*
+  Outlines are never clipped: angled shapes live on inner layers, not on the focusable element.
+  The color is set everywhere so color transitions never fade the ring in.
+*/
+* {
+  outline-color: var(--color-teal);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+@keyframes rise {
+  from {
+    opacity: var(--motion-readable-opacity);
+    transform: translateY(var(--move-rise));
+  }
+}
+
+@keyframes view-enter {
+  from { opacity: var(--motion-readable-opacity); transform: translateY(var(--move-view)); }
+}
+
+@keyframes popover-enter {
+  from { opacity: var(--motion-readable-opacity); translate: var(--move-view) 0; }
+}
+
+.motion-projects {
+  animation: view-enter var(--dur-base) var(--ease-out) backwards;
+}
+
+.collaborator-popover:popover-open {
+  animation: popover-enter var(--dur-popover) var(--ease-out) backwards;
+}
+
+/* Focus must never wait for an entrance to finish or inherit a fading ring. */
+.animate-rise:focus-within, .motion-projects:focus-within,
+.collaborator-popover:focus-within { animation: none; }
+
+.lobby-identity { --rise-delay: 0ms; }
+.lobby-pennant { --rise-delay: calc(var(--dur-stagger) * (1 + var(--entrance-order))); }
+.lobby-highlight { --rise-delay: calc(var(--dur-stagger) * (3 + var(--entrance-order))); }
+
+/* Backwards fill only, so finished entrances leave document.getAnimations(). */
+@utility animate-rise {
+  animation: rise var(--dur-slow) var(--ease-out) backwards;
+  animation-delay: var(--rise-delay, 0ms);
 }
 
 /* Shared angular geometry. These are static shapes and stay under reduced motion. */
@@ -74,12 +160,112 @@ body {
   clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
 }
 
+/* The lobby's upper-left feature: the right edge is cut on the diagonal. */
+@utility clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
 @utility label {
   font-family: var(--font-mono);
   font-size: var(--text-label);
   line-height: var(--text-label--line-height);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
+}
+
+/* Backdrop scrims. The left one is the desktop text safe zone (docs/design.md, Section 3.2). */
+@utility scrim-left {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--color-bg-deep) 88%, transparent) 0%,
+    color-mix(in srgb, var(--color-bg-deep) 60%, transparent) 20%,
+    transparent 38%
+  );
+}
+
+@utility scrim-right {
+  background: linear-gradient(270deg, color-mix(in srgb, var(--color-bg-deep) 70%, transparent) 0%, transparent 20%);
+}
+
+@utility scrim-top {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--color-bg-deep) 65%, transparent) 0%, transparent 14%);
+}
+
+@utility scrim-bottom {
+  background: linear-gradient(0deg, color-mix(in srgb, var(--color-bg-deep) 92%, transparent) 0%, transparent 26%);
+}
+
+/* Mobile: the light stays in the short band under the top bar; text starts on near-solid navy. */
+@utility scrim-mobile {
+  background: linear-gradient(
+    180deg,
+    transparent 0,
+    transparent 92px,
+    color-mix(in srgb, var(--color-bg) 62%, transparent) 124px,
+    color-mix(in srgb, var(--color-bg) 92%, transparent) 152px,
+    var(--color-bg) 320px
+  );
+}
+
+/* Image-led panels: text sits on the left and bottom, so those edges darken. */
+@utility scrim-feature {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-bg-deep) 84%, transparent) 0%,
+      color-mix(in srgb, var(--color-bg-deep) 48%, transparent) 50%,
+      transparent 80%
+    ),
+    linear-gradient(0deg, color-mix(in srgb, var(--color-bg-deep) 70%, transparent) 0%, transparent 50%);
+}
+
+/*
+  A dark backing sized by the text block itself, so every line sits on it whatever the art, the
+  wrap, or the slide. It reaches 32px left (the panel's left edge from 640px; clipped below that),
+  down 52px over the controls, and fades out 28px above the title and 16px past the widest line.
+*/
+@utility scrim-text {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -28px -16px -52px -32px;
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-bg-deep) 86%, transparent) calc(100% - 16px),
+      transparent
+    );
+    mask-image: linear-gradient(180deg, transparent, #000 28px);
+  }
+}
+
+/* Pixel stops, so the dark band always covers the text block whatever the card height. */
+@utility scrim-tile {
+  background: linear-gradient(
+    0deg,
+    var(--color-bg-deep) 0,
+    color-mix(in srgb, var(--color-bg-deep) 88%, transparent) 56px,
+    transparent 130px
+  );
+}
+
+@utility scrim-pennant {
+  background: linear-gradient(
+    0deg,
+    var(--color-bg-deep) 0,
+    var(--color-bg-deep) 116px,
+    color-mix(in srgb, var(--color-bg-deep) 70%, transparent) 148px,
+    transparent 210px
+  );
+}
+
+/* Small labels set over artwork sit on their own dark plate. */
+@utility label-plate {
+  background: color-mix(in srgb, var(--color-bg-deep) 88%, transparent);
+  padding: 2px 6px;
 }
 
 @utility grain {
@@ -96,6 +282,10 @@ body {
     --move-lift: 0px;
     --move-rise: 0px;
     --move-zoom: 1;
+    --move-view: 0px;
+    --dur-popover: var(--dur-fast);
+    --dur-base: var(--dur-fast);
+    --dur-slow: var(--dur-fast);
   }
 
   *,

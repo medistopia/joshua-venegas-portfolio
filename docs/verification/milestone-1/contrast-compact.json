@@ -1,0 +1,554 @@
+{
+  "viewport": {
+    "width": 1024,
+    "height": 768,
+    "deviceScaleFactor": 1
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 49,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "Contact",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.09,
+      "worstBackground": "#292b2f",
+      "pixels": 960
+    },
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2100
+    },
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2100
+    },
+    {
+      "text": "Research chart pending. No data shown.",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2370
+    },
+    {
+      "text": "Research chart pending. No data shown.",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 1020
+    }
+  ],
+  "results": [
+    {
+      "text": "Joshua",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 1392
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 1632
+    },
+    {
+      "text": "Home",
+      "textColor": "#070c16",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.29,
+      "worstBackground": "#edeae3",
+      "pixels": 792
+    },
+    {
+      "text": "Projects",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.94,
+      "worstBackground": "#070c16",
+      "pixels": 1496
+    },
+    {
+      "text": "Experience",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.89,
+      "worstBackground": "#080d17",
+      "pixels": 1804
+    },
+    {
+      "text": "About",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.41,
+      "worstBackground": "#12151c",
+      "pixels": 946
+    },
+    {
+      "text": "Contact",
+      "textColor": "#9aa6b8",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.99,
+      "worstBackground": "#191b20",
+      "pixels": 1320
+    },
+    {
+      "text": "UNG // Computer Science + ML Minor",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.19,
+      "worstBackground": "#0a101a",
+      "pixels": 4688
+    },
+    {
+      "text": "Joshua",
+      "textColor": "#edeae3",
+      "fontSize": 66.56,
+      "large": true,
+      "required": 3,
+      "minRatio": 15.79,
+      "worstBackground": "#0a1119",
+      "pixels": 14800
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#edeae3",
+      "fontSize": 66.56,
+      "large": true,
+      "required": 3,
+      "minRatio": 15.67,
+      "worstBackground": "#0a121b",
+      "pixels": 17200
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.67,
+      "worstBackground": "#0a121b",
+      "pixels": 5145
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.67,
+      "worstBackground": "#0a121b",
+      "pixels": 6174
+    },
+    {
+      "text": "Contact",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.26,
+      "worstBackground": "#080f18",
+      "pixels": 960
+    },
+    {
+      "text": "About",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.88,
+      "worstBackground": "#09101a",
+      "pixels": 688
+    },
+    {
+      "text": "01",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "Placeholder",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.19,
+      "worstBackground": "#181c25",
+      "pixels": 1520
+    },
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2100
+    },
+    {
+      "text": "Project Hermes",
+      "textColor": "#edeae3",
+      "fontSize": 24,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 4321
+    },
+    {
+      "text": "A Gmail-backed workspace for agents.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 3094
+    },
+    {
+      "text": "A Gmail-backed workspace for agents.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1207
+    },
+    {
+      "text": "02",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "Placeholder",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.19,
+      "worstBackground": "#181c25",
+      "pixels": 1520
+    },
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2100
+    },
+    {
+      "text": "JV Digital",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 1376
+    },
+    {
+      "text": "Recolm",
+      "textColor": "#edeae3",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 1344
+    },
+    {
+      "text": "A listing marketplace developed through JV Digital.",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1770
+    },
+    {
+      "text": "A listing marketplace developed through JV Digital.",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1875
+    },
+    {
+      "text": "A listing marketplace developed through JV Digital.",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 570
+    },
+    {
+      "text": "03",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "Placeholder",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.19,
+      "worstBackground": "#181c25",
+      "pixels": 1520
+    },
+    {
+      "text": "Research chart pending. No data shown.",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2370
+    },
+    {
+      "text": "Research chart pending. No data shown.",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 1020
+    },
+    {
+      "text": "Research",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 1104
+    },
+    {
+      "text": "Valorant ML",
+      "textColor": "#edeae3",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 2352
+    },
+    {
+      "text": "Research involving competitive VALORANT data and predictive ",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1590
+    },
+    {
+      "text": "Research involving competitive VALORANT data and predictive ",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1995
+    },
+    {
+      "text": "Research involving competitive VALORANT data and predictive ",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 1620
+    },
+    {
+      "text": "Research involving competitive VALORANT data and predictive ",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 825
+    },
+    {
+      "text": "Explore projects",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 3576
+    },
+    {
+      "text": "Experience",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.71,
+      "worstBackground": "#0f1725",
+      "pixels": 1376
+    },
+    {
+      "text": "AI Lab Team Leader",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.94,
+      "worstBackground": "#0f1725",
+      "pixels": 2244
+    },
+    {
+      "text": "Founder, JV Digital",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.94,
+      "worstBackground": "#0f1725",
+      "pixels": 2108
+    },
+    {
+      "text": "About",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.65,
+      "worstBackground": "#101825",
+      "pixels": 688
+    },
+    {
+      "text": "UNG computer science",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.69,
+      "worstBackground": "#111925",
+      "pixels": 2618
+    },
+    {
+      "text": "Machine learning minor",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.82,
+      "worstBackground": "#101825",
+      "pixels": 2635
+    },
+    {
+      "text": "Contact",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.09,
+      "worstBackground": "#292b2f",
+      "pixels": 960
+    },
+    {
+      "text": "Details being finalized",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 12.99,
+      "worstBackground": "#1f242b",
+      "pixels": 2465
+    },
+    {
+      "text": "Currently",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.89,
+      "worstBackground": "#080d17",
+      "pixels": 1232
+    },
+    {
+      "text": "University of North Georgia, computer science with a machine",
+      "textColor": "#edeae3",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.07,
+      "worstBackground": "#090e18",
+      "pixels": 8670
+    }
+  ]
+}
