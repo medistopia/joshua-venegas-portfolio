@@ -131,7 +131,8 @@ test.describe("default motion", () => {
       const toMs = (v: string) => (v.endsWith("ms") ? parseFloat(v) : parseFloat(v) * 1000);
       return Array.from(document.querySelectorAll("body *"))
         .map((el) => getComputedStyle(el))
-        .filter((s) => s.animationName !== "none")
+        // The ambient light loops by design and is covered by ambient.spec.ts.
+        .filter((s) => s.animationName !== "none" && s.animationIterationCount !== "infinite")
         .map((s) => toMs(s.animationDelay) + toMs(s.animationDuration));
     });
     expect(endTimes.length).toBeGreaterThan(0);

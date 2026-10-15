@@ -21,9 +21,9 @@
       "color": "#9aa6b8",
       "fontSize": 14,
       "required": 4.5,
-      "minRatio": 7.51,
-      "worstBackground": "#0d1323",
-      "pixels": 2992
+      "minRatio": 7.52,
+      "worstBackground": "#0d1322",
+      "pixels": 4131
     },
     {
       "state": "project-hermes",
@@ -34,7 +34,7 @@
       "required": 4.5,
       "minRatio": 7.52,
       "worstBackground": "#0d1322",
-      "pixels": 4131
+      "pixels": 2992
     },
     {
       "state": "wei-research",
@@ -65,8 +65,8 @@
       "color": "#c9a55c",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 7.95,
-      "worstBackground": "#0d1323",
+      "minRatio": 7.96,
+      "worstBackground": "#0d1322",
       "pixels": 4688
     }
   ],
@@ -177,8 +177,8 @@
       "color": "#c9a55c",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 7.95,
-      "worstBackground": "#0d1323",
+      "minRatio": 7.96,
+      "worstBackground": "#0d1322",
       "pixels": 4688
     },
     {
@@ -188,8 +188,8 @@
       "color": "#edeae3",
       "fontSize": 40,
       "required": 3,
-      "minRatio": 15.41,
-      "worstBackground": "#0d1323",
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
       "pixels": 5328
     },
     {
@@ -210,8 +210,8 @@
       "color": "#edeae3",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 15.42,
-      "worstBackground": "#0d1322",
+      "minRatio": 15.41,
+      "worstBackground": "#0d1323",
       "pixels": 3584
     },
     {
@@ -221,8 +221,8 @@
       "color": "#edeae3",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 15.41,
-      "worstBackground": "#0d1323",
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
       "pixels": 2480
     },
     {
@@ -232,8 +232,8 @@
       "color": "#edeae3",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 15.41,
-      "worstBackground": "#0d1323",
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
       "pixels": 2624
     },
     {
@@ -254,8 +254,8 @@
       "color": "#9aa6b8",
       "fontSize": 14,
       "required": 4.5,
-      "minRatio": 7.51,
-      "worstBackground": "#0d1323",
+      "minRatio": 7.52,
+      "worstBackground": "#0d1322",
       "pixels": 2992
     },
     {

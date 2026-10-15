@@ -2,6 +2,8 @@
 
 October 14 pilot update: captures and contrast reports in this directory are regenerated for the motion and Hermes pilot. The original run narrative below is retained as historical context; current results and limitations are in [the pilot report](../motion-pilot/README.md). Hermes now has a substantial narrative, and the original in-progress note remains only on the other project pages.
 
+October 14 polish pass: captures and reports here are regenerated again, and `contrast-ambient-peak-*.json` adds the lobby at the ambient light's brightest state. Results are in [the polish-pass report](../ambient-hermes/README.md).
+
 The homepage is now the lobby shell that Joshua approved as a desktop composition (`docs/design.md`, Section 3.6). The top bar, collaborator rail, and background persist, and the navigation swaps the lobby, Projects, case study, Experience, About, and Contact views at their own URLs. Everything here is produced by `npm run test:e2e` against a fresh production build, in Playwright 1.64.0's Chromium 156.0.8078.4.
 
 | Lobby, 1440 x 900 | Lobby, 1280 x 720 |

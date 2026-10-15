@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronIcon } from "@/components/icons/Icons";
+import { ArrowIcon, ChevronIcon } from "@/components/icons/Icons";
 import { artFor, formatDate, labelFor } from "@/components/lobby/config";
 import { InProgressNote, SectionLabel } from "@/components/views/ViewFrame";
+import { WorkflowDiagram } from "@/components/views/WorkflowDiagram";
 import { findPerson } from "@/content/people";
 import { allProjects, findProject, type Project } from "@/content/projects";
-import { hermesCaseStudy } from "@/content/hermes-case-study";
+import { hermesCaseStudy, type CaseStudy } from "@/content/hermes-case-study";
 
 export function generateStaticParams() {
   return allProjects.map((project) => ({ slug: project.slug }));
@@ -56,6 +57,7 @@ function Reader({ project }: { project: Project }) {
         <Image src={art.src} alt="" fill sizes="(min-width: 1024px) 1000px, 100vw" className="object-cover" style={{ objectPosition: art.focus }} />
         <span aria-hidden="true" className="scrim-feature absolute inset-0" />
         <span aria-hidden="true" className="scrim-tile absolute inset-0" />
+        <p className="label label-plate absolute top-4 right-4 text-text-muted">Illustrative art</p>
         {label && <p className="label label-plate relative self-start text-gold">{label}</p>}
         <h1 id="project-title" className="relative font-display text-display-m font-bold uppercase">
           {project.title}
@@ -65,7 +67,18 @@ function Reader({ project }: { project: Project }) {
       <div className="flex flex-col gap-8 p-6 sm:p-8">
         <p className="max-w-[62ch] text-lg leading-relaxed">{project.description ?? project.summary}</p>
 
-        {(project.status || project.milestones.length > 0 || people.length > 0) && (
+        {caseStudy && <Overview project={project} caseStudy={caseStudy} />}
+
+        {caseStudy && (
+          <section aria-labelledby="case-workflow" className="flex flex-col gap-4">
+            <h2 id="case-workflow" className="font-display text-2xl font-semibold uppercase text-text">
+              Reply workflow
+            </h2>
+            <WorkflowDiagram workflow={caseStudy.workflow} labelledBy="case-workflow" />
+          </section>
+        )}
+
+        {!caseStudy && (project.status || project.milestones.length > 0 || people.length > 0) && (
           <dl className="grid gap-px border border-line bg-line sm:grid-cols-3">
             {project.status && (
               <div className="bg-surface-solid px-4 py-3">
@@ -92,9 +105,9 @@ function Reader({ project }: { project: Project }) {
           </dl>
         )}
 
-        {caseStudy && caseStudy.map((section) => (
+        {caseStudy?.sections.map((section) => (
           <section key={section.id} aria-labelledby={`case-${section.id}`} className="flex max-w-[65ch] flex-col gap-3">
-            <h2 id={`case-${section.id}`} className="font-display text-2xl font-semibold uppercase text-text">
+            <h2 id={`case-${section.id}`} className="scroll-mt-6 font-display text-2xl font-semibold uppercase text-text">
               {section.title}
             </h2>
             {section.paragraphs.map((paragraph) => (
@@ -143,9 +156,67 @@ function Reader({ project }: { project: Project }) {
           </section>
         )}
 
+        {caseStudy && <p className="max-w-[65ch] border-t border-line pt-4 text-sm leading-relaxed text-text-muted">{caseStudy.note}</p>}
+
         {!caseStudy && <InProgressNote>Full case study in progress</InProgressNote>}
       </div>
     </article>
+  );
+}
+
+/** The case study's scannable summary; facts shared with other views come from the project record. */
+function Overview({ project, caseStudy }: { project: Project; caseStudy: CaseStudy }) {
+  const { overview } = caseStudy;
+  const cells = [
+    { term: "Problem", detail: overview.problem },
+    { term: "My role", detail: overview.role },
+    { term: "Delivered", detail: overview.delivered },
+  ];
+
+  return (
+    <section aria-labelledby="case-overview" className="flex flex-col gap-4">
+      <h2 id="case-overview" className="font-display text-2xl font-semibold uppercase text-text">
+        Overview
+      </h2>
+      <dl className="grid gap-px border border-line bg-line md:grid-cols-2">
+        {cells.map((cell) => (
+          <div key={cell.term} className="bg-surface-solid px-4 py-3">
+            <dt className="label text-gold">{cell.term}</dt>
+            <dd className="mt-1 text-sm leading-relaxed">{cell.detail}</dd>
+          </div>
+        ))}
+        <div className="bg-surface-solid px-4 py-3">
+          <dt className="label text-gold">Status</dt>
+          {project.status && <dd className="mt-1 text-sm leading-relaxed">{project.status}</dd>}
+          {project.milestones.map((milestone) => (
+            <dd key={milestone.label} className="mt-1 text-sm leading-relaxed">
+              {milestone.label}: {formatDate(milestone.date)}
+            </dd>
+          ))}
+        </div>
+      </dl>
+
+      <h3 id="overview-decisions" className="label text-text-muted">
+        Key engineering decisions
+      </h3>
+      <ol aria-labelledby="overview-decisions" className="grid gap-3 md:grid-cols-3">
+        {overview.decisions.map((decision, i) => (
+          <li key={decision.section}>
+            <a
+              href={`#case-${decision.section}`}
+              className="group flex h-full flex-col gap-1.5 border border-line bg-surface-solid p-3 transition-colors duration-(--dur-fast) hover:border-teal"
+            >
+              <span className="label text-text-muted">Decision {i + 1}</span>
+              <span className="inline-flex items-center gap-1.5 font-display text-xl leading-tight font-semibold uppercase text-teal">
+                {decision.title}
+                <ArrowIcon className="size-4 shrink-0" />
+              </span>
+              <span className="text-sm leading-snug text-text">{decision.summary}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
   );
 }
 

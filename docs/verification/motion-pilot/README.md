@@ -42,7 +42,7 @@ Visual review used the local Play lobby reference (`references/valorant/00-play-
 
 ## Evidence limits and review gate
 
-Hermes technical claims were checked against source and historical PR records; this was not a new signed-in production audit. The October 8 milestone is Joshua-supplied and distinct from the October 5 release merge. No adoption or performance metrics were invented. No private mailbox or customer capture is included.
+Hermes technical claims were checked against source and historical PR records; this was not a new signed-in production audit. The October 8 milestone is Joshua-supplied and distinct from the October 5 release merge. (Later correction: the October 8 production release and its recorded verification are now sourced as dossier H8.) No adoption or performance metrics were invented. No private mailbox or customer capture is included.
 
 The frozen Valorant outputs identify 2026 AUC 0.5691 as Bundle A; the consistent Bundle F series ends at 0.5578. No chart is published pending data-sharing and prediction-time clarification. ARA source was found: the scheduler is a placeholder, and missing local dependencies prevented runtime verification. Paper-qa remains separate. The dossier records remaining authorship, permission, outcome and research questions.
 

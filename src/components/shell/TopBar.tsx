@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { profile } from "@/content/profile";
+import { AmbientControl } from "./AmbientControl";
 import { BrandSlab } from "./BrandSlab";
 import { MobileMenu, MobileMenuView } from "./MobileMenu";
 import { NavTabList, NavTabs } from "./NavTabs";
@@ -25,6 +26,9 @@ export function TopBar() {
       </nav>
 
       <div className="ml-auto flex items-center gap-3 pr-4 lg:pr-6">
+        <Suspense fallback={null}>
+          <AmbientControl />
+        </Suspense>
         {resume && (
           <ButtonLink href={resume} variant="gold" className="hidden lg:inline-flex">
             Résumé

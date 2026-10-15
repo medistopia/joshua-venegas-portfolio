@@ -63,7 +63,7 @@ test.describe("desktop keyboard", () => {
     await freezeTimers(page);
 
     const stops: FocusInfo[] = [];
-    for (let i = 0; i < 26; i++) {
+    for (let i = 0; i < 27; i++) {
       await page.keyboard.press("Tab");
       const info = await describeFocus(page);
       if (info) stops.push(info);
@@ -77,6 +77,7 @@ test.describe("desktop keyboard", () => {
       "/experience",
       "/about",
       "/contact",
+      "button Pause background motion",
       "/projects/project-hermes",
       "button Previous item",
       "button Show Project Hermes",

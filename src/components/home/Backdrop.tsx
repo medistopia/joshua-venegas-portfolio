@@ -32,6 +32,11 @@ export function Backdrop() {
         />
       </picture>
 
+      {/* Under the scrims, so text backing is unchanged; clipped clear of the blurred top bar and rail. */}
+      <div className="absolute top-14 right-14 bottom-0 left-0 hidden overflow-hidden lg:block">
+        <div className="ambient-light absolute -top-14 -right-14 bottom-0 left-0" />
+      </div>
+
       <div className="scrim-left absolute inset-0 hidden lg:block" />
       <div className="scrim-right absolute inset-0 hidden lg:block" />
       <div className="scrim-top absolute inset-0 hidden lg:block" />
