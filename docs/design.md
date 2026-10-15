@@ -334,12 +334,16 @@ Motion is subtle and purposeful. All values are tokens.
 
 Planned motion:
 
-1. **Entrance** (once per page load): top bar fades in, the identity block rises 8px and fades in, then the cards follow in a 60ms stagger. The whole sequence finishes within about 700ms. Content must be readable even if JavaScript fails; the entrance is CSS-only.
+1. **Entrance pilot** (October 14): identity, priority-ordered pennants and highlights use a CSS-only 8px rise with 60ms stagger, ending at 780ms. Opacity starts at 0.92 to preserve readability. Top bar, rail and backdrop remain steady. Focus within cancels an entrance immediately. The entrance can replay when the lobby is restored; no persistent suppression flag is used. Exact scope and values are in `motion-pilot.md`.
 2. **Card hover and focus**: border, wash, art scale, and 4px lift over `--dur-base`.
 3. **NavTab hover**: skewed plate fades in over `--dur-fast`.
 4. **Ambient light** (optional, decided after the key art is approved): a very slow (20s or longer) opacity drift on the beam layer. It does not move the layout.
 5. **Mobile menu**: fade plus 12px slide, `--dur-base`.
 6. **"Currently working on" rotation**: the carousel advances every 8 seconds with a cross-fade over `--dur-base`. It holds while the pointer is over it, while keyboard focus is inside it, and while the page is hidden. Pause stops it; choosing a slide with an arrow or indicator also stops it until the visitor presses Play. Under reduced motion it starts paused, and a slide change is the 120ms cross-fade alone. Only visitor-initiated changes are announced to screen readers ("Slide 2 of 2: Research").
+
+The October 14 pilot adds a 200ms, 4px incoming Projects frame and a 160ms, 4px collaborator-popover entrance. Shared tokens, readable opacity and focus cancellation are specified in `motion-pilot.md`. Other views do not gain transitions yet. Ambient motion is deferred for this pilot after visual review of the existing beam.
+
+Hermes now has a substantial typed narrative in the existing scrolling reader: problem, role, workflow, three engineering decisions, verification, milestone/limits and next steps. The other four project pages keep their existing limited scope. Sources and claim boundaries are in `content-dossier.md`.
 
 ### Reduced-motion contract
 

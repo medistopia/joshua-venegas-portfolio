@@ -13,7 +13,7 @@ function PersonPopover({ person, id, anchored }: { person: Person; id: string; a
       popover="auto"
       role="dialog"
       aria-labelledby={`${id}-name`}
-      className={`w-72 max-w-[calc(100vw-2rem)] border border-line-strong bg-surface-solid p-4 text-text backdrop:bg-bg-deep/40 ${
+      className={`collaborator-popover w-72 max-w-[calc(100vw-2rem)] border border-line-strong bg-surface-solid p-4 text-text backdrop:bg-bg-deep/40 ${
         anchored ? "fixed inset-auto m-0 mr-3 [position-area:left_span-bottom]" : "m-auto"
       }`}
     >

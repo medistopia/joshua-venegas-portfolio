@@ -256,3 +256,45 @@ for (const [view, viewport] of cases) {
     await context.close();
   });
 }
+
+for (const viewport of ["desktop", "mobile"] as const) {
+  test(`Hermes reading sections retain contrast, ${viewport}`, async ({ browser }) => {
+    const { context, page } = await openPage(browser, viewport, "reduced", views["project-hermes"]);
+    await settle(page);
+    const results: Result[] = [];
+    for (const section of await page.locator("article section").all()) {
+      await section.scrollIntoViewIfNeeded();
+      results.push(...await measure(page, await textTargets(page), hideText, await section.getAttribute("aria-labelledby") ?? "section", "text"));
+    }
+    writeFileSync(`${verificationDir}/contrast-hermes-reading-${viewport}.json`, JSON.stringify({ browser: browser.version(), results }, null, 2) + "\n");
+    expect(results.filter((r) => r.minRatio < r.required)).toEqual([]);
+    await context.close();
+  });
+}
+
+for (const viewport of ["desktop", "compact", "mobile"] as const) {
+  test(`motion text contrast at start and midpoint, ${viewport}`, async ({ browser }) => {
+    const results: Result[] = [];
+    for (const path of ["/", "/projects"]) {
+      const { context, page } = await openPage(browser, viewport, "default", path);
+      await settle(page);
+      for (const progress of [0, 0.5]) {
+        await page.locator(".animate-rise, .motion-projects").evaluateAll((els, progress) => {
+          for (const el of els) (el as HTMLElement).style.animationName = "none";
+          void document.body.offsetHeight;
+          for (const el of els) (el as HTMLElement).style.removeProperty("animation-name");
+          void document.body.offsetHeight;
+          for (const el of els) for (const animation of el.getAnimations()) {
+            animation.pause();
+            const timing = animation.effect!.getTiming();
+            animation.currentTime = (timing.delay ?? 0) + Number(timing.duration) * progress;
+          }
+        }, progress);
+        results.push(...await measure(page, await textTargets(page), hideText, `${path}:${progress}`, "text"));
+      }
+      await context.close();
+    }
+    writeFileSync(`${verificationDir}/contrast-motion-${viewport}.json`, JSON.stringify({ browser: browser.version(), results }, null, 2) + "\n");
+    expect(results.filter((r) => r.minRatio < r.required)).toEqual([]);
+  });
+}

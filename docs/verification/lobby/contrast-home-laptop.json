@@ -276,8 +276,8 @@
       "color": "#edeae3",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 15.89,
-      "worstBackground": "#091019",
+      "minRatio": 15.91,
+      "worstBackground": "#091018",
       "pixels": 2624
     },
     {

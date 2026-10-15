@@ -248,7 +248,11 @@ Screenshots and the keyboard tab-order test pause the same clock, so captures ne
 
 ## Phase 3: Project case studies
 
-- `/projects` index in the lineup style, and `/projects/[slug]` with MDX bodies.
+October 14 pilot authorization: Joshua requested a sourced dossier for all five projects and research, a limited lobby/Projects motion pilot, and a substantial Hermes narrative. Only Hermes advances beyond the minimal case-study view in this pass. Its prose stays in Zod-validated TypeScript content rather than introducing MDX for one page. Review this pilot before extending the remaining case studies or tab motion. Evidence, unresolved facts and extension order are in `content-dossier.md`; motion in `motion-pilot.md`; verification in `verification/motion-pilot/README.md`.
+
+Integration baseline: PR #4 merged into `milestone-1/homepage` at `e4653a2`, whose tree matches reviewed `36eec11`. On inspection, `origin/main` was `75d18ba` and did not include the lobby. The pilot branch starts at `e4653a2`; its draft PR targets `main` per repository convention, so the GitHub diff also includes the previously reviewed homepage/lobby ancestry. Do not merge or deploy as part of this pilot.
+
+- `/projects` index in the lineup style; Hermes pilot uses typed narrative sections. Reconsider MDX only if the remaining case studies need richer editorial authoring.
 - Case study structure: Problem, My role, Implementation decisions, Evidence (repository, demo, screenshots, diagrams), Outcomes, Links.
 - Content-gated: a section renders only when Joshua supplies its content. Recolm waits for client permission.
 

@@ -54,7 +54,7 @@ export function Pennant({ item, variant, selected }: { item: PennantItem; varian
           alt=""
           fill
           sizes={imageSizes[variant]}
-          className="object-cover transition-transform duration-(--dur-slow) ease-(--ease-out) group-hover:scale-(--move-zoom) group-focus-visible:scale-(--move-zoom)"
+          className="object-cover transition-transform duration-(--dur-base) ease-(--ease-out) group-hover:scale-(--move-zoom) group-focus-visible:scale-(--move-zoom)"
           style={{ objectPosition: art.focus }}
         />
         {variant === "flank" && (

@@ -199,7 +199,7 @@ test.describe("desktop keyboard", () => {
     await reader.focus();
     await page.keyboard.press("End");
     await expect.poll(() => reader.evaluate((el) => el.scrollTop)).toBeGreaterThan(0);
-    await expect(page.getByText("Full case study in progress")).toBeInViewport();
+    await expect(page.getByRole("heading", { name: "Stack", exact: true })).toBeInViewport();
     await expect(page.getByRole("banner")).toBeInViewport({ ratio: 1 });
     expect(await page.evaluate(() => document.documentElement.scrollHeight)).toBeLessThanOrEqual(720);
     await context.close();

@@ -10,7 +10,7 @@
     "page"
   ],
   "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden (4.5:1, or 3:1 for large text). First viewport, reduced motion.",
-  "lines": 45,
+  "lines": 42,
   "failures": 0,
   "lowest": [
     {
@@ -23,17 +23,6 @@
       "minRatio": 6.62,
       "worstBackground": "#0f282e",
       "pixels": 960
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "What I worked on",
-      "color": "#9aa6b8",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.29,
-      "worstBackground": "#0f1725",
-      "pixels": 2208
     },
     {
       "state": "page",
@@ -67,6 +56,17 @@
       "minRatio": 7.35,
       "worstBackground": "#121c2b",
       "pixels": 544
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Research",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.71,
+      "worstBackground": "#0f1725",
+      "pixels": 1104
     }
   ],
   "results": [
@@ -260,134 +260,101 @@
     {
       "state": "page",
       "kind": "text",
-      "text": "What I worked on",
-      "color": "#9aa6b8",
-      "fontSize": 12,
+      "text": "An inbox with working context",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.7,
+      "worstBackground": "#101926",
+      "pixels": 8468
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
+      "color": "#edeae3",
+      "fontSize": 16,
       "required": 4.5,
-      "minRatio": 7.29,
+      "minRatio": 13.93,
+      "worstBackground": "#181e28",
+      "pixels": 11840
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.06,
+      "worstBackground": "#171d28",
+      "pixels": 12900
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 13.93,
+      "worstBackground": "#181e28",
+      "pixels": 12200
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Gmail remains responsible for mail storage and delivery. Her",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 13.63,
+      "worstBackground": "#1a2029",
+      "pixels": 12440
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Gmail remains responsible for mail storage and delivery. Her",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.06,
+      "worstBackground": "#171d28",
+      "pixels": 9280
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "My role and collaboration",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.94,
       "worstBackground": "#0f1725",
-      "pixels": 2208
+      "pixels": 7279
     },
     {
       "state": "page",
       "kind": "text",
-      "text": "Protected sign-in and organization access",
+      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
       "color": "#edeae3",
-      "fontSize": 14,
+      "fontSize": 16,
       "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 4726
+      "minRatio": 14.68,
+      "worstBackground": "#111926",
+      "pixels": 12220
     },
     {
       "state": "page",
       "kind": "text",
-      "text": "Reading Gmail threads and composing replies",
+      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
       "color": "#edeae3",
-      "fontSize": 14,
+      "fontSize": 16,
       "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 5134
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Contacts, deals, and linking conversations to contacts",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 6052
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Inbox layout, keyboard interactions, loading states, and err",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 6800
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Inbox layout, keyboard interactions, loading states, and err",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 952
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Session isolation between environments",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 4505
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "OAuth refusal and revocation handling",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 4284
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Logging safeguards and operational documentation",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 5797
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Reply-recipient validation that shows the destination and re",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 6358
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Reply-recipient validation that shows the destination and re",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 4012
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Automated testing and production release verification",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 6018
+      "minRatio": 14.82,
+      "worstBackground": "#101825",
+      "pixels": 1224
     },
     {
       "state": "page",

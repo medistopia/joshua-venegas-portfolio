@@ -28,6 +28,8 @@ The lineup is an ordered list in priority order (Hermes, Recolm, Valorant ML); d
 
 The primary composition reference is the Play lobby (`references/valorant/00-play-lobby.jpg`, local only).
 
+On October 14, 2026 Joshua explicitly authorized a limited motion and Hermes case-study pilot, plus a dossier for all five projects and research. This is an exception to the Phase 3 gate above, not authorization for the remaining full case studies. See `docs/content-dossier.md` and `docs/motion-pilot.md`; stop for review after the pilot. Hermes narrative is Zod-validated in `src/content/hermes-case-study.ts`.
+
 ## Hard rules
 
 - **Never invent content.** No made-up accomplishments, metrics, testimonials, dates, employers, client names, or contact details. Unconfirmed fields are `null` in `src/content` and are not rendered.

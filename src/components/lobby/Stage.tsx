@@ -33,8 +33,8 @@ export function Stage() {
           {pennants.map((item, i) => (
             <li
               key={item.project.slug}
-              style={{ "--rise-delay": `${120 + i * 60}ms` } as CSSProperties}
-              className={`animate-rise relative ${item.seat ? seatClasses[item.seat] : ""}`}
+              style={{ "--entrance-order": i } as CSSProperties}
+              className={`lobby-pennant animate-rise relative ${item.seat ? seatClasses[item.seat] : ""}`}
             >
               <Pennant item={item} variant={item.seat === "center" ? "lead" : "flank"} />
             </li>

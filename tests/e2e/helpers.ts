@@ -66,8 +66,11 @@ export async function settle(page: Page) {
   await page.waitForSelector("header [aria-current='page']", { state: "attached" });
   await page.evaluate(async () => {
     await document.fonts.ready;
+    // Full-page captures include distant project thumbnails. Explicitly request lazy images
+    // before decoding them; otherwise a long article can leave decode() pending offscreen.
+    for (const img of document.images) img.loading = "eager";
     await Promise.all(
-      Array.from(document.images).map((img) => (img.complete ? null : img.decode().catch(() => null))),
+      Array.from(document.images).map((img) => img.decode()),
     );
     await Promise.all(document.getAnimations().map((animation) => animation.finished.catch(() => null)));
   });

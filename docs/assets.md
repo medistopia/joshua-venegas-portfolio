@@ -127,6 +127,8 @@ Blender, purchased art, and commissions are **not** prerequisites. This is what 
 
 ## Content needed from Joshua
 
+October 14 update: `content-dossier.md` records inspected Hermes/Recolm source and local ARA, Lyn and Valorant ML evidence. The frozen ML results are found and identified by model/bundle/split; output-sharing and data terms remain unresolved, so no chart is shipped in this pilot. ARA's scheduler is a placeholder despite its README wording. Personal contribution boundaries for the experiments remain open. Hermes gains a sourced narrative using existing illustrative artwork only; no product/customer capture or new artwork permission is implied.
+
 Nothing below will be invented. Received in October 2026 and recorded in `src/content`: expected graduation (Spring 2027), interests, the AI Lab supervisor (Prof. Mohammad Mohebi), the Foxtrot collaboration with Brandon Hall, Hermes's stack, contributions, and Phase 1 release date (October 8, 2026), Recolm's client, stack, and scope of work, the Valorant ML methods, the research with Dr. Lai Wei and Dr. Yong Wei (title only), and two experiments (Auto Research Agent, Lyn Desktop Companion). Later in October 2026: Joshua's Foxtrot title (Software Engineer, in the Special Projects Group) and the agreement of all four collaborators to be listed. Of the Foxtrot offer letter, only the title is recorded; its compensation, terms, and the systems it lists are not published.
 
 Still needed:

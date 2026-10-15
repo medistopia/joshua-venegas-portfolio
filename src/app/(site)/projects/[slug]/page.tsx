@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
 import { ChevronIcon } from "@/components/icons/Icons";
 import { artFor, formatDate, labelFor } from "@/components/lobby/config";
 import { InProgressNote, SectionLabel } from "@/components/views/ViewFrame";
 import { findPerson } from "@/content/people";
 import { allProjects, findProject, type Project } from "@/content/projects";
+import { hermesCaseStudy } from "@/content/hermes-case-study";
 
 export function generateStaticParams() {
   return allProjects.map((project) => ({ slug: project.slug }));
@@ -23,29 +23,19 @@ export async function generateMetadata(props: PageProps<"/projects/[slug]">): Pr
  * Case study view. From 1024px the project list and the reading panel each scroll on their own,
  * so the shell's navigation stays in view; below 1024px the page scrolls.
  */
-export default function ProjectPage(props: PageProps<"/projects/[slug]">) {
+export default async function ProjectPage(props: PageProps<"/projects/[slug]">) {
+  const { slug } = await props.params;
+  const project = findProject(slug);
+  if (!project) notFound();
+
   return (
     <div
       data-view="inner"
       className="mx-auto grid w-full max-w-[1320px] gap-6 px-4 py-8 sm:px-8 lg:h-full lg:grid-cols-[240px_minmax(0,1fr)] lg:grid-rows-[minmax(0,1fr)] lg:py-6"
     >
-      <Suspense fallback={<div className="h-96 border border-line bg-surface lg:col-start-2" />}>
-        <ProjectDetail params={props.params} />
-      </Suspense>
-    </div>
-  );
-}
-
-async function ProjectDetail({ params }: { params: PageProps<"/projects/[slug]">["params"] }) {
-  const { slug } = await params;
-  const project = findProject(slug);
-  if (!project) notFound();
-
-  return (
-    <>
       <Reader project={project} />
       <ProjectList current={project.slug} />
-    </>
+    </div>
   );
 }
 
@@ -54,6 +44,7 @@ function Reader({ project }: { project: Project }) {
   const label = labelFor(project);
   const people = project.people.map(findPerson).filter((person) => person !== undefined);
   const isExperiment = project.kind === "experiment";
+  const caseStudy = project.slug === "project-hermes" ? hermesCaseStudy : null;
 
   return (
     <article
@@ -101,7 +92,18 @@ function Reader({ project }: { project: Project }) {
           </dl>
         )}
 
-        {project.contributions.length > 0 && (
+        {caseStudy && caseStudy.map((section) => (
+          <section key={section.id} aria-labelledby={`case-${section.id}`} className="flex max-w-[65ch] flex-col gap-3">
+            <h2 id={`case-${section.id}`} className="font-display text-2xl font-semibold uppercase text-text">
+              {section.title}
+            </h2>
+            {section.paragraphs.map((paragraph) => (
+              <p key={paragraph} className="leading-relaxed text-text">{paragraph}</p>
+            ))}
+          </section>
+        ))}
+
+        {!caseStudy && project.contributions.length > 0 && (
           <section aria-labelledby="contributions-heading" className="flex flex-col gap-3">
             <SectionLabel id="contributions-heading">What I worked on</SectionLabel>
             <ul className="grid gap-2 md:grid-cols-2">
@@ -141,7 +143,7 @@ function Reader({ project }: { project: Project }) {
           </section>
         )}
 
-        <InProgressNote>Full case study in progress</InProgressNote>
+        {!caseStudy && <InProgressNote>Full case study in progress</InProgressNote>}
       </div>
     </article>
   );

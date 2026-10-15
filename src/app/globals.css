@@ -43,10 +43,14 @@
   --dur-fast: 120ms;
   --dur-base: 200ms;
   --dur-slow: 480ms;
+  --dur-stagger: 60ms;
+  --dur-popover: 160ms;
 
   --move-lift: -4px;
   --move-rise: 8px;
   --move-zoom: 1.03;
+  --move-view: 4px;
+  --motion-readable-opacity: 0.92;
 }
 
 /*
@@ -104,10 +108,34 @@ body {
 
 @keyframes rise {
   from {
-    opacity: 0;
+    opacity: var(--motion-readable-opacity);
     transform: translateY(var(--move-rise));
   }
 }
+
+@keyframes view-enter {
+  from { opacity: var(--motion-readable-opacity); transform: translateY(var(--move-view)); }
+}
+
+@keyframes popover-enter {
+  from { opacity: var(--motion-readable-opacity); translate: var(--move-view) 0; }
+}
+
+.motion-projects {
+  animation: view-enter var(--dur-base) var(--ease-out) backwards;
+}
+
+.collaborator-popover:popover-open {
+  animation: popover-enter var(--dur-popover) var(--ease-out) backwards;
+}
+
+/* Focus must never wait for an entrance to finish or inherit a fading ring. */
+.animate-rise:focus-within, .motion-projects:focus-within,
+.collaborator-popover:focus-within { animation: none; }
+
+.lobby-identity { --rise-delay: 0ms; }
+.lobby-pennant { --rise-delay: calc(var(--dur-stagger) * (1 + var(--entrance-order))); }
+.lobby-highlight { --rise-delay: calc(var(--dur-stagger) * (3 + var(--entrance-order))); }
 
 /* Backwards fill only, so finished entrances leave document.getAnimations(). */
 @utility animate-rise {
@@ -254,6 +282,8 @@ body {
     --move-lift: 0px;
     --move-rise: 0px;
     --move-zoom: 1;
+    --move-view: 0px;
+    --dur-popover: var(--dur-fast);
     --dur-base: var(--dur-fast);
     --dur-slow: var(--dur-fast);
   }

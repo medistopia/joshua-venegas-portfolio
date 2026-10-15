@@ -16,17 +16,6 @@
     {
       "state": "page",
       "kind": "text",
-      "text": "What I worked on",
-      "color": "#9aa6b8",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.15,
-      "worstBackground": "#101928",
-      "pixels": 8832
-    },
-    {
-      "state": "page",
-      "kind": "text",
       "text": "Status",
       "color": "#c9a55c",
       "fontSize": 12,
@@ -67,6 +56,17 @@
       "minRatio": 8.4,
       "worstBackground": "#070c16",
       "pixels": 3840
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Joshua",
+      "color": "#070c16",
+      "fontSize": 20,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 5616
     }
   ],
   "results": [
@@ -282,13 +282,13 @@
     {
       "state": "page",
       "kind": "text",
-      "text": "What I worked on",
-      "color": "#9aa6b8",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.15,
+      "text": "An inbox with working context",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 8832
+      "pixels": 19272
     }
   ]
 }

@@ -4,13 +4,14 @@ type ViewFrameProps = {
   kicker: string;
   title: string;
   intro?: string;
+  motionPilot?: boolean;
   children: ReactNode;
 };
 
 /** A view inside the shell: replaces the lobby's stage and reads over the dimmed hall. */
-export function ViewFrame({ kicker, title, intro, children }: ViewFrameProps) {
+export function ViewFrame({ kicker, title, intro, children, motionPilot = false }: ViewFrameProps) {
   return (
-    <div data-view="inner" className="mx-auto flex w-full max-w-[1320px] flex-col gap-6 px-4 py-8 sm:px-8 lg:py-7">
+    <div data-view="inner" className={`${motionPilot ? "motion-projects " : ""}mx-auto flex w-full max-w-[1320px] flex-col gap-6 px-4 py-8 sm:px-8 lg:py-7`}>
       <header className="flex flex-col gap-2">
         <p className="label text-gold">{kicker}</p>
         <h1 className="font-display text-display-m font-bold uppercase">{title}</h1>
