@@ -98,12 +98,15 @@ Headline (approved): "I build practical software and applied machine learning sy
 
 \* Résumé actions render only once Joshua approves a published résumé. Until then they are omitted, not disabled.
 
-Grid: three columns inside a 1440px max width with 40px outer padding and 24px gaps: identity `minmax(300px, 360px)`, lineup `1fr`, panel stack `minmax(176px, 200px)`.
+Grid (1280px and up): three columns inside a 1440px max width with 40px outer padding and 24px gaps: identity `minmax(300px, 360px)`, lineup `minmax(0, 1fr)`, panel stack `minmax(176px, 200px)`.
+
+Compact desktop (1024 to 1279px): two columns, identity `300px` and lineup `minmax(0, 1fr)`, with the three panel tiles in one row beneath both. Three columns do not fit here: at 1100px the lineup column would be about 500px wide, while 520px-tall cards need about 740px.
 
 Card proportions (one rule for every desktop size):
 
 - **Every desktop card is 1:2** (width is half the height), including its pennant point.
-- The lead card height is `--card-h = clamp(360px, 100svh - 320px, 520px)`.
+- The lead card height is `--card-h = min(clamp(400px, 100svh - 320px, 520px), (lineup column width - 24px) / 1.38)`. The second term keeps the whole lineup (lead 0.5, two flanks 0.44 each, two 12px gaps) inside its column at any width; the lineup section is a CSS size container, so the width comes from `cqw`.
+- The fold never hides overflow. If content is taller than the viewport, the fold grows and the page scrolls.
 - Flanking cards are 88% of the lead card's height, still 1:2, and start 6% of `--card-h` lower, so they read as set back, as in the lobby.
 - Resulting sizes: at 1440 x 900, the lead card is 260 x 520 and the flanks are 229 x 458. At 1280 x 720, the lead card is 200 x 400 and the flanks are 176 x 352.
 - Cards are separated by 12px. The art area is the top 56% of each card; the title block sits below a rule (teal on the lead card, hairline on the flanks).
@@ -127,7 +130,7 @@ Below the fold (Milestone 1 keeps these short):
 Height is the constraint. Applied when the viewport is at least 1024px wide and at most 800px tall:
 
 - The display name shrinks one step (see type scale); the headline shrinks from 20px to 18px.
-- Cards follow the `--card-h` rule above (lead 200 x 400 at 1280 x 720), keeping the 1:2 ratio.
+- Cards follow the `--card-h` rule above (lead 200 x 400 at 1280 x 720), keeping the 1:2 ratio. Card text sizes follow the card's own width (container queries), not the viewport height, so small cards get the smaller title and summary at any viewport.
 - Outer padding drops to 32px.
 - The identity block, all three full cards, and the "Explore projects" action must be visible without scrolling at 1280 x 720.
 
@@ -155,6 +158,7 @@ Height is the constraint. Applied when the viewport is at least 1024px wide and 
 - The background uses a separate portrait crop. The key light and a small emblem sit in a short art band (about 96px) under the top bar; the Phase 1 study used about 27% of the viewport height, which delayed the name and the first card.
 - Below the band, a scrim fades the art to solid navy so text never sits on the bright part of the beam. Contrast is verified behind each line of text (Section 10).
 - Cards stack vertically in priority order: Hermes, Recolm, Valorant ML, at a 4:5 ratio, full width minus 16px margins.
+- The panel stack and status strip are desktop-only. On mobile, the same destinations follow the lineup as the Experience, About, and Contact sections, and the menu links to each page.
 
 ### 3.5 Lineup order across layouts
 
@@ -256,11 +260,11 @@ A 7% film-grain overlay (overlay blend) sits above L2 to unify art and UI. The e
 
 **ProjectCard (tall).** Pennant-shaped card for the lineup (reference 00).
 - Proportions: 1:2 on desktop (see Section 3.2), 4:5 on mobile. The base comes to a point 28px deep, with an inner chevron line (gold on the lead card, hairline on the flanks).
-- Structure: index badge centered on the top edge, art (top 56%), a rule (teal on the lead card), context label in gold when confirmed (for example "JV Digital"), title in `h3`, one-line summary, and later a "Case study" affordance.
-- Missing art uses a clearly labelled composition placeholder (hatched area, "Composition placeholder", and what is needed). Placeholders never imitate a product interface, and the research chart placeholder shows empty axes with "No data shown".
-- Rest state: 1px line border, surface fill, art slightly desaturated (90%).
-- Hover and focus: border becomes 2px teal, a teal-soft gradient rises from the bottom (Collection's selected tile), art returns to full saturation and scales to 1.03 inside its frame, and the card lifts 4px.
-- The whole card is one link, with its accessible name equal to the project title. Secondary links (repository, demo) belong on the case study page, not nested inside the card.
+- Structure: index badge centered on the top edge (the featured-order number: Hermes 01, Recolm 02, Valorant ML 03), art (top 56%), a rule (teal on the lead card), context label in gold when confirmed (for example "JV Digital"), title in `h3`, one-line summary, and a "View project" cue at the bottom. The cue shows only when the card is at least 240px wide and 440px tall, so it never collides with a long summary (at 1440 x 900 that is the lead card; on mobile and tablet, every card). Title and summary step down on cards narrower than 300px and 210px.
+- Missing art uses a clearly labelled placeholder: the art area is lit by a warm glow from the top (echoing the key light) over a faint hatch, and holds an empty dashed capture frame with gold corner ticks, a "Placeholder" label, and what is pending ("Product capture pending", or "Research chart pending. No data shown." with empty axes). Placeholders never imitate a product interface.
+- Rest state: 1px border (light on the lead card, hairline on the flanks), solid surface fill.
+- Hover and focus: the border, rule, chevron, and cue turn teal, a teal-soft gradient rises from the bottom (Collection's selected tile), the art scales to 1.03 inside its frame, and the card lifts 4px. The focus ring is a 2px teal rectangle 4px outside the card, drawn on the link itself, so the pennant clip never cuts it.
+- The whole card is one link, with its accessible name equal to the project title and its description equal to the summary. Secondary links (repository, demo) belong on the case study page, not nested inside the card.
 - Missing data (role, stack, links) is omitted, never filled with placeholder claims.
 
 **Panel.** Translucent surface, hairline border, optional notched top-right corner, optional 2px gold top rule for leadership or prestige content.
@@ -269,7 +273,7 @@ A 7% film-grain overlay (overlay blend) sits above L2 to unify art and UI. The e
 
 **Tag.** Mono caps label in a 1px bordered box with tight padding.
 
-**StatusStrip.** Bottom bar of the hero, showing one confirmed status line and a scroll cue.
+**StatusStrip.** Bottom bar of the hero on desktop, showing one confirmed status line.
 
 **MobileMenu.** Full-screen dialog with angled list items at `display-l` size, a close button, and contact links at the bottom.
 
@@ -317,10 +321,11 @@ Implementation: components animate movement only through the `--move-lift`, `--m
 | Range | Layout |
 |-------|--------|
 | below 640px | Mobile layout; menu dialog; stacked 4:5 cards |
-| 640 to 1023px | Larger mobile layout; cards in a 2-column grid with the third spanning both columns; menu dialog |
-| 1024px and up | Desktop lobby composition; inline nav tabs; three-card lineup |
+| 640 to 1023px | Larger mobile layout; cards in a 2-column grid (4:5) with the third spanning both columns at 8:5, so its row is the same height; menu dialog |
+| 1024 to 1279px | Compact lobby: identity and three-card lineup side by side, panel tiles in one row beneath; inline nav tabs |
+| 1280px and up | Full lobby composition: identity, lineup, and panel stack in three columns |
 | 1024px and up, height 800px or less | Short-laptop overrides (Section 3.3) |
-| 1536px and up | Content capped at 1360px; background art continues to the edges |
+| 1536px and up | Content capped at 1440px; background art continues to the edges |
 
 Background art is delivered with `<picture>` art direction: a landscape crop for 1024px and wider, and a portrait crop below that. Art is never stretched. Focal positions are fixed per crop.
 

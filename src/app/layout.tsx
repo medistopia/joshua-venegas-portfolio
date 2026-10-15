@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Joshua Venegas",
+  title: { default: "Joshua Venegas", template: "%s | Joshua Venegas" },
   description:
     "Joshua Venegas's interactive portfolio showcasing software engineering, applied machine learning, and project leadership.",
 };

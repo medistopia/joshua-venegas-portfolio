@@ -18,13 +18,13 @@ Project details, links, and outcomes will be added as Joshua supplies and confir
 
 ## Development status
 
-**Phase 2, Milestone 1.** Candidate A (Atrium) is the approved visual direction, with an interim background. The homepage is being built.
+**Phase 2, Milestone 1, in review.** Candidate A (Atrium) is the approved visual direction, with an interim background. The homepage, navigation, and minimal inner pages are built; see [docs/verification/milestone-1](docs/verification/milestone-1/README.md).
 
 | Phase | Status |
 |-------|--------|
 | 0. Repository and planning | Complete |
 | 1. Visual direction decision (key art and project art) | Approved: candidate A, see [docs/verification/phase-1](docs/verification/phase-1/README.md) |
-| 2. Milestone 1: homepage with navigation, project cards, mobile layout | In progress |
+| 2. Milestone 1: homepage with navigation, project cards, mobile layout | In review |
 | 3 to 6. Case studies, inner pages, expanded verification, deployment | Not started |
 
 See [docs/implementation-plan.md](docs/implementation-plan.md) for details.
@@ -38,13 +38,15 @@ npm install
 npm run dev        # http://localhost:3000; composition study at /lab/composition
 npm run lint
 npm run typecheck
+npm run test:e2e   # builds, serves on port 3200, and runs the Playwright specs
 ```
 
 ## Stack
 
 - Next.js 16 (App Router) with React 19 and TypeScript (strict)
 - Tailwind CSS v4 with design tokens
-- Typed content modules (Zod validation and MDX case studies are planned)
+- Typed content modules validated with Zod (MDX case studies are planned)
+- Playwright for screenshots, keyboard, reduced-motion, and contrast checks
 - Playwright for screenshot, keyboard, and reduced-motion verification
 - No WebGL: the cinematic look comes from rendered key art and layered CSS (rationale in the implementation plan)
 

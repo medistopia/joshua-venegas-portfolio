@@ -34,17 +34,23 @@
   --text-label--line-height: 1.2;
 
   --tracking-label: 0.12em;
+}
 
+:root {
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
   --dur-fast: 120ms;
   --dur-base: 200ms;
   --dur-slow: 480ms;
-}
 
-:root {
   --move-lift: -4px;
   --move-rise: 8px;
   --move-zoom: 1.03;
+
+  /*
+    Lead card height on desktop. The lineup (lead 0.5, two flanks 0.44 each, two 12px gaps,
+    so 1.38 x height + 24px) must fit the lineup column, which is a size container (cqw).
+  */
+  --card-h: min(clamp(400px, calc(100svh - 320px), 520px), calc((100cqw - 24px) / 1.38));
 }
 
 html {
@@ -53,8 +59,38 @@ html {
   color-scheme: dark;
 }
 
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
 body {
   font-family: var(--font-sans);
+}
+
+/*
+  Outlines are never clipped: angled shapes live on inner layers, not on the focusable element.
+  The color is set everywhere so color transitions never fade the ring in.
+*/
+* {
+  outline-color: var(--color-teal);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--move-rise));
+  }
+}
+
+/* Backwards fill only, so finished entrances leave document.getAnimations(). */
+@utility animate-rise {
+  animation: rise var(--dur-slow) var(--ease-out) backwards;
+  animation-delay: var(--rise-delay, 0ms);
 }
 
 /* Shared angular geometry. These are static shapes and stay under reduced motion. */
@@ -82,6 +118,40 @@ body {
   text-transform: uppercase;
 }
 
+/* Backdrop scrims. The left one is the desktop text safe zone (docs/design.md, Section 3.2). */
+@utility scrim-left {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--color-bg-deep) 88%, transparent) 0%,
+    color-mix(in srgb, var(--color-bg-deep) 60%, transparent) 20%,
+    transparent 38%
+  );
+}
+
+@utility scrim-right {
+  background: linear-gradient(270deg, color-mix(in srgb, var(--color-bg-deep) 70%, transparent) 0%, transparent 20%);
+}
+
+@utility scrim-top {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--color-bg-deep) 65%, transparent) 0%, transparent 14%);
+}
+
+@utility scrim-bottom {
+  background: linear-gradient(0deg, color-mix(in srgb, var(--color-bg-deep) 92%, transparent) 0%, transparent 26%);
+}
+
+/* Mobile: the light stays in the short band under the top bar; text starts on near-solid navy. */
+@utility scrim-mobile {
+  background: linear-gradient(
+    180deg,
+    transparent 0,
+    transparent 92px,
+    color-mix(in srgb, var(--color-bg) 62%, transparent) 124px,
+    color-mix(in srgb, var(--color-bg) 92%, transparent) 152px,
+    var(--color-bg) 320px
+  );
+}
+
 @utility grain {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -96,6 +166,8 @@ body {
     --move-lift: 0px;
     --move-rise: 0px;
     --move-zoom: 1;
+    --dur-base: var(--dur-fast);
+    --dur-slow: var(--dur-fast);
   }
 
   *,

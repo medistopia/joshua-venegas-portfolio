@@ -1,0 +1,304 @@
+{
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "deviceScaleFactor": 1
+  },
+  "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden. First viewport, reduced motion.",
+  "lines": 24,
+  "failures": 0,
+  "lowest": [
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2100
+    },
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2100
+    },
+    {
+      "text": "A Gmail-backed workspace for agents.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 4369
+    },
+    {
+      "text": "A listing marketplace developed through JV Digital.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 4896
+    },
+    {
+      "text": "A listing marketplace developed through JV Digital.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 765
+    }
+  ],
+  "results": [
+    {
+      "text": "Joshua",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 1392
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#070c16",
+      "fontSize": 20,
+      "large": true,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 1632
+    },
+    {
+      "text": "Menu",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 16.47,
+      "worstBackground": "#060a14",
+      "pixels": 544
+    },
+    {
+      "text": "UNG // Computer Science + ML Minor",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.91,
+      "worstBackground": "#0e1421",
+      "pixels": 4688
+    },
+    {
+      "text": "Joshua",
+      "textColor": "#edeae3",
+      "fontSize": 61.44,
+      "large": true,
+      "required": 3,
+      "minRatio": 15.46,
+      "worstBackground": "#0c1321",
+      "pixels": 12483
+    },
+    {
+      "text": "Venegas",
+      "textColor": "#edeae3",
+      "fontSize": 61.44,
+      "large": true,
+      "required": 3,
+      "minRatio": 15.46,
+      "worstBackground": "#0c1321",
+      "pixels": 14454
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.34,
+      "worstBackground": "#0d1421",
+      "pixels": 6573
+    },
+    {
+      "text": "I build practical software and applied machine learning syst",
+      "textColor": "#edeae3",
+      "fontSize": 18,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
+      "pixels": 4767
+    },
+    {
+      "text": "Contact",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.95,
+      "worstBackground": "#0d1323",
+      "pixels": 960
+    },
+    {
+      "text": "About",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 15.42,
+      "worstBackground": "#0d1322",
+      "pixels": 688
+    },
+    {
+      "text": "Featured work",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.52,
+      "worstBackground": "#0d1322",
+      "pixels": 1792
+    },
+    {
+      "text": "01",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "Placeholder",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.19,
+      "worstBackground": "#181c25",
+      "pixels": 1520
+    },
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2100
+    },
+    {
+      "text": "Project Hermes",
+      "textColor": "#edeae3",
+      "fontSize": 30,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6732
+    },
+    {
+      "text": "A Gmail-backed workspace for agents.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 4369
+    },
+    {
+      "text": "02",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    },
+    {
+      "text": "Placeholder",
+      "textColor": "#edeae3",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 14.19,
+      "worstBackground": "#181c25",
+      "pixels": 1520
+    },
+    {
+      "text": "Product capture pending",
+      "textColor": "#9aa6b8",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.92,
+      "worstBackground": "#181c25",
+      "pixels": 2100
+    },
+    {
+      "text": "JV Digital",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 1376
+    },
+    {
+      "text": "Recolm",
+      "textColor": "#edeae3",
+      "fontSize": 30,
+      "large": true,
+      "required": 3,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 3024
+    },
+    {
+      "text": "A listing marketplace developed through JV Digital.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 4896
+    },
+    {
+      "text": "A listing marketplace developed through JV Digital.",
+      "textColor": "#9aa6b8",
+      "fontSize": 14,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 765
+    },
+    {
+      "text": "03",
+      "textColor": "#c9a55c",
+      "fontSize": 12,
+      "large": false,
+      "required": 4.5,
+      "minRatio": 8.4,
+      "worstBackground": "#070c16",
+      "pixels": 272
+    }
+  ]
+}
