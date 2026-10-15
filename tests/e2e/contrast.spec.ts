@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { expect, test, type Page } from "@playwright/test";
-import { openPage, settle, verificationDir, views, viewports, type ViewName, type ViewportName } from "./helpers";
+import { freezeTimers, openPage, settle, verificationDir, views, viewports, type ViewName, type ViewportName } from "./helpers";
 
 type Target = {
   text: string;
@@ -105,7 +105,7 @@ function textTargets(page: Page): Promise<Target[]> {
 }
 
 /** Control graphics in the active state, held to the 3:1 non-text minimum. */
-function controlTargets(page: Page): Promise<Target[]> {
+function controlTargets(page: Page, selector = controlGraphics): Promise<Target[]> {
   return page.evaluate((selector) => {
     const canvas = document.createElement("canvas").getContext("2d", { willReadFrequently: true })!;
     return Array.from(document.querySelectorAll(selector)).map((el) => {
@@ -116,14 +116,14 @@ function controlTargets(page: Page): Promise<Target[]> {
       const rect = el.getBoundingClientRect();
       const button = el.closest("button")!;
       return {
-        text: `${button.getAttribute("aria-label")}${button.getAttribute("aria-current") ? " (current)" : ""}`,
+        text: `${button.getAttribute("aria-label") ?? button.textContent?.trim()}${button.getAttribute("aria-current") ? " (current)" : ""}`,
         color: [r, g, b, a / 255] as [number, number, number, number],
         required: 3,
         fontSize: 0,
         box: { x0: rect.left, y0: rect.top, x1: rect.right, y1: rect.bottom },
       };
     });
-  }, controlGraphics);
+  }, selector);
 }
 
 /**
@@ -268,6 +268,62 @@ for (const viewport of ["desktop", "mobile"] as const) {
     }
     writeFileSync(`${verificationDir}/contrast-hermes-reading-${viewport}.json`, JSON.stringify({ browser: browser.version(), results }, null, 2) + "\n");
     expect(results.filter((r) => r.minRatio < r.required)).toEqual([]);
+    await context.close();
+  });
+}
+
+/** The carousel's control graphics plus the ambient light's Pause/Play icon. */
+const ambientControlGraphics = `${controlGraphics}, header [data-ambient] svg`;
+
+// The ambient light runs from 1024px, so these are the sizes where its brightest state can matter.
+for (const viewport of ["wide", "desktop", "laptop", "compact"] as const) {
+  test(`lobby text and controls at the ambient light's brightest state, ${viewport}`, async ({ browser }) => {
+    const { context, page } = await openPage(browser, viewport, "default", "/", { clock: true });
+    await settle(page);
+    await freezeTimers(page);
+    const peak = await page.locator(".ambient-light").evaluate((el) => {
+      for (const animation of el.getAnimations()) {
+        animation.pause();
+        animation.currentTime = Number(animation.effect!.getComputedTiming().duration) / 2;
+      }
+      return Number(getComputedStyle(el).opacity);
+    });
+    expect(peak, "ambient light held at full strength").toBeCloseTo(1, 2);
+
+    const results: Result[] = [];
+    for (const state of ["project-hermes", "wei-research"]) {
+      if (state === "wei-research") {
+        await page.locator("[aria-roledescription='carousel'] button[aria-label='Show Research']").dispatchEvent("click");
+        await expect(page.locator(`[data-slide='${state}']`)).not.toHaveAttribute("inert");
+        await settle(page);
+      }
+      results.push(...(await measure(page, await textTargets(page), hideText, `ambient-peak:${state}`, "text")));
+      const controls = await controlTargets(page, ambientControlGraphics);
+      expect(controls).toHaveLength(6);
+      results.push(...(await measure(page, controls, `${ambientControlGraphics} { visibility: hidden !important; }`, `ambient-peak:${state}`, "control")));
+    }
+    expect(results.some((r) => r.text.includes("Pause background motion"))).toBe(true);
+
+    const failures = results.filter((r) => r.minRatio < r.required);
+    writeFileSync(
+      `${verificationDir}/contrast-ambient-peak-${viewport}.json`,
+      `${JSON.stringify(
+        {
+          path: "/",
+          viewport: viewports[viewport],
+          browser: `Chromium ${browser.version()}`,
+          method:
+            "Default motion with the ambient light paused at the midpoint of its cycle (full opacity). Same per-line and control-graphic measurement as the reduced-motion lobby reports, on both carousel slides, including the background motion control.",
+          lines: results.length,
+          failures: failures.length,
+          lowest: [...results].sort((a, b) => a.minRatio / a.required - b.minRatio / b.required).slice(0, 5),
+          results,
+        },
+        null,
+        2,
+      )}\n`,
+    );
+    expect(failures, JSON.stringify(failures, null, 2)).toEqual([]);
     await context.close();
   });
 }

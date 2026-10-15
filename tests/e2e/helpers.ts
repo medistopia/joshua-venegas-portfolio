@@ -72,7 +72,9 @@ export async function settle(page: Page) {
     await Promise.all(
       Array.from(document.images).map((img) => img.decode()),
     );
-    await Promise.all(document.getAnimations().map((animation) => animation.finished.catch(() => null)));
+    // The lobby's ambient light loops; only animations that end are awaited.
+    const finite = document.getAnimations().filter((animation) => animation.effect?.getComputedTiming().iterations !== Infinity);
+    await Promise.all(finite.map((animation) => animation.finished.catch(() => null)));
   });
 }
 
