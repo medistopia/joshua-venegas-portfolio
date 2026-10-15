@@ -65,6 +65,6 @@ The suite also refreshes the shared lobby and pilot captures in [`../lobby/`](..
 - The ambient light is lobby-only from 1024px. Below that the hall art is a short band behind the carousel, so the layer is not rendered.
 - The control appears after hydration. Under reduced motion the light stays at its static state and the control is hidden; reduced-motion visitors cannot opt in.
 - The visitor's pause is remembered across client navigation within a visit, not across reloads.
-- Hermes claims still rest on source and historical records (dossier H1–H7). No new signed-in or production audit was performed, and no adoption, time-saving or impact claim is made.
+- Hermes claims still rest on source and historical records (dossier H1–H8; H8, the October 8 release and its recorded Production verification, was added after this run). No new signed-in or production audit was performed, and no adoption, time-saving or impact claim is made.
 - Firefox, WebKit and screen-reader passes remain Phase 5 work.
 - No merge, deployment, new artwork or hosting configuration.

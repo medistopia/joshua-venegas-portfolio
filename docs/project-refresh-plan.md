@@ -81,15 +81,20 @@ Bundle F's temporal series is 2024: 0.6267, 2025: 0.6081, 2026: 0.5578. A decrea
 
 ## Project Hermes
 
-**Evidence baseline.** H1–H7. The October 8, 2026 Phase 1 production milestone and Joshua's contribution scope are user-supplied (H1); the release code merged October 5 (H6), and its record lists open production checks and a partially verified revocation observation. The case study's technical claims map to source and historical PRs; no new signed-in or production audit was performed.
+**Evidence baseline.** H1–H8. Joshua's contribution scope is user-supplied (H1). Two releases are recorded:
 
-**Unresolved.** What marked October 8 acceptance; which remaining production checks closed, with evidence; the division of work with Brandon Hall; which sanitized workflow and outcome may be published.
+- Release PR 43 brought the Phase 1 app to Production on October 5, leaving production checks and a revocation observation open (H6).
+- Release PR 52 shipped `24fdc62` on October 8 with the recipient work (PR 50) and the runbook (PR 49). That day's records report the automated gate: 904 tests in 57 files, typecheck, lint and `preflight:full`, which at that commit also runs the production build and the jsdom load check. They also report signed-in Production verification of the reply recipient, a real send, sign-out, cross-environment session refusal and outside-account refusal. The issues tracking the October 5 open checks were closed on that evidence (H8).
+
+These are historical records. On October 14 the release metadata, comments and issue states were re-read; nothing was rerun, and no Production request or signed-in session was made. The case study's technical claims map to source and to those records.
+
+**Unresolved.** The division of work with Brandon Hall, including who carried out each verification step; the pilot's documented outcome, which its tracking issue had not recorded when checked; which sanitized workflow and outcome may be published.
 
 **Next steps (portfolio, not product).** Request Foxtrot's approval for sanitized product captures made with a synthetic mailbox: the thread view, the contact and deal rail, the composer showing its destination, and the changed-recipient review state. Agree a documented pilot outcome that Foxtrot is willing to publish, with its source, date and method.
 
 **Validation.** Written approval; a review of every capture for personal or customer data; an outcome statement that cites its source. No adoption, time-saving or impact figure without that statement.
 
-**Artifacts for an updated case study.** Approved captures; the outcome statement; a clarified release chronology; the confirmed division of responsibilities.
+**Artifacts for an updated case study.** Approved captures; the outcome statement; the confirmed division of responsibilities; if the verification wording is strengthened, citations to H8 that keep H6 as the earlier release.
 
 ## Wei research
 
