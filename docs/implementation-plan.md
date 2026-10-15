@@ -1,12 +1,12 @@
 # Implementation Plan
 
-Status: planning complete, implementation not started. Each phase ends with a review by Joshua before the next one begins.
+Status: Phase 1 approved (candidate A, Atrium, with interim background art). Phase 2, Milestone 1 (the homepage), is in progress. Each phase ends with a review by Joshua before the next one begins.
 
 ## Recommended stack
 
 | Concern | Choice | Reason |
 |---------|--------|--------|
-| Framework | Next.js (App Router), latest stable at scaffold time | Static rendering by default, built-in image optimization and art direction support, `next/font` self-hosting, metadata and Open Graph APIs, simple Vercel deployment later |
+| Framework | Next.js 16.4 (App Router, Turbopack, Cache Components enabled) | Static rendering by default, built-in image optimization and art direction support, `next/font` self-hosting, metadata and Open Graph APIs, simple Vercel deployment later |
 | UI | React with Server Components by default | Only the mobile menu and small interactive pieces need client JavaScript |
 | Language | TypeScript, `strict: true` | Typed content models catch missing project fields at build time |
 | Styling | Tailwind CSS v4 with design tokens in `@theme` | Tokens from `docs/design.md` live in one CSS file; utilities keep components short; custom variants handle the short-height layout |
@@ -21,7 +21,7 @@ Status: planning complete, implementation not started. Each phase ends with a re
 
 No. The cinematic quality in the references comes from rendered key art plus layered translucent UI, and both are delivered here as optimized images and CSS. WebGL would add bundle weight, battery cost, GPU variability, and extra reduced-motion and fallback work, without improving how a recruiter reads the page.
 
-3D tools are still useful **offline**: Blender is the recommended way to produce the emblem-led key art (see `docs/assets.md`, A1). The output is a static image.
+3D tools can still help **offline**, for example a Blender render of the approved scene, but they are optional and not a prerequisite. Phase 1 produced its key art candidates with an image generation tool and a Python renderer (see `docs/assets.md`, A1). Either way, the output is a static image.
 
 Reconsider real-time WebGL only if, after the static key art ships, Joshua specifically wants an interactive element (for example, light that follows the cursor), and only as a progressive enhancement that is disabled under reduced motion and replaced by the static image when unsupported.
 
@@ -40,28 +40,31 @@ flowchart LR
   P5 --> P6["Phase 6: Deployment, on explicit approval"]
 ```
 
-## Phase 0: Repository and planning (this pull request)
+## Phase 0: Repository and planning (complete)
 
 - `.gitignore`, `README.md`, `AGENTS.md`, `docs/design.md`, `docs/implementation-plan.md`, `docs/assets.md`.
 - No application code.
 
-## Phase 1: Visual direction decision
+## Phase 1: Visual direction decision (approved)
 
 Goal: settle the cinematic background and project art **before** building homepage components, so the layout is designed around real imagery and not around procedural decoration.
 
-Steps:
+Steps and status:
 
-1. **Decide directions.** Joshua picks the key art direction (emblem-led, environment-led, or portrait-led) and the card art approach (real captures, emblems, or mixed). See `docs/assets.md`, A1 and A2.
-2. **Scaffold the minimum.** Create the Next.js, TypeScript, and Tailwind project; add the fonts and the color, type, and spacing tokens from `docs/design.md`. No components yet.
-3. **Produce two or three composition candidates.** Rough key art at the specified desktop and mobile crops (quick Blender blockouts, graded stock, or rough studies), following the focal point, safe zone, and value rules in A1.
-4. **Build a composition study route** (`/lab/composition`, development-only, excluded from production builds). It places each candidate behind:
-   - the typeset name and role line at final size,
-   - three plain card silhouettes at final size and position,
-   - the top bar as a flat bar.
-5. **Capture and compare.** Screenshot each candidate at 1440 x 900, 1280 x 720, and 390 x 844. Put the screenshots side by side with references 03 (Rank Legacy), 05 (Agents), and 10 (Premier hub). Measure hero text contrast over each candidate.
-6. **Gate.** Joshua approves one candidate, or asks for a revision. The approved image (final or a composition-matched stand-in) and its crop positions are recorded in `docs/assets.md`.
+1. **Decide directions.** Done. Background: dark architectural scene, subtle JV emblem, one warm light. Card order: Recolm, Hermes (lead), Valorant ML. Headline approved. Card art: real captures where available, original research charts for Valorant ML, labelled placeholders otherwise.
+2. **Scaffold the minimum.** Done. Next.js 16.4, TypeScript, Tailwind v4, fonts, and the color, type, spacing, and motion tokens in `src/app/globals.css`. Minimal typed content in `src/content`. Playwright for capture.
+3. **Produce comparable candidates.** Done. Three candidates at desktop and mobile crops: A (Atrium) and B (Gallery) from the Cursor image generation tool, and C (Procedural hall) from `scripts/art/render_backdrop.py`.
+4. **Build the composition study route.** Done. `/lab/composition/{a,b,c}/{guides,clean}`, development only (404 in production builds, `instant = false`, not indexed). Each candidate sits behind the same top bar, identity block, three pennant card silhouettes, panel stack, primary action, and status strip, with optional guide overlays.
+5. **Capture and compare.** Done. Captures at 1440 x 900, 1280 x 720, and 390 x 844, comparison sheets, the reference checklist, and safe-zone contrast measurements are in `docs/verification/phase-1/README.md`. Primary comparison reference: the Play lobby (00).
+6. **Gate.** Approved: candidate A, Atrium. Its current background is an interim asset; the path to a final-resolution source is decided during refinement (`docs/assets.md`, A1). Adjustments requested at the gate: keep the desktop lineup, show Hermes first on mobile through document order, reduce the decorative space above the mobile identity block, keep the panel tiles and the emblem, and verify contrast behind the actual text positions.
 
-Exit criteria: an approved A1 image or stand-in at both crops, an approved A2 approach with at least one sample card image, and hero text contrast of at least 4.5:1 measured in the safe zone.
+Exit criteria:
+
+- An approved A1 candidate. Done (A, interim).
+- An approved A2 approach. Done. A sample card image depends on a real capture or real research results, so card art can stay as labelled placeholders when Milestone 1 starts.
+- Hero text contrast in the safe zone. The Phase 1 measurement is an approximation: it compares the text colors against the 98th-percentile luminance of all pixels in the safe-zone box, which ignores the brightest 2% of pixels and does not look at where the glyphs actually sit. Milestone 1 replaces it with a strict per-line check (Verification, section 5).
+
+What the study does not include: functional links, focus states, motion, and below-the-fold sections. Those belong to Milestone 1. The study's `_components` are throwaway; Milestone 1 rebuilds them as real components.
 
 ## Phase 2: Milestone 1, the homepage
 
@@ -71,8 +74,10 @@ Goal: one polished homepage with functional navigation, featured project cards, 
 
 In scope:
 
-- Global shell: SkipLink, TopBar (BrandSlab, NavTabs, résumé action, social icon links), StatusStrip, Footer.
-- Homepage: Backdrop (approved art with `<picture>` art direction, grain, ghost type), Hero identity block, three-card Lineup, short Experience snapshot, short About teaser, Contact panel.
+- Global shell: SkipLink, TopBar (BrandSlab, NavTabs, résumé action and social icon links once confirmed), StatusStrip, Footer.
+- Homepage: Backdrop (candidate A interim art with `<picture>` art direction, scrims, grain), JV emblem, Hero identity block, three-card Lineup with the "Explore projects" action, panel stack (Experience, About, Contact tiles), short Experience snapshot, short About teaser, Contact panel.
+- Lineup order: an ordered list in priority order (Hermes, Recolm, Valorant ML); desktop CSS places it as Recolm, Hermes, Valorant ML (`docs/design.md`, Section 3.5).
+- One representative card (Hermes) is built first and reviewed inside the full composition before the other two cards and the rest of the page are finished.
 - Mobile menu as a modal dialog.
 - Navigation that works: `/projects`, `/experience`, `/about`, `/contact`, and `/projects/[slug]` exist as minimal pages inside the shared shell. They contain only confirmed facts and a clear "in progress" note.
 - Motion and the reduced-motion contract from `docs/design.md`, Section 8.
@@ -84,14 +89,16 @@ Out of scope: full case studies, full inner pages, analytics, contact form backe
 ```
 src/
   app/
-    layout.tsx              # fonts, metadata, shell
+    layout.tsx              # fonts, metadata, <html> and <body>
     globals.css             # Tailwind import, @theme tokens, motion tokens, reduced-motion block
-    page.tsx                # homepage
-    projects/page.tsx
-    projects/[slug]/page.tsx
-    experience/page.tsx
-    about/page.tsx
-    contact/page.tsx
+    (site)/
+      layout.tsx            # shared shell (the Phase 1 lab route stays outside it)
+      page.tsx              # homepage
+      projects/page.tsx
+      projects/[slug]/page.tsx
+      experience/page.tsx
+      about/page.tsx
+      contact/page.tsx
   components/
     shell/                  # SkipLink, TopBar, BrandSlab, NavTabs, MobileMenu, StatusStrip, Footer
     home/                   # Backdrop, Hero, Lineup, ExperienceSnapshot, AboutTeaser, ContactPanel
@@ -109,16 +116,17 @@ tests/
     screenshots.spec.ts
     keyboard.spec.ts
     reduced-motion.spec.ts
+    contrast.spec.ts
 playwright.config.ts
 ```
 
-Content rule: fields that Joshua has not confirmed are `null`, and components omit them. The résumé button renders only when the PDF exists; until then the Contact panel lists the résumé as "available on request". Joshua approves that wording.
+Content rule: fields that Joshua has not confirmed are `null`, and components omit them. Résumé and contact links render only once their values are confirmed; until then they are omitted entirely (no disabled buttons and no "on request" wording).
 
 ### Task order
 
 1. Content schemas and the confirmed content entries.
 2. Shell: SkipLink, TopBar with NavTabs (active state from the current route), Footer.
-3. Backdrop with approved art, scrims, grain, and ghost type.
+3. Backdrop with approved art, scrims, grain, and the JV emblem (promoted from the Phase 1 study).
 4. Hero identity block and buttons.
 5. ProjectCard and Lineup, including hover, focus, and selected states.
 6. Below-the-fold sections.
@@ -130,7 +138,7 @@ Content rule: fields that Joshua has not confirmed are `null`, and components om
 
 ### Acceptance criteria
 
-- At 1440 x 900 and 1280 x 720, the name, role line, primary actions, and all three full cards are visible without scrolling.
+- At 1440 x 900 and 1280 x 720, the name, headline, actions, all three full cards, and "Explore projects" are visible without scrolling, with cards at 1:2 per `docs/design.md`, Section 3.2.
 - At 390 x 844, there is no horizontal scrolling, the hero and the first card's title are reachable within one scroll, and the menu works.
 - Every nav item and card link resolves to a real page; the active tab is marked with `aria-current="page"`.
 - No invented content: every displayed fact traces to `src/content` and was confirmed by Joshua.
@@ -159,11 +167,12 @@ The references are compared by eye, side by side, not by pixel diff (the goal is
 
 | Check | Compare against |
 |-------|-----------------|
-| One clear focal point; the eye moves from name to lineup | 03 Rank Legacy, 10 Premier hub |
+| Lobby composition: identity left, raised lead card in a set-back lineup, panel stack right, one primary action below | 00 Play lobby (primary) |
+| One clear focal point; the eye moves from name to lineup | 00, 03 Rank Legacy |
 | Background has readable depth (at least three planes) and atmosphere | 03, 05 Agents |
 | Top bar hierarchy: brand slab, then tabs, then actions; the active tab is unmistakable | Top bar in all references |
 | Panel geometry: hairlines, square or notched corners, translucency, no heavy shadows | 01 Collection, 02 Rank Overview |
-| Tall cards feel like the lineup or player cards and have a clear selected state | 01 player card, 06 Agent Mastery |
+| Tall cards feel like the lineup or player cards and have a clear selected state | 00 lineup, 01 player card |
 | Accent discipline: teal for state, gold thin, coral rationed | 07 Store, 09 Esports, 10 |
 | Type: condensed display with a confident scale; labels in small spaced caps; body remains readable | 03, 07 |
 | The page still reads as a professional portfolio within ten seconds | Not a game reference; this is a recruiter's read |
@@ -173,7 +182,7 @@ The references are compared by eye, side by side, not by pixel diff (the goal is
 Automated in `tests/e2e/keyboard.spec.ts` and confirmed manually once:
 
 - The first Tab press reveals the skip link; activating it moves focus to `main`.
-- Tab order follows the visual order: brand, five nav tabs, résumé, social links, hero actions, three cards, then the sections below.
+- Tab order: brand, five nav tabs, résumé and social links (when confirmed), hero actions, the three cards in priority order (Hermes, Recolm, Valorant ML; on desktop this is center, left, right, as described in `docs/design.md`, Section 3.5), "Explore projects", the panel tiles, then the sections below.
 - Every focused element shows the 2px teal ring, which is not clipped by angled shapes (checked in the focus screenshots).
 - Enter activates links, and each card navigates to its project page.
 - Mobile menu: opens with Enter or Space, focus moves inside, Tab stays inside, Escape closes, and focus returns to the Menu button.
@@ -184,13 +193,25 @@ Automated in `tests/e2e/keyboard.spec.ts` and confirmed manually once:
 Automated in `tests/e2e/reduced-motion.spec.ts` with a Playwright context using `reducedMotion: 'reduce'`:
 
 - After load, `document.getAnimations()` returns no running animations.
-- For the nav tab, button, card, and menu, hovering and focusing produce a computed `transform` of `none`, and every transition duration is 120ms or less.
-- The reduced-motion fold screenshot matches the final state of the default-motion screenshot (content, position, and layout are identical; only motion differs).
+- For the nav tab, button, card, and menu, hovering and focusing leave the computed `transform` unchanged from the rest state (no lift, zoom, or slide), and every transition duration is 120ms or less.
+- Angled geometry is preserved: the computed `clip-path` of the brand slab, tabs, panels, and cards is identical with and without reduced motion.
+- The reduced-motion fold screenshot matches the final state of the default-motion screenshot (content, position, layout, and shapes are identical; only movement differs).
 - With default motion, the entrance sequence finishes within one second, and content is readable with JavaScript disabled.
+
+### 5. Text contrast at actual positions
+
+Automated in `tests/e2e/contrast.spec.ts` at all three viewports (reduced motion, so the page is in its final state):
+
+- Collect the box of every rendered line of text in the first viewport (one box per line, from the text node's client rects), with its computed text color and size.
+- Capture the same viewport with all text made transparent, so the pixels inside each box are exactly the background behind that line (art, scrims, grain, and surfaces).
+- For each line, compute the WCAG contrast ratio between the text color and every background pixel inside its box, and keep the minimum. The test requires the minimum to be at least 4.5:1, or 3:1 for large text (24px and up, or 18.66px and up at weight 700 or more).
+- The results are written to `docs/verification/milestone-1/contrast-*.json`.
+
+This is a strict worst case per line, which replaces the Phase 1 approximation (98th-percentile luminance across the whole safe-zone box).
 
 ### Deferred to Phase 5 (after visual approval)
 
-- Automated accessibility scans (axe) and a full contrast audit.
+- Automated accessibility scans (axe) and a contrast audit of states (hover, focus) and inner pages.
 - Lighthouse performance budgets (LCP, CLS) and image weight checks.
 - Firefox and WebKit, tablet (768 x 1024), 320px width, 200% zoom, and ultrawide (2560 x 1080).
 - Screen reader passes (NVDA and VoiceOver).
@@ -222,10 +243,9 @@ Not started without Joshua's explicit approval. The plan is Vercel with preview 
 
 | Question | Blocks |
 |----------|--------|
-| Key art direction (emblem, environment, or portrait) | Phase 1 |
-| Card art approach (captures, emblems, or mixed) | Phase 1 |
-| Card order in the lineup | Phase 2 |
-| Hero role line wording | Phase 2 |
+| Path to final-resolution key art (upscaled AI image, brief for an artist or render, or improved procedural render) | Final art during refinement; candidate A's interim art is used meanwhile |
+| Approval of the draft JV monogram and emblem | Phase 2 |
+| Real captures (Hermes, Recolm) and research results (Valorant ML) | Card art; placeholders are used until supplied |
 | Confirmed public links (résumé, email, GitHub, LinkedIn) | Phase 2 (they are omitted until confirmed) |
 | Project details and evidence | Phase 3 |
 | Recolm client permission | Recolm case study |
