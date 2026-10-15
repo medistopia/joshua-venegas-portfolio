@@ -10,7 +10,7 @@
     "page"
   ],
   "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden (4.5:1, or 3:1 for large text). First viewport, reduced motion.",
-  "lines": 42,
+  "lines": 51,
   "failures": 0,
   "lowest": [
     {
@@ -27,46 +27,46 @@
     {
       "state": "page",
       "kind": "text",
-      "text": "Status",
-      "color": "#c9a55c",
+      "text": "Key engineering decisions",
+      "color": "#9aa6b8",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 816
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Phase 1 production release",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 3584
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "With",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 544
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Research",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.71,
+      "minRatio": 7.29,
       "worstBackground": "#0f1725",
-      "pixels": 1104
+      "pixels": 3456
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Problem",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 960
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "My role",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 960
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Delivered",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 1232
     }
   ],
   "results": [
@@ -124,6 +124,17 @@
       "minRatio": 7.97,
       "worstBackground": "#070b16",
       "pixels": 1320
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Illustrative art",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.85,
+      "worstBackground": "#080e17",
+      "pixels": 2208
     },
     {
       "state": "page",
@@ -194,6 +205,193 @@
     {
       "state": "page",
       "kind": "text",
+      "text": "Overview",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.97,
+      "worstBackground": "#0e1725",
+      "pixels": 2523
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Problem",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 960
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6647
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 7055
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6460
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 1292
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "My role",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 960
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 7038
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6868
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 7293
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6970
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 7072
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 3077
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Delivered",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 1232
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "A desktop-first Phase 1 workspace: protected sign-in, Gmail ",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6732
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "A desktop-first Phase 1 workspace: protected sign-in, Gmail ",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 6868
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "A desktop-first Phase 1 workspace: protected sign-in, Gmail ",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 5372
+    },
+    {
+      "state": "page",
+      "kind": "text",
       "text": "Status",
       "color": "#c9a55c",
       "fontSize": 12,
@@ -217,12 +415,23 @@
       "state": "page",
       "kind": "text",
       "text": "Phase 1 production release",
-      "color": "#c9a55c",
-      "fontSize": 12,
+      "color": "#edeae3",
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 7.35,
+      "minRatio": 14.25,
       "worstBackground": "#121c2b",
-      "pixels": 3584
+      "pixels": 3009
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": ":",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 119
     },
     {
       "state": "page",
@@ -238,123 +447,13 @@
     {
       "state": "page",
       "kind": "text",
-      "text": "With",
-      "color": "#c9a55c",
+      "text": "Key engineering decisions",
+      "color": "#9aa6b8",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 544
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Brandon Hall",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 1428
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "An inbox with working context",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.7,
-      "worstBackground": "#101926",
-      "pixels": 8468
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 13.93,
-      "worstBackground": "#181e28",
-      "pixels": 11840
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.06,
-      "worstBackground": "#171d28",
-      "pixels": 12900
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 13.93,
-      "worstBackground": "#181e28",
-      "pixels": 12200
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 13.63,
-      "worstBackground": "#1a2029",
-      "pixels": 12440
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.06,
-      "worstBackground": "#171d28",
-      "pixels": 9280
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "My role and collaboration",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.94,
+      "minRatio": 7.29,
       "worstBackground": "#0f1725",
-      "pixels": 7279
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.68,
-      "worstBackground": "#111926",
-      "pixels": 12220
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.82,
-      "worstBackground": "#101825",
-      "pixels": 1224
+      "pixels": 3456
     },
     {
       "state": "page",

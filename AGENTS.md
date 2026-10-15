@@ -30,6 +30,8 @@ The primary composition reference is the Play lobby (`references/valorant/00-pla
 
 On October 14, 2026 Joshua explicitly authorized a limited motion and Hermes case-study pilot, plus a dossier for all five projects and research. This is an exception to the Phase 3 gate above, not authorization for the remaining full case studies. See `docs/content-dossier.md` and `docs/motion-pilot.md`; stop for review after the pilot. Hermes narrative is Zod-validated in `src/content/hermes-case-study.ts`.
 
+A follow-up polish pass (also authorized October 14) adds the Hermes overview and reply-workflow diagram, one ambient light on the lobby with its own Pause/Play control (`docs/motion-pilot.md`), and `docs/project-refresh-plan.md`. The refresh plan is for later work in the project repositories; it does not authorize those refreshes or the remaining case studies.
+
 ## Hard rules
 
 - **Never invent content.** No made-up accomplishments, metrics, testimonials, dates, employers, client names, or contact details. Unconfirmed fields are `null` in `src/content` and are not rendered.

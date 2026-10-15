@@ -41,8 +41,8 @@
       "color": "#9aa6b8",
       "fontSize": 18,
       "required": 4.5,
-      "minRatio": 7.89,
-      "worstBackground": "#080d16",
+      "minRatio": 7.93,
+      "worstBackground": "#080c16",
       "pixels": 946
     },
     {
@@ -52,9 +52,20 @@
       "color": "#9aa6b8",
       "fontSize": 18,
       "required": 4.5,
-      "minRatio": 6.89,
-      "worstBackground": "#1b1c22",
+      "minRatio": 6.91,
+      "worstBackground": "#1a1c22",
       "pixels": 1320
+    },
+    {
+      "state": "/:0",
+      "kind": "text",
+      "text": "Pause background motion",
+      "color": "#edeae3",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 16.39,
+      "worstBackground": "#060b15",
+      "pixels": 3168
     },
     {
       "state": "/:0",
@@ -85,8 +96,8 @@
       "color": "#edeae3",
       "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.74,
-      "worstBackground": "#161820",
+      "minRatio": 14.68,
+      "worstBackground": "#15191f",
       "pixels": 3094
     },
     {
@@ -96,8 +107,8 @@
       "color": "#edeae3",
       "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.65,
-      "worstBackground": "#16191f",
+      "minRatio": 14.64,
+      "worstBackground": "#161920",
       "pixels": 2771
     },
     {
@@ -162,8 +173,8 @@
       "color": "#c9a55c at 92%",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 6.99,
-      "worstBackground": "#0a121a",
+      "minRatio": 7.03,
+      "worstBackground": "#0a111a",
       "pixels": 3856
     },
     {
@@ -173,8 +184,8 @@
       "color": "#c9a55c at 92%",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 7.14,
-      "worstBackground": "#090e18",
+      "minRatio": 7.15,
+      "worstBackground": "#090e17",
       "pixels": 688
     },
     {
@@ -184,8 +195,8 @@
       "color": "#edeae3 at 92%",
       "fontSize": 40,
       "required": 3,
-      "minRatio": 13.48,
-      "worstBackground": "#091019",
+      "minRatio": 13.49,
+      "worstBackground": "#081019",
       "pixels": 5328
     },
     {
@@ -195,8 +206,8 @@
       "color": "#edeae3 at 92%",
       "fontSize": 40,
       "required": 3,
-      "minRatio": 13.31,
-      "worstBackground": "#0a121b",
+      "minRatio": 13.32,
+      "worstBackground": "#0a121a",
       "pixels": 6192
     },
     {
@@ -206,8 +217,8 @@
       "color": "#edeae3 at 92%",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 13.31,
-      "worstBackground": "#0a121b",
+      "minRatio": 13.32,
+      "worstBackground": "#0a121a",
       "pixels": 3584
     },
     {
@@ -239,8 +250,8 @@
       "color": "#9aa6b8 at 92%",
       "fontSize": 14,
       "required": 4.5,
-      "minRatio": 6.66,
-      "worstBackground": "#09111a",
+      "minRatio": 6.67,
+      "worstBackground": "#091119",
       "pixels": 4131
     },
     {
@@ -426,8 +437,8 @@
       "color": "#c9a55c at 92%",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 7.11,
-      "worstBackground": "#090f18",
+      "minRatio": 7.12,
+      "worstBackground": "#080f17",
       "pixels": 1376
     },
     {
@@ -460,7 +471,7 @@
       "fontSize": 12,
       "required": 4.5,
       "minRatio": 7.01,
-      "worstBackground": "#0e1118",
+      "worstBackground": "#0e1117",
       "pixels": 1232
     },
     {
@@ -580,8 +591,8 @@
       "color": "#9aa6b8",
       "fontSize": 18,
       "required": 4.5,
-      "minRatio": 7.89,
-      "worstBackground": "#080d16",
+      "minRatio": 7.93,
+      "worstBackground": "#080c16",
       "pixels": 946
     },
     {
@@ -591,9 +602,20 @@
       "color": "#9aa6b8",
       "fontSize": 18,
       "required": 4.5,
-      "minRatio": 6.89,
-      "worstBackground": "#1b1c22",
+      "minRatio": 6.91,
+      "worstBackground": "#1a1c22",
       "pixels": 1320
+    },
+    {
+      "state": "/:0.5",
+      "kind": "text",
+      "text": "Pause background motion",
+      "color": "#edeae3",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 16.39,
+      "worstBackground": "#060b15",
+      "pixels": 3168
     },
     {
       "state": "/:0.5",
@@ -701,8 +723,8 @@
       "color": "#c9a55c at 100%",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 8.04,
-      "worstBackground": "#0a1219",
+      "minRatio": 8.09,
+      "worstBackground": "#09111a",
       "pixels": 3856
     },
     {
@@ -723,8 +745,8 @@
       "color": "#edeae3 at 100%",
       "fontSize": 40,
       "required": 3,
-      "minRatio": 15.73,
-      "worstBackground": "#0a101a",
+      "minRatio": 15.74,
+      "worstBackground": "#09101a",
       "pixels": 5328
     },
     {
@@ -734,8 +756,8 @@
       "color": "#edeae3 at 100%",
       "fontSize": 40,
       "required": 3,
-      "minRatio": 15.54,
-      "worstBackground": "#0a121b",
+      "minRatio": 15.55,
+      "worstBackground": "#0a121a",
       "pixels": 6192
     },
     {
@@ -745,8 +767,8 @@
       "color": "#edeae3 at 100%",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 15.54,
-      "worstBackground": "#0a121b",
+      "minRatio": 15.57,
+      "worstBackground": "#09121a",
       "pixels": 3584
     },
     {
@@ -778,8 +800,8 @@
       "color": "#9aa6b8 at 100%",
       "fontSize": 14,
       "required": 4.5,
-      "minRatio": 7.64,
-      "worstBackground": "#09111a",
+      "minRatio": 7.65,
+      "worstBackground": "#091119",
       "pixels": 4131
     },
     {

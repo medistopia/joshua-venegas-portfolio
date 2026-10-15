@@ -2,95 +2,282 @@
   "browser": "156.0.8078.4",
   "results": [
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents, dev",
+      "text": "Overview",
       "color": "#edeae3",
-      "fontSize": 18,
-      "required": 4.5,
+      "fontSize": 24,
+      "required": 3,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 18816
+      "pixels": 10092
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents, dev",
-      "color": "#edeae3",
-      "fontSize": 18,
+      "text": "Problem",
+      "color": "#c9a55c",
+      "fontSize": 12,
       "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22638
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3840
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents, dev",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
       "color": "#edeae3",
-      "fontSize": 18,
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23478
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 13566
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents, dev",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
       "color": "#edeae3",
-      "fontSize": 18,
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23058
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 16592
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents, dev",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
       "color": "#edeae3",
-      "fontSize": 18,
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24108
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17510
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents, dev",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
       "color": "#edeae3",
-      "fontSize": 18,
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19362
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17034
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents, dev",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
       "color": "#edeae3",
-      "fontSize": 18,
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24780
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 15402
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "A Gmail-backed inbox and workspace for Foxtrot's agents, dev",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
       "color": "#edeae3",
-      "fontSize": 18,
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 16422
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 5202
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
+      "kind": "text",
+      "text": "My role",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3840
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17102
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17034
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 18462
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 16116
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 15572
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 14382
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 13226
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 18428
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 16966
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Software Engineer in Foxtrot's Special Projects Group, worki",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 4998
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Delivered",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 4960
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "A desktop-first Phase 1 workspace: protected sign-in, Gmail ",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 15912
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "A desktop-first Phase 1 workspace: protected sign-in, Gmail ",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17646
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "A desktop-first Phase 1 workspace: protected sign-in, Gmail ",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 16728
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "A desktop-first Phase 1 workspace: protected sign-in, Gmail ",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 18360
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "A desktop-first Phase 1 workspace: protected sign-in, Gmail ",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 7038
+    },
+    {
+      "state": "case-overview",
       "kind": "text",
       "text": "Status",
       "color": "#c9a55c",
@@ -101,7 +288,7 @@
       "pixels": 3296
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
       "text": "Pilot support and follow-up work",
       "color": "#edeae3",
@@ -112,18 +299,29 @@
       "pixels": 14688
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
       "text": "Phase 1 production release",
-      "color": "#c9a55c",
-      "fontSize": 12,
+      "color": "#edeae3",
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 7.35,
+      "minRatio": 14.25,
       "worstBackground": "#121c2b",
-      "pixels": 14368
+      "pixels": 12070
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
+      "kind": "text",
+      "text": ":",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 510
+    },
+    {
+      "state": "case-overview",
       "kind": "text",
       "text": "October 8, 2026",
       "color": "#edeae3",
@@ -131,386 +329,551 @@
       "required": 4.5,
       "minRatio": 14.25,
       "worstBackground": "#121c2b",
-      "pixels": 7344
+      "pixels": 4726
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "With",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 2208
-    },
-    {
-      "state": "case-problem",
-      "kind": "text",
-      "text": "Brandon Hall",
+      "text": "October 8, 2026",
       "color": "#edeae3",
       "fontSize": 14,
       "required": 4.5,
       "minRatio": 14.25,
       "worstBackground": "#121c2b",
-      "pixels": 5746
+      "pixels": 2346
     },
     {
-      "state": "case-problem",
+      "state": "case-overview",
       "kind": "text",
-      "text": "An inbox with working context",
+      "text": "Key engineering decisions",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 13824
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "Decision",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 4030
+    },
+    {
+      "state": "case-overview",
+      "kind": "text",
+      "text": "1",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 442
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Contact and deal context",
+      "color": "#edeae3",
+      "fontSize": 20,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 15133
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "The linked contact and its deals appear beside the thread. L",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 17646
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "The linked contact and its deals appear beside the thread. L",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 17034
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "The linked contact and its deals appear beside the thread. L",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 7616
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Step",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 2752
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "4",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 544
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Hermes",
+      "color": "#3dd6c4",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 9.47,
+      "worstBackground": "#121c2b",
+      "pixels": 3296
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Reply composer",
+      "color": "#edeae3",
+      "fontSize": 20,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 11712
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Shows the single destination the reply will go to.",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 18802
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Shows the single destination the reply will go to.",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 2550
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Step",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 2752
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "5",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 544
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Hermes",
+      "color": "#3dd6c4",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 9.47,
+      "worstBackground": "#121c2b",
+      "pixels": 3296
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Server recipient recheck",
+      "color": "#edeae3",
+      "fontSize": 20,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 19056
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "On send, the server rereads the thread and compares its dest",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 17408
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "On send, the server rereads the thread and compares its dest",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 18734
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "On send, the server rereads the thread and compares its dest",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 3230
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Changed or missing recipient",
+      "color": "#f05a5e",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 5.16,
+      "worstBackground": "#121c2b",
+      "pixels": 15456
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Nothing is sent. The current conversation returns to the com",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 18598
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Nothing is sent. The current conversation returns to the com",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 15776
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Back to step",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 2482
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Back to step",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 3332
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "4",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 578
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": ".",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 272
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Step",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 2752
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "6",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 544
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Gmail",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 2752
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Gmail send",
+      "color": "#edeae3",
+      "fontSize": 20,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 7920
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "The server builds the reply and Gmail delivers it.",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 16762
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "The server builds the reply and Gmail delivers it.",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 6.95,
+      "worstBackground": "#121c2b",
+      "pixels": 4590
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Hermes",
+      "color": "#3dd6c4",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 9.47,
+      "worstBackground": "#121c2b",
+      "pixels": 3296
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Interface and server routes on Vercel. Checks the session an",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 16966
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Interface and server routes on Vercel. Checks the session an",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 16864
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Gmail",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 2752
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Mail storage and delivery. Threads are read and replies sent",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17204
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Mail storage and delivery. Threads are read and replies sent",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17680
+    },
+    {
+      "state": "case-workflow",
+      "kind": "text",
+      "text": "Mail storage and delivery. Threads are read and replies sent",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 1768
+    },
+    {
+      "state": "case-architecture",
+      "kind": "text",
+      "text": "After protected sign-in, the agent opens a Gmail thread with",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 19210
+    },
+    {
+      "state": "case-architecture",
+      "kind": "text",
+      "text": "After protected sign-in, the agent opens a Gmail thread with",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 19822
+    },
+    {
+      "state": "case-architecture",
+      "kind": "text",
+      "text": "After protected sign-in, the agent opens a Gmail thread with",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 18564
+    },
+    {
+      "state": "case-architecture",
+      "kind": "text",
+      "text": "After protected sign-in, the agent opens a Gmail thread with",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 20060
+    },
+    {
+      "state": "case-architecture",
+      "kind": "text",
+      "text": "After protected sign-in, the agent opens a Gmail thread with",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 10438
+    },
+    {
+      "state": "case-architecture",
+      "kind": "text",
+      "text": "Architecture and boundaries",
       "color": "#edeae3",
       "fontSize": 24,
       "required": 3,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 33872
+      "pixels": 31842
     },
     {
-      "state": "case-problem",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23840
+      "pixels": 21240
     },
     {
-      "state": "case-problem",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23560
+      "pixels": 23520
     },
     {
-      "state": "case-problem",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24280
-    },
-    {
-      "state": "case-problem",
-      "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21760
-    },
-    {
-      "state": "case-problem",
-      "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22960
-    },
-    {
-      "state": "case-problem",
-      "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 20000
-    },
-    {
-      "state": "case-problem",
-      "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 10360
-    },
-    {
-      "state": "case-problem",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 20800
-    },
-    {
-      "state": "case-problem",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23360
-    },
-    {
-      "state": "case-problem",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22640
-    },
-    {
-      "state": "case-problem",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19320
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "Hermes gives Foxtrot's agents a Gmail-backed workspace with ",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 4662
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 20800
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23360
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22640
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "Gmail remains responsible for mail storage and delivery. Her",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19320
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "My role and collaboration",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 29174
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22200
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23480
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22880
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19200
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21320
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24600
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23040
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I am a Software Engineer in Foxtrot's Special Projects Group",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 7320
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 20640
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23480
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21160
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22560
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 16480
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19800
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -519,317 +882,108 @@
       "pixels": 21640
     },
     {
-      "state": "case-role",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 22560
+      "pixels": 24360
     },
     {
-      "state": "case-role",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 22720
+      "pixels": 23000
     },
     {
-      "state": "case-role",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 5360
+      "pixels": 24200
     },
     {
-      "state": "case-role",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "Architecture and workflow",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 30856
-    },
-    {
-      "state": "case-role",
-      "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23360
+      "pixels": 23880
     },
     {
-      "state": "case-role",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 20720
+      "pixels": 20560
     },
     {
-      "state": "case-role",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 21440
+      "pixels": 22960
     },
     {
-      "state": "case-role",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
+      "text": "Hermes is a Next.js and TypeScript application whose interfa",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 2865
+      "pixels": 5160
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 14066
+      "pixels": 20800
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 22560
+      "pixels": 18080
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22720
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "I also worked on session isolation, OAuth refusal and revoca",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 5360
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "Architecture and workflow",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 30856
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23360
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 20720
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21440
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22920
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21720
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24040
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 20080
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "The Next.js and TypeScript application combines the interfac",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 9240
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23760
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21880
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23400
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19720
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22920
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23760
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24400
-    },
-    {
-      "state": "case-workflow",
-      "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -838,147 +992,202 @@
       "pixels": 22440
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23440
+      "pixels": 22400
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "After protected sign-in, an agent opens a Gmail thread in th",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 5360
+      "pixels": 22720
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 19040
+      "pixels": 23480
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23600
+      "pixels": 24520
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 19480
+      "pixels": 23400
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 22640
+      "pixels": 3640
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "Decision 1: make session boundaries explicit",
       "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
+      "fontSize": 24,
+      "required": 3,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 22640
+      "pixels": 25520
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "Decision 1: make session boundaries explicit",
       "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
+      "fontSize": 24,
+      "required": 3,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23520
+      "pixels": 21402
     },
     {
-      "state": "case-workflow",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "A valid signature is not enough to decide where a session be",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 13120
+      "pixels": 24600
     },
     {
-      "state": "case-sessions",
+      "state": "case-architecture",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "A valid signature is not enough to decide where a session be",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 5660
-    },
-    {
-      "state": "case-sessions",
-      "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22640
+      "pixels": 11400
     },
     {
       "state": "case-sessions",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23520
+      "pixels": 16724
     },
     {
       "state": "case-sessions",
       "kind": "text",
-      "text": "The reply composer shows one destination. When the agent sen",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 13120
+      "pixels": 22440
+    },
+    {
+      "state": "case-sessions",
+      "kind": "text",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 22400
+    },
+    {
+      "state": "case-sessions",
+      "kind": "text",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 22720
+    },
+    {
+      "state": "case-sessions",
+      "kind": "text",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23480
+    },
+    {
+      "state": "case-sessions",
+      "kind": "text",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24520
+    },
+    {
+      "state": "case-sessions",
+      "kind": "text",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23400
+    },
+    {
+      "state": "case-sessions",
+      "kind": "text",
+      "text": "Gmail remains responsible for mail storage and delivery: lin",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 3640
     },
     {
       "state": "case-sessions",
@@ -1223,39 +1432,6 @@
       "pixels": 5040
     },
     {
-      "state": "case-sessions",
-      "kind": "text",
-      "text": "Decision 2: finish the refusal workflow",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 31784
-    },
-    {
-      "state": "case-sessions",
-      "kind": "text",
-      "text": "Decision 2: finish the refusal workflow",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 11136
-    },
-    {
-      "state": "case-sessions",
-      "kind": "text",
-      "text": "An OAuth callback may receive a grant before the application",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 7605
-    },
-    {
       "state": "case-oauth",
       "kind": "text",
       "text": "This adds a boundary beyond separate signing secrets. If the",
@@ -1264,62 +1440,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 19494
-    },
-    {
-      "state": "case-oauth",
-      "kind": "text",
-      "text": "This adds a boundary beyond separate signing secrets. If the",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 20160
-    },
-    {
-      "state": "case-oauth",
-      "kind": "text",
-      "text": "This adds a boundary beyond separate signing secrets. If the",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22360
-    },
-    {
-      "state": "case-oauth",
-      "kind": "text",
-      "text": "This adds a boundary beyond separate signing secrets. If the",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23640
-    },
-    {
-      "state": "case-oauth",
-      "kind": "text",
-      "text": "This adds a boundary beyond separate signing secrets. If the",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23200
-    },
-    {
-      "state": "case-oauth",
-      "kind": "text",
-      "text": "This adds a boundary beyond separate signing secrets. If the",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22680
+      "pixels": 19845
     },
     {
       "state": "case-oauth",
@@ -1561,7 +1682,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 24320
+      "pixels": 24360
     },
     {
       "state": "case-oauth",
@@ -1586,15 +1707,37 @@
       "pixels": 23320
     },
     {
-      "state": "case-recipients",
+      "state": "case-oauth",
       "kind": "text",
-      "text": "A revocation failure does not make the account eligible. The",
+      "text": "Decision 3: show the destination, then recheck it",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 21924
+    },
+    {
+      "state": "case-oauth",
+      "kind": "text",
+      "text": "Decision 3: show the destination, then recheck it",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 30856
+    },
+    {
+      "state": "case-oauth",
+      "kind": "text",
+      "text": "A conversation can change while someone writes a reply. I wo",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 6050
+      "pixels": 20000
     },
     {
       "state": "case-recipients",
@@ -1605,7 +1748,62 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 24320
+      "pixels": 17945
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "A revocation failure does not make the account eligible. The",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 22160
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "A revocation failure does not make the account eligible. The",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23760
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "A revocation failure does not make the account eligible. The",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 17600
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "A revocation failure does not make the account eligible. The",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24200
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "A revocation failure does not make the account eligible. The",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24360
     },
     {
       "state": "case-recipients",
@@ -1693,7 +1891,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 22200
+      "pixels": 23880
     },
     {
       "state": "case-recipients",
@@ -1704,7 +1902,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23720
+      "pixels": 23160
     },
     {
       "state": "case-recipients",
@@ -1715,7 +1913,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 20840
+      "pixels": 19640
     },
     {
       "state": "case-recipients",
@@ -1726,7 +1924,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 24200
+      "pixels": 23160
     },
     {
       "state": "case-recipients",
@@ -1737,67 +1935,12 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23760
+      "pixels": 20400
     },
     {
       "state": "case-recipients",
       "kind": "text",
       "text": "A conversation can change while someone writes a reply. I wo",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 6480
-    },
-    {
-      "state": "case-recipients",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 17640
-    },
-    {
-      "state": "case-recipients",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22640
-    },
-    {
-      "state": "case-recipients",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24160
-    },
-    {
-      "state": "case-recipients",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22920
-    },
-    {
-      "state": "case-recipients",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -1808,7 +1951,62 @@
     {
       "state": "case-recipients",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 17760
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23480
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24160
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24080
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23600
+    },
+    {
+      "state": "case-recipients",
+      "kind": "text",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -1819,7 +2017,7 @@
     {
       "state": "case-recipients",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -1830,7 +2028,7 @@
     {
       "state": "case-recipients",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -1841,7 +2039,7 @@
     {
       "state": "case-recipients",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -1852,7 +2050,7 @@
     {
       "state": "case-recipients",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -1863,7 +2061,7 @@
     {
       "state": "case-recipients",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -1872,108 +2070,20 @@
       "pixels": 8600
     },
     {
-      "state": "case-recipients",
+      "state": "case-verification",
       "kind": "text",
-      "text": "Verification and evidence",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 27782
-    },
-    {
-      "state": "case-recipients",
-      "kind": "text",
-      "text": "The repository contains targeted tests for cross-environment",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23000
-    },
-    {
-      "state": "case-recipients",
-      "kind": "text",
-      "text": "The repository contains targeted tests for cross-environment",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 15250
+      "pixels": 9135
     },
     {
       "state": "case-verification",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22640
-    },
-    {
-      "state": "case-verification",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24160
-    },
-    {
-      "state": "case-verification",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22920
-    },
-    {
-      "state": "case-verification",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23600
-    },
-    {
-      "state": "case-verification",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22720
-    },
-    {
-      "state": "case-verification",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24360
-    },
-    {
-      "state": "case-verification",
-      "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -1984,7 +2094,7 @@
     {
       "state": "case-verification",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -1995,7 +2105,7 @@
     {
       "state": "case-verification",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -2006,7 +2116,7 @@
     {
       "state": "case-verification",
       "kind": "text",
-      "text": "If that destination changes or disappears, Hermes refuses th",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -2078,7 +2188,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 20600
+      "pixels": 22800
     },
     {
       "state": "case-verification",
@@ -2089,7 +2199,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 24320
+      "pixels": 23720
     },
     {
       "state": "case-verification",
@@ -2100,7 +2210,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 22880
+      "pixels": 22440
     },
     {
       "state": "case-verification",
@@ -2111,7 +2221,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 9480
+      "pixels": 5840
     },
     {
       "state": "case-verification",
@@ -2188,17 +2298,6 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23760
-    },
-    {
-      "state": "case-verification",
-      "kind": "text",
-      "text": "Release work combined automated checks with signed-in browse",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
       "pixels": 23080
     },
     {
@@ -2210,7 +2309,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23240
+      "pixels": 23200
     },
     {
       "state": "case-verification",
@@ -2221,7 +2320,7 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 22560
+      "pixels": 18120
     },
     {
       "state": "case-verification",
@@ -2232,7 +2331,183 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 21360
+      "pixels": 23680
+    },
+    {
+      "state": "case-verification",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 6480
+    },
+    {
+      "state": "case-verification",
+      "kind": "text",
+      "text": "Scope and limits",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 17690
+    },
+    {
+      "state": "case-verification",
+      "kind": "text",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24160
+    },
+    {
+      "state": "case-verification",
+      "kind": "text",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23760
+    },
+    {
+      "state": "case-verification",
+      "kind": "text",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 19008
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 22400
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "If that destination changed or disappeared, Hermes refuses t",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 8600
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Verification and evidence",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 27782
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "The repository contains targeted tests for cross-environment",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23000
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "The repository contains targeted tests for cross-environment",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24400
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "The repository contains targeted tests for cross-environment",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 17360
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "The repository contains targeted tests for cross-environment",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 21680
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "The repository contains targeted tests for cross-environment",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 22800
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "The repository contains targeted tests for cross-environment",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23720
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "The repository contains targeted tests for cross-environment",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 22440
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "The repository contains targeted tests for cross-environment",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 5840
     },
     {
       "state": "case-status",
@@ -2243,7 +2518,40 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 8256
+      "pixels": 21240
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 18600
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24080
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 20640
     },
     {
       "state": "case-status",
@@ -2276,342 +2584,111 @@
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
+      "pixels": 23080
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23200
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 18120
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23680
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 6480
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Scope and limits",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 17690
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24160
+    },
+    {
+      "state": "case-status",
+      "kind": "text",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
       "pixels": 23760
     },
     {
       "state": "case-status",
       "kind": "text",
-      "text": "Release work combined automated checks with signed-in browse",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23080
+      "pixels": 23760
     },
     {
       "state": "case-status",
       "kind": "text",
-      "text": "Release work combined automated checks with signed-in browse",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23240
+      "pixels": 21320
     },
     {
       "state": "case-status",
       "kind": "text",
-      "text": "Release work combined automated checks with signed-in browse",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22560
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "Release work combined automated checks with signed-in browse",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21360
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "Production milestone and limits",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 35148
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23600
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23560
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23280
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23800
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 13760
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21200
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22920
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19440
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21400
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24560
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21640
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24400
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21840
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "Next steps",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 11832
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22720
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23720
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 24040
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19800
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 17720
-    },
-    {
-      "state": "case-status",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 15035
-    },
-    {
-      "state": "case-next",
-      "kind": "text",
-      "text": "Release work combined automated checks with signed-in browse",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23080
-    },
-    {
-      "state": "case-next",
-      "kind": "text",
-      "text": "Release work combined automated checks with signed-in browse",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23240
-    },
-    {
-      "state": "case-next",
-      "kind": "text",
-      "text": "Release work combined automated checks with signed-in browse",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 22560
-    },
-    {
-      "state": "case-next",
-      "kind": "text",
-      "text": "Release work combined automated checks with signed-in browse",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21360
-    },
-    {
-      "state": "case-next",
-      "kind": "text",
-      "text": "Production milestone and limits",
-      "color": "#edeae3",
-      "fontSize": 24,
-      "required": 3,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 35148
-    },
-    {
-      "state": "case-next",
-      "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -2622,134 +2699,123 @@
     {
       "state": "case-next",
       "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
+      "text": "Release work combined automated checks with signed-in browse",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23560
+      "pixels": 17887
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
+      "text": "Release work combined automated checks with signed-in browse",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23280
+      "pixels": 23200
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
+      "text": "Release work combined automated checks with signed-in browse",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23800
+      "pixels": 18120
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "Phase 1 entered production on October 8, 2026, followed by p",
+      "text": "Release work combined automated checks with signed-in browse",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 13760
+      "pixels": 23680
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
+      "text": "Release work combined automated checks with signed-in browse",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 21200
+      "pixels": 6480
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
+      "text": "Scope and limits",
       "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
+      "fontSize": 24,
+      "required": 3,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 22920
+      "pixels": 17690
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 19440
+      "pixels": 24160
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 21400
+      "pixels": 23760
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 24560
+      "pixels": 23760
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 21640
+      "pixels": 21320
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 24400
-    },
-    {
-      "state": "case-next",
-      "kind": "text",
-      "text": "The first phase is desktop-first and deliberately narrower t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21840
+      "pixels": 23600
     },
     {
       "state": "case-next",
@@ -2765,7 +2831,7 @@
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "The current focus is pilot support and follow-up work on the",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -2776,62 +2842,260 @@
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "The current focus is pilot support and follow-up work on the",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23720
+      "pixels": 18200
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "The current focus is pilot support and follow-up work on the",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 24040
+      "pixels": 7000
     },
     {
       "state": "case-next",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "Stack",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 2752
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Next.js",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 3840
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "TypeScript",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 5504
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Supabase",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 4416
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Google Workspace sign-in",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 13248
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Gmail API",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 4960
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Vercel",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 3296
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Technical details come from the Hermes source and its review",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 18156
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Technical details come from the Hermes source and its review",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 16558
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Technical details come from the Hermes source and its review",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 17884
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Technical details come from the Hermes source and its review",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 19856
+    },
+    {
+      "state": "case-next",
+      "kind": "text",
+      "text": "Technical details come from the Hermes source and its review",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 20638
+    },
+    {
+      "state": "stack-heading",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 19800
+      "pixels": 17887
     },
     {
-      "state": "case-next",
+      "state": "stack-heading",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "Release work combined automated checks with signed-in browse",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 17720
+      "pixels": 23200
     },
     {
-      "state": "case-next",
+      "state": "stack-heading",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "Release work combined automated checks with signed-in browse",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 19400
+      "pixels": 18120
     },
     {
-      "state": "case-next",
+      "state": "stack-heading",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23680
+    },
+    {
+      "state": "stack-heading",
+      "kind": "text",
+      "text": "Release work combined automated checks with signed-in browse",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 6480
+    },
+    {
+      "state": "stack-heading",
+      "kind": "text",
+      "text": "Scope and limits",
+      "color": "#edeae3",
+      "fontSize": 24,
+      "required": 3,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 17690
+    },
+    {
+      "state": "stack-heading",
+      "kind": "text",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 24160
+    },
+    {
+      "state": "stack-heading",
+      "kind": "text",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23760
+    },
+    {
+      "state": "stack-heading",
+      "kind": "text",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
+      "color": "#edeae3",
+      "fontSize": 16,
+      "required": 4.5,
+      "minRatio": 14.67,
+      "worstBackground": "#101928",
+      "pixels": 23760
+    },
+    {
+      "state": "stack-heading",
+      "kind": "text",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -2840,26 +3104,15 @@
       "pixels": 21320
     },
     {
-      "state": "case-next",
+      "state": "stack-heading",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "Phase 1 is desktop-first and deliberately narrower than a fu",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 21720
-    },
-    {
-      "state": "case-next",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23400
+      "pixels": 23600
     },
     {
       "state": "stack-heading",
@@ -2875,7 +3128,7 @@
     {
       "state": "stack-heading",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "The current focus is pilot support and follow-up work on the",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
@@ -2886,90 +3139,24 @@
     {
       "state": "stack-heading",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "The current focus is pilot support and follow-up work on the",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 23720
+      "pixels": 18200
     },
     {
       "state": "stack-heading",
       "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
+      "text": "The current focus is pilot support and follow-up work on the",
       "color": "#edeae3",
       "fontSize": 16,
       "required": 4.5,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 24040
-    },
-    {
-      "state": "stack-heading",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19800
-    },
-    {
-      "state": "stack-heading",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 17720
-    },
-    {
-      "state": "stack-heading",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 19400
-    },
-    {
-      "state": "stack-heading",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21320
-    },
-    {
-      "state": "stack-heading",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 21720
-    },
-    {
-      "state": "stack-heading",
-      "kind": "text",
-      "text": "The current focus is pilot support and follow-up work. For t",
-      "color": "#edeae3",
-      "fontSize": 16,
-      "required": 4.5,
-      "minRatio": 14.67,
-      "worstBackground": "#101928",
-      "pixels": 23400
+      "pixels": 7000
     },
     {
       "state": "stack-heading",
@@ -3051,79 +3238,57 @@
     {
       "state": "stack-heading",
       "kind": "text",
-      "text": "All projects",
+      "text": "Technical details come from the Hermes source and its review",
       "color": "#9aa6b8",
-      "fontSize": 12,
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 7.6,
-      "worstBackground": "#0b1220",
-      "pixels": 6624
-    },
-    {
-      "state": "stack-heading",
-      "kind": "text",
-      "text": "Foxtrot",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 6.19,
-      "worstBackground": "#122d37",
-      "pixels": 3840
-    },
-    {
-      "state": "stack-heading",
-      "kind": "text",
-      "text": "Project Hermes",
-      "color": "#edeae3",
-      "fontSize": 18,
-      "required": 4.5,
-      "minRatio": 12,
-      "worstBackground": "#122d37",
-      "pixels": 9724
-    },
-    {
-      "state": "stack-heading",
-      "kind": "text",
-      "text": "JV Digital",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.57,
+      "minRatio": 7.15,
       "worstBackground": "#101928",
-      "pixels": 5504
+      "pixels": 18156
     },
     {
       "state": "stack-heading",
       "kind": "text",
-      "text": "Recolm",
-      "color": "#edeae3",
-      "fontSize": 18,
+      "text": "Technical details come from the Hermes source and its review",
+      "color": "#9aa6b8",
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.67,
+      "minRatio": 7.15,
       "worstBackground": "#101928",
-      "pixels": 4356
+      "pixels": 16558
     },
     {
       "state": "stack-heading",
       "kind": "text",
-      "text": "Research",
-      "color": "#c9a55c",
-      "fontSize": 12,
+      "text": "Technical details come from the Hermes source and its review",
+      "color": "#9aa6b8",
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 7.57,
+      "minRatio": 7.15,
       "worstBackground": "#101928",
-      "pixels": 4416
+      "pixels": 17884
     },
     {
       "state": "stack-heading",
       "kind": "text",
-      "text": "Valorant ML",
-      "color": "#edeae3",
-      "fontSize": 18,
+      "text": "Technical details come from the Hermes source and its review",
+      "color": "#9aa6b8",
+      "fontSize": 14,
       "required": 4.5,
-      "minRatio": 14.67,
+      "minRatio": 7.15,
       "worstBackground": "#101928",
-      "pixels": 7568
+      "pixels": 19856
+    },
+    {
+      "state": "stack-heading",
+      "kind": "text",
+      "text": "Technical details come from the Hermes source and its review",
+      "color": "#9aa6b8",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 7.15,
+      "worstBackground": "#101928",
+      "pixels": 20638
     }
   ]
 }

@@ -50,6 +50,8 @@ Read-only local source at `C:/Projects/project-hermes`, commit `44fb9ec4cd2dfded
 
 Public narrative: `src/content/hermes-case-study.ts`. Overview/problem/workflow map to H1/H2, role to H1, decisions to H3/H4/H5, verification to H3–H7, milestone to H1 with H6's caveat. Proposed portfolio next steps are editorial work authorized by this request.
 
+Polish pass (October 14): the overview's problem and delivered cells restate H1/H2 without adoption, time-saving or impact claims; its status cell renders `projects.ts` (H1). The reply-workflow diagram maps sign-in to H2/H3, thread and send to H2/H5, contact/deal context and Supabase's role to H2, and the server recheck and changed-or-missing review path to H5. It describes the single-recipient reply only. The former role and problem sections were folded into the overview and architecture sections; their attribution caveats are kept (the lead paragraph limits the scope to Hermes within Foxtrot OS, and each decision is phrased as work Joshua contributed to). Portfolio-production commentary moved to a closing note; the illustrative-art disclosure is a label on the header image. Follow-up work for every project is planned in `project-refresh-plan.md`.
+
 ## Recolm
 
 | Topic | Factual basis / editorial decision |

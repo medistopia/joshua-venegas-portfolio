@@ -10,41 +10,30 @@
     "page"
   ],
   "method": "Minimum WCAG contrast between each rendered line's text color and every background pixel inside that line's box, captured with glyphs hidden (4.5:1, or 3:1 for large text). First viewport, reduced motion.",
-  "lines": 20,
+  "lines": 22,
   "failures": 0,
   "lowest": [
     {
       "state": "page",
       "kind": "text",
-      "text": "Status",
+      "text": "Problem",
       "color": "#c9a55c",
       "fontSize": 12,
       "required": 4.5,
       "minRatio": 7.35,
       "worstBackground": "#121c2b",
-      "pixels": 3296
+      "pixels": 3840
     },
     {
       "state": "page",
       "kind": "text",
-      "text": "Phase 1 production release",
-      "color": "#c9a55c",
+      "text": "Illustrative art",
+      "color": "#9aa6b8",
       "fontSize": 12,
       "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 14368
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "With",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 2208
+      "minRatio": 7.42,
+      "worstBackground": "#12151a",
+      "pixels": 8832
     },
     {
       "state": "page",
@@ -67,6 +56,17 @@
       "minRatio": 5.9,
       "worstBackground": "#f05a5e",
       "pixels": 5616
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Venegas",
+      "color": "#070c16",
+      "fontSize": 20,
+      "required": 3,
+      "minRatio": 5.9,
+      "worstBackground": "#f05a5e",
+      "pixels": 6528
     }
   ],
   "results": [
@@ -102,6 +102,17 @@
       "minRatio": 16.37,
       "worstBackground": "#070b15",
       "pixels": 2208
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Illustrative art",
+      "color": "#9aa6b8",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.42,
+      "worstBackground": "#12151a",
+      "pixels": 8832
     },
     {
       "state": "page",
@@ -216,79 +227,90 @@
     {
       "state": "page",
       "kind": "text",
-      "text": "Status",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 3296
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Pilot support and follow-up work",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 14688
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Phase 1 production release",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 14368
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "October 8, 2026",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 7344
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "With",
-      "color": "#c9a55c",
-      "fontSize": 12,
-      "required": 4.5,
-      "minRatio": 7.35,
-      "worstBackground": "#121c2b",
-      "pixels": 2208
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "Brandon Hall",
-      "color": "#edeae3",
-      "fontSize": 14,
-      "required": 4.5,
-      "minRatio": 14.25,
-      "worstBackground": "#121c2b",
-      "pixels": 5746
-    },
-    {
-      "state": "page",
-      "kind": "text",
-      "text": "An inbox with working context",
+      "text": "Overview",
       "color": "#edeae3",
       "fontSize": 24,
       "required": 3,
       "minRatio": 14.67,
       "worstBackground": "#101928",
-      "pixels": 19272
+      "pixels": 10092
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Problem",
+      "color": "#c9a55c",
+      "fontSize": 12,
+      "required": 4.5,
+      "minRatio": 7.35,
+      "worstBackground": "#121c2b",
+      "pixels": 3840
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 13566
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 16592
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17510
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 17034
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 15402
+    },
+    {
+      "state": "page",
+      "kind": "text",
+      "text": "Foxtrot's agents answer Gmail conversations that belong to s",
+      "color": "#edeae3",
+      "fontSize": 14,
+      "required": 4.5,
+      "minRatio": 14.25,
+      "worstBackground": "#121c2b",
+      "pixels": 5202
     }
   ]
 }

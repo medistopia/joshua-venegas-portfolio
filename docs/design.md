@@ -337,13 +337,13 @@ Planned motion:
 1. **Entrance pilot** (October 14): identity, priority-ordered pennants and highlights use a CSS-only 8px rise with 60ms stagger, ending at 780ms. Opacity starts at 0.92 to preserve readability. Top bar, rail and backdrop remain steady. Focus within cancels an entrance immediately. The entrance can replay when the lobby is restored; no persistent suppression flag is used. Exact scope and values are in `motion-pilot.md`.
 2. **Card hover and focus**: border, wash, art scale, and 4px lift over `--dur-base`.
 3. **NavTab hover**: skewed plate fades in over `--dur-fast`.
-4. **Ambient light** (optional, decided after the key art is approved): a very slow (20s or longer) opacity drift on the beam layer. It does not move the layout.
+4. **Ambient light** (October 14 polish pass, in review): a 24s opacity-only drift of one warm glow on the beam and its floor pool, on the lobby from 1024px, beneath the scrims. It does not move the layout. A "Pause background motion" control at the right of the top bar stops it, independently of the carousel; it also holds while the page is hidden. Details in `motion-pilot.md`.
 5. **Mobile menu**: fade plus 12px slide, `--dur-base`.
 6. **"Currently working on" rotation**: the carousel advances every 8 seconds with a cross-fade over `--dur-base`. It holds while the pointer is over it, while keyboard focus is inside it, and while the page is hidden. Pause stops it; choosing a slide with an arrow or indicator also stops it until the visitor presses Play. Under reduced motion it starts paused, and a slide change is the 120ms cross-fade alone. Only visitor-initiated changes are announced to screen readers ("Slide 2 of 2: Research").
 
-The October 14 pilot adds a 200ms, 4px incoming Projects frame and a 160ms, 4px collaborator-popover entrance. Shared tokens, readable opacity and focus cancellation are specified in `motion-pilot.md`. Other views do not gain transitions yet. Ambient motion is deferred for this pilot after visual review of the existing beam.
+The October 14 pilot adds a 200ms, 4px incoming Projects frame and a 160ms, 4px collaborator-popover entrance. Shared tokens, readable opacity and focus cancellation are specified in `motion-pilot.md`. Other views do not gain transitions yet. The pilot deferred ambient motion; the polish pass adds the single ambient light in item 4.
 
-Hermes now has a substantial typed narrative in the existing scrolling reader: problem, role, workflow, three engineering decisions, verification, milestone/limits and next steps. The other four project pages keep their existing limited scope. Sources and claim boundaries are in `content-dossier.md`.
+Hermes has a substantial typed narrative in the existing scrolling reader. It opens with an overview (problem, role and collaboration, what was delivered, status, and three linked summaries of the engineering decisions) and a reply-workflow diagram in HTML and CSS: numbered steps tagged Hermes, Gmail or Supabase, three columns from 768px and one below, with the changed-or-missing-recipient path drawn as a dashed loop back to the composer, a legend separating Gmail's mail storage and delivery from Supabase's application records, and a text description. Architecture, the three decisions, verification, scope and limits, and next steps follow; a muted closing note carries the sourcing and planned-captures commentary, and the header art carries a brief "Illustrative art" label. The other four project pages keep their existing limited scope. Sources and claim boundaries are in `content-dossier.md`.
 
 ### Reduced-motion contract
 
@@ -353,7 +353,7 @@ Removed:
 
 - Movement on interaction: no hover lift, no art zoom, no sliding menus. State changes happen in place.
 - The entrance sequence's travel. Content renders in its final position immediately.
-- Ambient and looping animation (including any beam drift), and autoplaying video. The carousel starts paused; the visitor can still press Play.
+- Ambient and looping animation (including the beam drift), and autoplaying video. The ambient light stays at its static state and its control is hidden. The carousel starts paused; the visitor can still press Play.
 - Smooth scrolling.
 
 Preserved:
@@ -410,5 +410,5 @@ Decided:
 Still open:
 
 1. **Final key art source.** Whether the approved scene ships as upscaled AI-generated art (with its licensing caveats), is redrawn or commissioned to match, or is replaced by an improved owned render.
-2. **Ambient motion.** Whether the beam drift ships at all.
+2. **Ambient motion.** The beam drift is implemented for review (Section 8, item 4); Joshua decides whether it ships.
 3. **Personal VALORANT context.** Whether the Valorant ML case study mentions Joshua's own competitive play. Nothing about it appears unless Joshua opts in.

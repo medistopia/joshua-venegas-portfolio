@@ -252,6 +252,8 @@ October 14 pilot authorization: Joshua requested a sourced dossier for all five 
 
 Integration baseline: PR #4 merged into `milestone-1/homepage` at `e4653a2`, whose tree matches reviewed `36eec11`. On inspection, `origin/main` was `75d18ba` and did not include the lobby. The pilot branch starts at `e4653a2`; its draft PR targets `main` per repository convention, so the GitHub diff also includes the previously reviewed homepage/lobby ancestry. Do not merge or deploy as part of this pilot.
 
+October 14 polish pass (after the pilot): Joshua authorized a scannable Hermes overview and reply-workflow diagram, one restrained ambient light on the lobby with its own Pause/Play control, and `project-refresh-plan.md` for later work in the project repositories. The branch is stacked on the unmerged pilot (`codex/motion-hermes-pilot`, `cab57f1`) and its draft PR targets that branch, so its diff is this pass alone. No other case study is expanded and no project repository is changed. Results are in `verification/ambient-hermes/README.md`.
+
 - `/projects` index in the lineup style; Hermes pilot uses typed narrative sections. Reconsider MDX only if the remaining case studies need richer editorial authoring.
 - Case study structure: Problem, My role, Implementation decisions, Evidence (repository, demo, screenshots, diagrams), Outcomes, Links.
 - Content-gated: a section renders only when Joshua supplies its content. Recolm waits for client permission.

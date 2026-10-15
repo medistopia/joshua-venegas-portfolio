@@ -106,7 +106,7 @@ Blender, purchased art, and commissions are **not** prerequisites. This is what 
 | Résumé PDF | Needs Joshua's approval to publish | `public/resume/joshua-venegas-resume.pdf`; linked from the top bar, hero, and Contact |
 | Headshot | Missing, optional | About page |
 | Project screenshots | Missing | Case study evidence sections |
-| Architecture diagrams | Missing | Case studies; can be produced as original SVG once the architecture is described |
+| Architecture diagrams | Hermes reply workflow done (original HTML and CSS, `src/components/views/WorkflowDiagram.tsx`, from the dossier's H2/H5 evidence); others missing | Case studies; produced as original HTML/CSS or SVG once the architecture is described |
 
 ## A5. Typography and icons
 
