@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { InProgressNote, PageBody } from "@/components/ui/PageHeader";
-import { ProjectArt } from "@/components/ui/ProjectArt";
-import { featured, findProject } from "@/content/projects";
-
-const caseStudySections = ["Problem", "My role", "Implementation decisions", "Evidence", "Outcomes"];
+import { ChevronIcon } from "@/components/icons/Icons";
+import { artFor, formatDate, labelFor } from "@/components/lobby/config";
+import { InProgressNote, SectionLabel } from "@/components/views/ViewFrame";
+import { findPerson } from "@/content/people";
+import { allProjects, findProject, type Project } from "@/content/projects";
 
 export function generateStaticParams() {
-  return featured.map((project) => ({ slug: project.slug }));
+  return allProjects.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata(props: PageProps<"/projects/[slug]">): Promise<Metadata> {
@@ -18,19 +19,20 @@ export async function generateMetadata(props: PageProps<"/projects/[slug]">): Pr
   return project ? { title: project.title, description: project.summary } : {};
 }
 
+/**
+ * Case study view. From 1024px the project list and the reading panel each scroll on their own,
+ * so the shell's navigation stays in view; below 1024px the page scrolls.
+ */
 export default function ProjectPage(props: PageProps<"/projects/[slug]">) {
   return (
-    <PageBody>
-      <Link
-        href="/projects"
-        className="label self-start text-text-muted transition-colors duration-(--dur-fast) hover:text-text"
-      >
-        All projects
-      </Link>
-      <Suspense fallback={<div className="h-64" />}>
+    <div
+      data-view="inner"
+      className="mx-auto grid w-full max-w-[1320px] gap-6 px-4 py-8 sm:px-8 lg:h-full lg:grid-cols-[240px_minmax(0,1fr)] lg:grid-rows-[minmax(0,1fr)] lg:py-6"
+    >
+      <Suspense fallback={<div className="h-96 border border-line bg-surface lg:col-start-2" />}>
         <ProjectDetail params={props.params} />
       </Suspense>
-    </PageBody>
+    </div>
   );
 }
 
@@ -40,36 +42,147 @@ async function ProjectDetail({ params }: { params: PageProps<"/projects/[slug]">
   if (!project) notFound();
 
   return (
-    <article className="flex flex-col gap-10">
-      <header className="grid gap-8 border-b border-line pb-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-end">
-        <div className="flex flex-col gap-4">
-          {project.context && <p className="label text-gold">{project.context}</p>}
-          <h1 className="font-display text-display-l font-bold uppercase">{project.title}</h1>
-          <p className="max-w-[48ch] text-lg leading-relaxed text-text-muted">{project.summary}</p>
-        </div>
-        <div className="relative aspect-video border border-line-strong">
-          <ProjectArt project={project} className="h-full" sizes="(min-width: 1024px) 50vw, 100vw" />
-        </div>
+    <>
+      <Reader project={project} />
+      <ProjectList current={project.slug} />
+    </>
+  );
+}
+
+function Reader({ project }: { project: Project }) {
+  const art = artFor(project.slug);
+  const label = labelFor(project);
+  const people = project.people.map(findPerson).filter((person) => person !== undefined);
+  const isExperiment = project.kind === "experiment";
+
+  return (
+    <article
+      aria-labelledby="project-title"
+      tabIndex={0}
+      className="flex flex-col border border-line bg-surface backdrop-blur-sm lg:col-start-2 lg:row-start-1 lg:min-h-0 lg:overflow-y-auto"
+    >
+      <header className="relative flex min-h-56 flex-col justify-end gap-2 overflow-hidden border-b border-line p-6 sm:p-8">
+        <Image src={art.src} alt="" fill sizes="(min-width: 1024px) 1000px, 100vw" className="object-cover" style={{ objectPosition: art.focus }} />
+        <span aria-hidden="true" className="scrim-feature absolute inset-0" />
+        <span aria-hidden="true" className="scrim-tile absolute inset-0" />
+        {label && <p className="label label-plate relative self-start text-gold">{label}</p>}
+        <h1 id="project-title" className="relative font-display text-display-m font-bold uppercase">
+          {project.title}
+        </h1>
       </header>
 
-      <InProgressNote>Case study in progress</InProgressNote>
+      <div className="flex flex-col gap-8 p-6 sm:p-8">
+        <p className="max-w-[62ch] text-lg leading-relaxed">{project.description ?? project.summary}</p>
 
-      <section aria-labelledby="case-study-outline">
-        <h2 id="case-study-outline" className="label text-text-muted">
-          Planned sections
-        </h2>
-        <ul className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
-          {caseStudySections.map((section) => (
-            <li key={section} className="grid grid-cols-[3px_1fr] border border-line bg-surface-solid">
-              <span aria-hidden="true" className="bg-line-strong" />
-              <div className="flex flex-col gap-1 px-4 py-3">
-                <p className="font-display text-xl font-semibold uppercase">{section}</p>
-                <p className="text-sm text-text-muted">Not yet published</p>
+        {(project.status || project.milestones.length > 0 || people.length > 0) && (
+          <dl className="grid gap-px border border-line bg-line sm:grid-cols-3">
+            {project.status && (
+              <div className="bg-surface-solid px-4 py-3">
+                <dt className="label text-gold">Status</dt>
+                <dd className="mt-1 text-sm">{project.status}</dd>
               </div>
-            </li>
-          ))}
-        </ul>
-      </section>
+            )}
+            {project.milestones.map((milestone) => (
+              <div key={milestone.label} className="bg-surface-solid px-4 py-3">
+                <dt className="label text-gold">{milestone.label}</dt>
+                <dd className="mt-1 text-sm">{formatDate(milestone.date)}</dd>
+              </div>
+            ))}
+            {people.length > 0 && (
+              <div className="bg-surface-solid px-4 py-3">
+                <dt className="label text-gold">With</dt>
+                {people.map((person) => (
+                  <dd key={person.id} className="mt-1 text-sm">
+                    {person.name}
+                  </dd>
+                ))}
+              </div>
+            )}
+          </dl>
+        )}
+
+        {project.contributions.length > 0 && (
+          <section aria-labelledby="contributions-heading" className="flex flex-col gap-3">
+            <SectionLabel id="contributions-heading">What I worked on</SectionLabel>
+            <ul className="grid gap-2 md:grid-cols-2">
+              {project.contributions.map((item) => (
+                <li key={item} className="grid grid-cols-[3px_1fr] border border-line bg-surface-solid">
+                  <span aria-hidden="true" className="bg-teal" />
+                  <span className="px-4 py-2.5 text-sm leading-snug">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {project.components.length > 0 && (
+          <section aria-labelledby="components-heading" className="flex flex-col gap-3">
+            <SectionLabel id="components-heading">{isExperiment ? "What the experiment involves" : "What it involves"}</SectionLabel>
+            <ul className="flex flex-wrap gap-2">
+              {project.components.map((item) => (
+                <li key={item} className="border border-line-strong px-3 py-1.5 text-sm">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {project.stack.length > 0 && (
+          <section aria-labelledby="stack-heading" className="flex flex-col gap-3">
+            <SectionLabel id="stack-heading">Stack</SectionLabel>
+            <ul className="flex flex-wrap gap-2">
+              {project.stack.map((item) => (
+                <li key={item} className="label border border-line px-3 py-1.5 text-text-muted">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <InProgressNote>Full case study in progress</InProgressNote>
+      </div>
     </article>
+  );
+}
+
+function ProjectList({ current }: { current: string }) {
+  return (
+    <nav aria-label="Projects" className="flex flex-col gap-3 lg:col-start-1 lg:row-start-1 lg:min-h-0 lg:overflow-y-auto">
+      <Link
+        href="/projects"
+        className="label inline-flex items-center gap-1 self-start text-text-muted transition-colors duration-(--dur-fast) hover:text-text"
+      >
+        <ChevronIcon direction="left" className="size-4" />
+        All projects
+      </Link>
+      <ul className="flex flex-col gap-2">
+        {allProjects.map((project) => {
+          const active = project.slug === current;
+          const art = artFor(project.slug);
+          const label = labelFor(project);
+          return (
+            <li key={project.slug}>
+              <Link
+                href={`/projects/${project.slug}`}
+                aria-current={active ? "page" : undefined}
+                className={`group grid grid-cols-[48px_minmax(0,1fr)] items-center gap-3 border p-2 transition-colors duration-(--dur-fast) ${
+                  active ? "border-teal bg-teal-soft" : "border-line bg-surface hover:border-line-strong"
+                }`}
+              >
+                <span aria-hidden="true" className="relative block h-16 overflow-hidden bg-bg-deep">
+                  <Image src={art.src} alt="" fill sizes="48px" className="object-cover" style={{ objectPosition: art.focus }} />
+                </span>
+                <span className="flex min-w-0 flex-col gap-0.5">
+                  {label && <span className="label text-gold">{label}</span>}
+                  <span className="font-display text-lg leading-tight font-semibold uppercase">{project.title}</span>
+                </span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 }

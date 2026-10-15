@@ -1,6 +1,7 @@
 import type { Browser, BrowserContextOptions, Page } from "@playwright/test";
 
 export const viewports = {
+  wide: { width: 1920, height: 1080, deviceScaleFactor: 1 },
   desktop: { width: 1440, height: 900, deviceScaleFactor: 1 },
   laptop: { width: 1280, height: 720, deviceScaleFactor: 1 },
   compact: { width: 1024, height: 768, deviceScaleFactor: 1 },
@@ -11,14 +12,26 @@ export const viewports = {
 export type ViewportName = keyof typeof viewports;
 export type Motion = "default" | "reduced";
 
-export const verificationDir = "docs/verification/milestone-1";
+export const verificationDir = "docs/verification/lobby";
+
+/** Every view in the shell, keyed by the name used in screenshot and report files. */
+export const views = {
+  home: "/",
+  projects: "/projects",
+  "project-hermes": "/projects/project-hermes",
+  experience: "/experience",
+  about: "/about",
+  contact: "/contact",
+} as const;
+
+export type ViewName = keyof typeof views;
 
 export async function openPage(
   browser: Browser,
   viewport: ViewportName,
   motion: Motion,
   path = "/",
-  options: BrowserContextOptions = {},
+  { clock = false, ...options }: BrowserContextOptions & { clock?: boolean } = {},
 ) {
   const { width, height, deviceScaleFactor } = viewports[viewport];
   const context = await browser.newContext({
@@ -28,12 +41,29 @@ export async function openPage(
     ...options,
   });
   const page = await context.newPage();
+  // A fake clock keeps real time until a test pauses or advances it.
+  if (clock) await page.clock.install();
   await page.goto(path);
   return { context, page };
 }
 
-/** Fonts loaded, images decoded, and entrance animations finished. */
+/** Stops page timers, and with them the carousel's rotation. Needs a page opened with `clock`. */
+export async function freezeTimers(page: Page) {
+  // The page clock keeps running between reading it and pausing; retry if it has passed the target.
+  for (let attempt = 1; ; attempt++) {
+    try {
+      await page.clock.pauseAt(await page.evaluate(() => Date.now() + 250));
+      return;
+    } catch (error) {
+      if (attempt === 5) throw error;
+    }
+  }
+}
+
+/** Active tab revealed, fonts loaded, images decoded, and entrance animations finished. */
 export async function settle(page: Page) {
+  // The tabs stream in behind a Suspense boundary (usePathname under Cache Components).
+  await page.waitForSelector("header [aria-current='page']", { state: "attached" });
   await page.evaluate(async () => {
     await document.fonts.ready;
     await Promise.all(

@@ -2,18 +2,23 @@ import Link from "next/link";
 import { Monogram } from "@/components/brand/Monogram";
 import { profile } from "@/content/profile";
 
-export function BrandSlab() {
+/** `compact` shows the monogram only; the name stays in the link's accessible name. */
+export function BrandSlab({ compact = false }: { compact?: boolean }) {
   return (
     <Link
       href="/"
-      className="group relative flex shrink-0 items-center gap-3 pr-9 pl-4 text-bg-deep outline-offset-[-4px]"
+      className={`group relative flex shrink-0 items-center gap-3 pl-4 text-bg-deep outline-offset-[-4px] ${compact ? "pr-8" : "pr-9"}`}
     >
       <span
         aria-hidden="true"
         className="clip-slab absolute inset-0 bg-coral transition-[filter] duration-(--dur-fast) group-hover:brightness-110"
       />
       <Monogram className="relative h-6 w-auto" />
-      <span className="relative font-display text-xl font-bold tracking-wide whitespace-nowrap uppercase">
+      <span
+        className={
+          compact ? "sr-only" : "relative font-display text-xl font-bold tracking-wide whitespace-nowrap uppercase"
+        }
+      >
         {profile.name.first} {profile.name.last}
       </span>
     </Link>

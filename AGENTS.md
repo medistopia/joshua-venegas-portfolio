@@ -18,7 +18,11 @@ If a change conflicts with these documents, update the document in the same pull
 
 ## Current status
 
-Phase 1 is approved: candidate A (Atrium) is the visual direction, and its background is an interim asset until final-resolution art is produced. Phase 2 (Milestone 1, the homepage) is implemented and in review; results are in `docs/verification/milestone-1/README.md`. Do not start Phase 3 until Joshua approves the homepage. The composition study at `/lab/composition` (development only) remains for reference; its results are in `docs/verification/phase-1/README.md`. The study's `src/app/lab/composition/_components` are throwaway and must not be imported by real pages.
+Phase 1 is approved: candidate A (Atrium) is the visual direction, and its background is an interim asset until final-resolution art is produced. The composition study at `/lab/composition` (development only) remains for reference; its results are in `docs/verification/phase-1/README.md`. The study's `src/app/lab/composition/_components` are throwaway and must not be imported by real pages.
+
+Milestone 1 became the lobby shell after Joshua's review: he approved its desktop composition, and the shell, its views (Projects, case studies, Experience, About, Contact), and the tablet and mobile versions are implemented and in review (`docs/design.md`, Section 3.6; results in `docs/verification/lobby/README.md`). The first homepage's results remain in `docs/verification/milestone-1/README.md`. Do not start Phase 3 (full case studies) until Joshua approves the shell.
+
+Facts live in `src/content` and carry no layout fields. `src/components/lobby/config.ts` decides what appears where. A project's stack is never a list of accomplishments: only `contributions` describe Joshua's own work.
 
 The lineup is an ordered list in priority order (Hermes, Recolm, Valorant ML); desktop CSS places it as Recolm, Hermes, Valorant ML (`docs/design.md`, Section 3.5).
 
@@ -39,7 +43,8 @@ The primary composition reference is the Play lobby (`references/valorant/00-pla
 - TypeScript strict. Content is typed in `src/content` (Zod validation arrives with Milestone 1).
 - Tailwind CSS v4. Use the design tokens defined in `src/app/globals.css`; do not hard-code colors, durations, or font sizes in components.
 - Motion uses the duration and easing tokens, and any movement uses the `--move-*` tokens. Reduced motion removes movement only; static layout and angled geometry stay. It is defined once in `src/app/globals.css`; components must not add their own motion exceptions.
-- Desktop project cards are 1:2, sized from `--card-h` (`docs/design.md`, Section 3.2).
+- Lobby pennants are sized from `--pennant-h`, which is written against the lobby grid's columns (`docs/design.md`, Section 3.6). Change both together.
+- From 1024px the shell is one viewport tall and `main` scrolls; never hide overflow to make a view fit.
 - Accessibility is part of every change: semantic landmarks, visible 2px teal focus rings that are not clipped by `clip-path`, real links for navigation, and a modal dialog for the mobile menu.
 - Square corners. Angular shapes use the shared notch and skew utilities.
 - Package manager: npm.
@@ -58,16 +63,16 @@ python scripts/art/measure_safe_zone.py   # quick p98 screening of hero contrast
 python scripts/art/contact_sheet.py       # comparison sheets
 ```
 
-The Playwright specs in `tests/e2e` write screenshots and contrast results to `docs/verification/milestone-1/`.
+The Playwright specs in `tests/e2e` write screenshots and contrast results to `docs/verification/lobby/`.
 
 ## Verification before requesting review
 
-For any UI change, run `npm run test:e2e`: it captures screenshots at 1440 x 900, 1280 x 720, and 390 x 844 in both default and reduced motion, and runs the keyboard, reduced-motion, and text-contrast tests. Review the screenshots before requesting review. Details are in `docs/implementation-plan.md`, "Verification for Milestone 1".
+For any UI change, run `npm run test:e2e`: it captures the lobby at 1920 x 1080, 1440 x 900, 1280 x 720, 1024 x 768, 768 x 1024, and 390 x 844 in both default and reduced motion, and every view at desktop, laptop, tablet, and mobile sizes. It also runs the layout (one-viewport fit and glyph containment), keyboard, reduced-motion, and text-contrast tests. Review the screenshots before requesting review. Details are in `docs/implementation-plan.md`, "Verification for Milestone 1".
 
 ## Git
 
 - Work on a branch; open a pull request against `main`.
-- Commit messages are imperative and specific (for example, "Add ProjectCard focus and selected states").
+- Commit messages are imperative and specific (for example, "Add Pennant focus and selected states").
 - Keep commits focused. Do not mix planning documents with application code unless the document change describes that code.
 
 <!-- BEGIN:nextjs-agent-rules -->

@@ -1,24 +1,25 @@
-import { Backdrop } from "@/components/home/Backdrop";
-import { Hero } from "@/components/home/Hero";
-import { HomeSections } from "@/components/home/HomeSections";
-import { Lineup } from "@/components/home/Lineup";
-import { PanelStack } from "@/components/home/PanelStack";
-import { StatusStrip } from "@/components/home/StatusStrip";
+import { CurrentWork } from "@/components/lobby/CurrentWork";
+import { workload } from "@/components/lobby/config";
+import { FeatureTiles } from "@/components/lobby/FeatureTiles";
+import { Identity } from "@/components/lobby/Identity";
+import { Stage } from "@/components/lobby/Stage";
+import { CollaboratorStrip } from "@/components/shell/Collaborators";
 
+/**
+ * The lobby. 1280px and up: feature and identity, stage, and tiles in three columns.
+ * 1024 to 1279px: feature and identity beside the stage, tiles in a row beneath.
+ * Below 1024px: one column in document order, with collaborators at the end.
+ */
 export default function HomePage() {
   return (
-    <>
-      {/* The fold slides under the translucent top bar so the art runs to the top edge. It never clips: it grows and scrolls. */}
-      <div className="relative isolate -mt-14 pt-14 lg:min-h-svh">
-        <Backdrop />
-        <div className="relative mx-auto grid max-w-[1440px] gap-12 px-4 pb-16 sm:px-8 lg:mb-10 lg:min-h-[calc(100svh-96px)] lg:grid-cols-[300px_minmax(0,1fr)] lg:content-center lg:items-center lg:gap-x-6 lg:gap-y-8 lg:px-10 lg:py-8 xl:grid-cols-[minmax(300px,360px)_minmax(0,1fr)_minmax(176px,200px)] xl:py-0 short:px-8">
-          <Hero />
-          <Lineup />
-          <PanelStack />
-        </div>
-        <StatusStrip />
+    <div className="lobby flex flex-col gap-10 px-4 pb-12 sm:px-8 lg:grid lg:min-h-full lg:grid-cols-[280px_minmax(0,1fr)] lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-x-8 lg:gap-y-5 lg:py-4 xl:gap-y-6 xl:py-6 xl:grid-cols-[300px_minmax(0,1fr)_208px] xl:grid-rows-1">
+      <div className="flex flex-col gap-7 lg:gap-5 xl:gap-7">
+        <CurrentWork items={workload} />
+        <Identity />
       </div>
-      <HomeSections />
-    </>
+      <Stage />
+      <FeatureTiles />
+      <CollaboratorStrip />
+    </div>
   );
 }

@@ -4,9 +4,13 @@ import { forbiddenMotion, openPage, settle, tabTo } from "./helpers";
 const interactive = [
   "header nav a[href='/projects']",
   "main a[href='/contact']",
-  "a[href='/projects/project-hermes']",
-  "main a[href='/projects'] >> nth=0",
-  "main nav[aria-label='Sections'] a[href='/about']",
+  "main ol a[href='/projects/project-hermes']",
+  "main ol a[href='/projects/recolm']",
+  "section[aria-labelledby='lineup-heading'] > a[href='/projects']",
+  "main nav[aria-label='Highlights'] a[href='/about']",
+  "aside li > button[popovertarget='rail-brandon-hall']",
+  "button[aria-label='Next item']",
+  "button[aria-label$='automatic rotation']",
 ];
 
 /** Rendered boxes of an element and its descendants; any lift, slide, or zoom changes them. */
@@ -40,11 +44,13 @@ function clipPaths(page: Page) {
 
 const layoutTargets = [
   "h1",
-  "a[href='/projects/project-hermes']",
-  "a[href='/projects/recolm']",
-  "a[href='/projects/valorant-ml']",
-  "main a[href='/projects'] >> nth=0",
-  "main nav[aria-label='Sections']",
+  "[aria-roledescription='carousel']",
+  "main ol a[href='/projects/project-hermes']",
+  "main ol a[href='/projects/recolm']",
+  "main ol a[href='/projects/valorant-ml']",
+  "section[aria-labelledby='lineup-heading'] > a[href='/projects']",
+  "main nav[aria-label='Highlights']",
+  "aside[aria-labelledby='collaborators-rail-heading']",
 ];
 
 function layout(page: Page) {
@@ -84,7 +90,7 @@ test.describe("reduced motion", () => {
     }
 
     await page.mouse.move(5, 895);
-    const hermes = "a[href='/projects/project-hermes']";
+    const hermes = "main ol a[href='/projects/project-hermes']";
     await page.waitForTimeout(250);
     const rest = await motionState(page, hermes);
     await tabTo(page, hermes);
@@ -137,8 +143,9 @@ test.describe("default motion", () => {
     const { context, page } = await openPage(browser, "desktop", "default", "/", { javaScriptEnabled: false });
     await page.waitForTimeout(1200);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-    await expect(page.locator("main ol > li")).toHaveCount(3);
-    const opacities = await page.locator("main ol > li").evaluateAll((items) =>
+    const pennants = page.locator("section[aria-labelledby='lineup-heading'] ol > li");
+    await expect(pennants).toHaveCount(3);
+    const opacities = await pennants.evaluateAll((items) =>
       items.map((item) => getComputedStyle(item).opacity),
     );
     expect(opacities).toEqual(["1", "1", "1"]);

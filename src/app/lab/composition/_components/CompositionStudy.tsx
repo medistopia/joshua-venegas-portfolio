@@ -1,7 +1,10 @@
 import type { CSSProperties, ReactNode } from "react";
 import { Monogram } from "@/components/brand/Monogram";
 import { profile } from "@/content/profile";
-import { lineup } from "@/content/projects";
+import { featured } from "@/content/projects";
+
+/** The Phase 1 study renders the desktop row left to right. */
+const lineup = [featured[1], featured[0], featured[2]];
 import type { Candidate } from "../_lib/candidates";
 import { Backdrop } from "./Backdrop";
 import { FocalMarker, GuideBox, GuideChip } from "./Guide";

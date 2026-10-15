@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState, type KeyboardEvent } from "react";
 import { profile } from "@/content/profile";
+import { NavIcon } from "./NavIcon";
 import { isActive, navItems } from "./navigation";
 
 export function MobileMenu() {
@@ -81,7 +82,7 @@ export function MobileMenuView({ pathname }: { pathname: string | null }) {
                     href={item.href}
                     onClick={close}
                     aria-current={active ? "page" : undefined}
-                    className={`group relative block py-2 pr-6 pl-4 font-display text-4xl font-bold uppercase ${
+                    className={`group relative flex items-center gap-4 py-2 pr-6 pl-4 font-display text-4xl font-bold uppercase ${
                       active ? "text-bg-deep" : "text-text"
                     }`}
                   >
@@ -91,6 +92,7 @@ export function MobileMenuView({ pathname }: { pathname: string | null }) {
                         active ? "bg-text" : "group-hover:bg-text/8"
                       }`}
                     />
+                    <NavIcon name={item.icon} className="relative size-7" />
                     <span className="relative">{item.label}</span>
                   </Link>
                 </li>

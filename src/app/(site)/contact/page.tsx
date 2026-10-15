@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { ContactActions } from "@/components/ui/ContactActions";
-import { PageBody, PageHeader } from "@/components/ui/PageHeader";
+import { Panel, ViewFrame } from "@/components/views/ViewFrame";
 
 export const metadata: Metadata = { title: "Contact" };
 
 export default function ContactPage() {
   return (
-    <PageBody>
-      <PageHeader eyebrow="Contact" title="Get in touch" />
-      <ContactActions />
-    </PageBody>
+    <ViewFrame kicker="Contact" title="Get in touch">
+      <Panel className="max-w-[640px] px-5 py-5">
+        <ContactActions />
+      </Panel>
+    </ViewFrame>
   );
 }

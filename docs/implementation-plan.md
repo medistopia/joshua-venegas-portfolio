@@ -70,7 +70,7 @@ What the study does not include: functional links, focus states, motion, and bel
 
 Goal: one polished homepage with functional navigation, featured project cards, and a mobile layout. This is the first real milestone and is intentionally small.
 
-Status: implemented and verified; results and screenshots are in `docs/verification/milestone-1/README.md`. Waiting on Joshua's review.
+Status: the first homepage was implemented and verified (`docs/verification/milestone-1/README.md`). Joshua's review replaced it with the lobby shell (`docs/design.md`, Section 3.6): a persistent top bar and collaborator rail, with the navigation swapping the lobby, Projects, case study, Experience, About, and Contact views. Its desktop composition is approved; the full shell is implemented and verified (`docs/verification/lobby/README.md`) and waiting on Joshua's review. The scope, structure, and verification below describe the first homepage; the specs in `tests/e2e` now cover the shell, with output in `docs/verification/lobby/`.
 
 ### Scope
 
@@ -119,6 +119,7 @@ tests/
     keyboard.spec.ts
     reduced-motion.spec.ts
     contrast.spec.ts
+    carousel.spec.ts        # lobby shell: "Currently working on" rotation
 playwright.config.ts
 ```
 
@@ -224,6 +225,18 @@ Automated in `tests/e2e/layout.spec.ts` at 17 viewports from 320 x 640 to 1920 x
 - Desktop (1024px and up): Recolm, Hermes, Valorant ML from left to right; cards are 1:2, flanks are 0.88 of the lead, and the lead is at least 400px tall; identity, lineup, and tiles do not overlap. From 1280px, everything fits between the top bar and the status strip and the tiles sit right of the lineup; from 1024 to 1279px, the tiles share one row below the lineup.
 - Tablet (640 to 1023px): Hermes and Recolm side by side, Valorant ML spanning both columns below at about the same height; no panel tiles.
 - Mobile (below 640px): cards stacked in featured order, Hermes first.
+
+### 7. Carousel rotation (lobby shell)
+
+Automated in `tests/e2e/carousel.spec.ts` on Playwright's fake clock, paused once the page settles, with every pending rotation timer tracked:
+
+- The carousel advances every 8 seconds and wraps; automatic changes are not announced.
+- The pointer over it, keyboard focus inside it, and a hidden page each hold rotation with no timer pending, and rotation resumes with a fresh 8-second timer when that ends.
+- Pause stops rotation until Play. Choosing a slide with an arrow or indicator stops it too, and is announced ("Slide 2 of 2: Research").
+- Under reduced motion it starts paused, and a slide change is a 120ms opacity fade with no movement.
+- On both slides, only the active slide's link is in the tab order. Leaving the lobby clears the timer.
+
+Screenshots and the keyboard tab-order test pause the same clock, so captures never change slide mid-test.
 
 ### Deferred to Phase 5 (after visual approval)
 

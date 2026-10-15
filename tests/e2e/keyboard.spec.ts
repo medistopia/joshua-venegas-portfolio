@@ -1,9 +1,8 @@
 import { expect, test, type Page } from "@playwright/test";
-import { openPage, settle, tabTo } from "./helpers";
+import { freezeTimers, openPage, settle, tabTo } from "./helpers";
 
 type FocusInfo = {
-  href: string | null;
-  label: string;
+  stop: string;
   outline: string;
   unclipped: boolean;
 };
@@ -32,9 +31,11 @@ function describeFocus(page: Page) {
         }
       }
     }
+    const visibleText = el.cloneNode(true) as HTMLElement;
+    visibleText.querySelectorAll("[aria-hidden='true']").forEach((node) => node.remove());
+    const name = (el.getAttribute("aria-label") ?? visibleText.textContent ?? "").trim().replace(/\s+/g, " ");
     return {
-      href: el.getAttribute("href"),
-      label: (el.getAttribute("aria-label") ?? el.textContent ?? "").trim().replace(/\s+/g, " ").slice(0, 40),
+      stop: el.getAttribute("href") ?? `button ${name}`,
       outline: `${style.outlineStyle} ${style.outlineWidth} ${style.outlineColor}`,
       unclipped,
     };
@@ -56,18 +57,19 @@ test.describe("desktop keyboard", () => {
     await context.close();
   });
 
-  test("tab order follows the documented sequence with visible, unclipped rings", async ({ browser }) => {
-    const { context, page } = await openPage(browser, "desktop", "default");
+  test("lobby tab order follows the documented sequence with visible, unclipped rings", async ({ browser }) => {
+    const { context, page } = await openPage(browser, "desktop", "default", "/", { clock: true });
     await settle(page);
+    await freezeTimers(page);
 
     const stops: FocusInfo[] = [];
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 26; i++) {
       await page.keyboard.press("Tab");
       const info = await describeFocus(page);
       if (info) stops.push(info);
     }
 
-    expect(stops.map((s) => s.href)).toEqual([
+    expect(stops.map((s) => s.stop)).toEqual([
       "#main",
       "/",
       "/",
@@ -75,48 +77,131 @@ test.describe("desktop keyboard", () => {
       "/experience",
       "/about",
       "/contact",
-      "/contact",
+      "/projects/project-hermes",
+      "button Previous item",
+      "button Show Project Hermes",
+      "button Show Research",
+      "button Next item",
+      "button Pause automatic rotation",
       "/about",
+      "/contact",
       "/projects/project-hermes",
       "/projects/recolm",
       "/projects/valorant-ml",
       "/projects",
+      "/projects/project-hermes",
       "/experience",
       "/about",
-      "/contact",
+      "button Brandon Hall",
+      "button Dr. Lai Wei",
+      "button Dr. Yong Wei",
+      "button Prof. Mohammad Mohebi",
     ]);
     for (const stop of stops.slice(1)) {
-      expect(stop.outline, stop.label).toBe(ring);
-      expect(stop.unclipped, `${stop.label} ring is clipped`).toBe(true);
+      expect(stop.outline, stop.stop).toBe(ring);
+      expect(stop.unclipped, `${stop.stop} ring is clipped`).toBe(true);
     }
     await context.close();
   });
 
-  test("Enter on a project card opens its page", async ({ browser }) => {
+  test("carousel controls change the slide and keep inactive slides out of the tab order", async ({ browser }) => {
+    const { context, page } = await openPage(browser, "desktop", "default", "/", { clock: true });
+    await settle(page);
+    await freezeTimers(page);
+    const carousel = page.locator("[aria-roledescription='carousel']");
+    await expect(carousel.getByRole("button", { name: "Show Project Hermes" })).toHaveAttribute("aria-current", "true");
+    await tabTo(page, "button[aria-label='Next item']");
+    await page.keyboard.press("Enter");
+    await expect(carousel.getByRole("button", { name: "Show Research" })).toHaveAttribute("aria-current", "true");
+    await expect(carousel.getByText("Research with Dr. Lai Wei and Dr. Yong Wei.")).toBeVisible();
+    await expect(carousel.getByRole("button", { name: "Play automatic rotation" })).toBeVisible();
+    // The Project Hermes slide's link is inert while hidden.
+    await expect(carousel.locator("[inert] a[href='/projects/project-hermes']")).toHaveCount(1);
+    await page.keyboard.press("Shift+Tab");
+    await page.keyboard.press("Shift+Tab");
+    await expect(carousel.getByRole("button", { name: "Show Project Hermes" })).toBeFocused();
+    await page.keyboard.press("Enter");
+    await expect(carousel.getByText("Developing a Gmail-backed inbox")).toBeVisible();
+    await expect(carousel.locator("[inert] a[href='/projects/project-hermes']")).toHaveCount(0);
+    await context.close();
+  });
+
+  test("a collaborator opens with Enter, shows the relationship, and closes with Escape", async ({ browser }) => {
     const { context, page } = await openPage(browser, "desktop", "default");
     await settle(page);
-    await tabTo(page, "a[href='/projects/project-hermes']");
+    const rail = page.getByRole("complementary", { name: "Collaborators" });
+    const button = rail.getByRole("button", { name: "Brandon Hall" });
+    const popover = page.getByRole("dialog", { name: "Brandon Hall" });
+
+    await tabTo(page, "aside li > button[popovertarget='rail-brandon-hall']");
+    await page.keyboard.press("Enter");
+    await expect(popover).toBeVisible();
+    await expect(popover).toContainText("Special Projects Group");
+    await expect(popover).toBeInViewport({ ratio: 1 });
+    await expect(popover).not.toContainText(/online|offline|away/i);
+
+    await page.keyboard.press("Escape");
+    await expect(popover).toBeHidden();
+    await expect(button).toBeFocused();
+    await context.close();
+  });
+
+  test("Enter on a pennant opens its case study", async ({ browser }) => {
+    const { context, page } = await openPage(browser, "desktop", "default");
+    await settle(page);
+    await tabTo(page, "main ol a[href='/projects/project-hermes']");
     await page.keyboard.press("Enter");
     await page.waitForURL("**/projects/project-hermes");
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Project Hermes");
     await context.close();
   });
 
-  test("every nav tab resolves and marks the active page", async ({ browser }) => {
+  test("every nav tab replaces the stage, marks itself current, and Back returns", async ({ browser }) => {
     const { context, page } = await openPage(browser, "desktop", "default");
     const nav = page.getByRole("banner").getByRole("navigation", { name: "Primary" });
-    for (const [href, name] of [
-      ["/", "Home"],
-      ["/projects", "Projects"],
-      ["/experience", "Experience"],
-      ["/about", "About"],
-      ["/contact", "Contact"],
-    ]) {
-      const response = await page.goto(href);
-      expect(response?.status(), href).toBe(200);
+    const headings: [string, string, string][] = [
+      ["/projects", "Projects", "Select a project"],
+      ["/experience", "Experience", "Experience"],
+      ["/about", "About", "Joshua Venegas"],
+      ["/contact", "Contact", "Get in touch"],
+      ["/", "Home", "Joshua Venegas"],
+    ];
+    for (const [href, name, heading] of headings) {
+      await nav.getByRole("link", { name }).click();
+      await page.waitForURL((url) => url.pathname === href);
+      await expect(page.getByRole("heading", { level: 1 })).toHaveText(heading);
       await expect(nav.getByRole("link", { name })).toHaveAttribute("aria-current", "page");
       await expect(nav.locator("[aria-current='page']")).toHaveCount(1);
+      // The shell stays in place: the rail is present in every view.
+      await expect(page.getByRole("complementary", { name: "Collaborators" })).toBeVisible();
     }
+
+    for (const [href, name] of [...headings].reverse().slice(1)) {
+      await page.goBack();
+      await page.waitForURL((url) => url.pathname === href);
+      await expect(nav.getByRole("link", { name })).toHaveAttribute("aria-current", "page");
+    }
+
+    for (const href of ["/", "/projects", "/experience", "/about", "/contact"]) {
+      const response = await page.goto(href);
+      expect(response?.status(), href).toBe(200);
+    }
+    await context.close();
+  });
+
+  test("the case study scrolls inside its reading panel while navigation stays visible", async ({ browser }) => {
+    const { context, page } = await openPage(browser, "laptop", "default", "/projects/project-hermes");
+    await settle(page);
+    const reader = page.locator("article[aria-labelledby='project-title']");
+    const overflow = await reader.evaluate((el) => el.scrollHeight - el.clientHeight);
+    expect(overflow, "reading panel has more content than fits").toBeGreaterThan(0);
+
+    await reader.focus();
+    await page.keyboard.press("End");
+    await expect.poll(() => reader.evaluate((el) => el.scrollTop)).toBeGreaterThan(0);
+    await expect(page.getByText("Full case study in progress")).toBeInViewport();
+    await expect(page.getByRole("banner")).toBeInViewport({ ratio: 1 });
+    expect(await page.evaluate(() => document.documentElement.scrollHeight)).toBeLessThanOrEqual(720);
     await context.close();
   });
 });
@@ -157,7 +242,21 @@ test.describe("mobile menu", () => {
     await page.keyboard.press("Enter");
     await page.waitForURL("**/experience");
     await expect(dialog).toBeHidden();
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Current roles");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Experience");
+    await context.close();
+  });
+
+  test("a collaborator in the strip opens a centered popover", async ({ browser }) => {
+    const { context, page } = await openPage(browser, "mobile", "default");
+    await settle(page);
+    await tabTo(page, "li > button[popovertarget='strip-lai-wei']", 60);
+    await page.keyboard.press("Enter");
+    const popover = page.getByRole("dialog", { name: "Dr. Lai Wei" });
+    await expect(popover).toBeVisible();
+    await expect(popover).toBeInViewport({ ratio: 1 });
+    await expect(popover).toContainText("Dr. Yong Wei");
+    await popover.getByRole("button", { name: "Close" }).click();
+    await expect(popover).toBeHidden();
     await context.close();
   });
 });
